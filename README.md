@@ -1,9 +1,9 @@
-* Sassline
+# Sassline
 ========
 
 Set text on the web to a baseline grid easily with rems and Sass. A starting point for prototyping, blogs or other web projects with base typography styling and no bloat.
 
-** Do one thing well
+## Do one thing well
 
 There are many different options when it comes to boilerplates, frameworks and pattern libraries these days. Sassline has one aim and one aim only – to spread better typography across the responsive environment that is the web.
 
@@ -13,25 +13,25 @@ OpenType features are enabled to give the nicest formatting of text and some flo
 
 Fallback pixel values are provided to use if desired for full browser support – see [here](http://caniuse.com/rem) for more info.
 
-** Font-size = line-height?
+## Font-size = line-height?
 
 Sassline is based on setting the root font-size as half the line-height of the paragraph text. The height of the baseline grid is then effectively set at 2rem. The styling included sets all the typographic elements to the baseline and takes into account element ordering, i.e. if there is a h2 followed by an h3. The spacing is set between elements with the Gestalt law of proximity (elements closer together are visually grouped).
 
-** Why?
+## Why?
 
 I recently wrote a dissertation on responsive typography, looking at which historical typographic conventions are best suited to text in a responsive environment. Sassline takes some of my thoughts from this and puts them into action. You can also read some more about how it came about [here](http://typenot.es/posts/baseline-rems).
 
-** Documentation
+## Documentation
 
 I am currently working on some more thorough documentation for Sassline, please check out the blog post [here](http://typenot.es/posts/baseline-rems) for now.
 
-** Responsive Nav
+## Responsive Nav
 
 Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-nav.js) plugin is included to provide a mobile ready navigation to work from.
 
 ========
 
-** License
+## License
 
 The MIT License (MIT)
 
