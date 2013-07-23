@@ -1,0 +1,385 @@
+/* Typography */
+/* --------------------------------------- */
+
+// Setting root sizes and base styles.
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  @include rootsize-0;
+  @include breakpoint(break-1) {
+    @include rootsize-1;
+  }
+  @include breakpoint(break-2) {
+    @include rootsize-2;
+  }
+  @include breakpoint(break-3) {
+    @include rootsize-3;
+  }
+  @include breakpoint(break-4) {
+    @include rootsize-4;
+  }
+}
+
+// Site wide base styles.
+body {
+  line-height: 2rem;
+  font-family: $serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+// Links.
+a {
+  color: $linkColour;
+  text-decoration: none;
+  -webkit-transition: .1s color;
+     -moz-transition: .1s color;
+      -ms-transition: .1s color;
+       -o-transition: .1s color;
+          transition: .1s color;
+  &:hover, &:active, &:focus {
+    color: $hoverColour;
+    text-decoration: none;
+  }
+}
+
+// Paragraphs. OpenType ligatures and oldstyle numerals enabled if available.
+p {
+  -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+  -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  @include fontsize-0(16);
+  @include breakpoint(break-1) {
+    @include fontsize-1(18);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(20);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(20);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(22);
+  }
+}
+
+// Headings.
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: $headingColour;
+  text-rendering: optimizelegibility;
+}
+
+// H1. OpenType ligatures, discretionary ligatures and lining numerals enabled if available.
+h1, .alpha {
+  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
+  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  line-height: 3rem;
+  @include fontsize-0(28);
+  @include breakpoint(break-1) {
+    @include fontsize-1(30);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(32);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(36);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(40);
+  }
+}
+
+// H2. OpenType ligatures, discretionary ligatures and lining numerals enabled if available.
+h2, .beta {
+  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
+  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  line-height: 2rem;
+  padding-top: 1rem;
+  @include fontsize-0(22);
+  @include breakpoint(break-1) {
+    @include fontsize-1(24);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(26);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(30);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(34);
+  }
+}
+
+// H3. OpenType ligatures and lining numerals enabled if available.
+h3, .gamma {
+  -moz-font-feature-settings: 'liga=1, lnum=1, kern=1';
+  -ms-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  -webkit-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  line-height: 2rem;
+  padding-top: 1rem;
+  @include fontsize-0(20);
+  @include breakpoint(break-1) {
+    @include fontsize-1(22);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(24);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(28);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(30);
+  }
+}
+
+// H4. OpenType ligatures and lining numerals enabled if available.
+h4, .delta {
+  -moz-font-feature-settings: 'liga=1, lnum=1, kern=1';
+  -ms-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  -webkit-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  line-height: 2rem;
+  padding-top: 1rem;
+  @include fontsize-0(18);
+  @include breakpoint(break-1) {
+    @include fontsize-1(20);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(22);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(26);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(28);
+  }
+}
+
+// H5. OpenType ligatures and lining numerals enabled if available.
+h5, .epsilon {
+  -moz-font-feature-settings: 'liga=1, lnum=1, kern=1';
+  -ms-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  -webkit-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  line-height: 2rem;
+  padding-top: 1rem;
+  @include fontsize-0(17);
+  @include breakpoint(break-1) {
+    @include fontsize-1(19);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(21);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(24);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(26);
+  }
+}
+
+// H6. OpenType ligatures and lining numerals enabled if available.
+h6, .zeta {
+  -moz-font-feature-settings: 'liga=1, lnum=1, kern=1';
+  -ms-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  -webkit-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
+  line-height: 2rem;
+  padding-top: 1rem;
+  @include fontsize-0(16);
+  @include breakpoint(break-1) {
+    @include fontsize-1(18);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(20);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(22);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(24);
+  }
+}
+
+// Nice spacing after high level headings and images. Text sits directly below h4, h5 and h6.
+h1 + p, h1 + ol, h1 + ul, h1 + blockquote p, h1 + pre,
+.alpha + p, .alpha + ol, .alpha + ul, .alpha + blockquote p, .alpha + pre,
+h2 + p, h2 + ol, h2 + ul, h2 + blockquote p, h2 + pre,
+.beta + p, .beta + ol, .beta + ul, .beta + blockquote p, .beta + pre,
+h3 + p, h3 + ol, h3 + ul, h3 + blockquote p, h3 + pre,
+.gamma + p, .gamma + ol, .gamma + ul, .gamma + blockquote p, .gamma + pre,
+img + p, img + ol, img + ul, img + blockquote p, img + pre {
+  margin-top: 2rem;
+}
+
+// Lists.
+ul, ol {
+  margin-bottom: 2rem;
+  li {
+    -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    line-height: 2rem;
+    @include fontsize-0(16);
+    margin-left: 2rem;
+    @include breakpoint(break-1) {
+      @include fontsize-1(18);
+      margin-left: 0;
+    }
+    @include breakpoint(break-2) {
+      @include fontsize-2(20);
+    }
+    @include breakpoint(break-3) {
+      @include fontsize-3(22);
+    }
+    @include breakpoint(break-4) {
+      @include fontsize-4(24);
+    }
+    a {
+      color: $hoverColour;
+      &:hover, &:active, &:focus {
+        color: $linkColour;
+      }
+    }
+  }
+}
+
+// Bold.
+b, strong, .bold {
+  font-weight: 600;
+}
+
+// Italic.
+em, i, .italic {
+  font-style: italic;
+}
+
+// Caption or inline small text.
+small, .caption {
+  font-family: $sans-serif;
+  @include fontsize-0(12);
+  @include breakpoint(break-1) {
+    @include fontsize-1(14);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(14);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(16);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(18);
+  }
+}
+
+// Nice spacing for captions.
+h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption, .gamma + .caption, img + .caption {
+  margin-top: 0;
+}
+
+// Quotes.
+blockquote {
+  p {
+    font-style: italic;
+    padding-left: 2rem;
+    border-left: 6px solid;
+  }
+}
+
+// Horizontal rule.
+hr {
+  margin-top: 3.825em;
+  margin-bottom: 3.825em;
+  color: #d8d3ce;
+  background-color: #d8d3ce;
+  border: 0;
+  border-bottom: 1px solid #d8d3ce;
+}
+
+// Code block. Some styles from normalize included.
+code, pre {
+  padding: 0;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  color: #FFF;
+}
+
+code {
+  padding: 0; color:#FFF; background-color: #002028; border:0;
+}
+
+pre {
+  display: block;
+  padding: 1rem; margin: 0; background-color: #002028;
+  border: 0;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+pre code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  line-height: 2rem;
+  @include fontsize-0(12);
+  @include breakpoint(break-1) {
+    @include fontsize-1(14);
+  }
+  @include breakpoint(break-2) {
+    @include fontsize-2(16);
+  }
+  @include breakpoint(break-3) {
+    @include fontsize-3(17);
+  }
+  @include breakpoint(break-4) {
+    @include fontsize-4(18);
+  }
+}
+
+// Letter space those capitals people, Jan Tschichold would be proud.
+.upper {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+// Consistent height numbers with OpenType.
+.lining-numerals {
+  -moz-font-feature-settings: 'lnum=1, kern=1';
+  -ms-font-feature-settings: 'lnum' 1, 'kern' 1;
+  -webkit-font-feature-settings: 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'lnum' 1, 'kern' 1;
+}
+
+// Ascending and descending numbers with OpenType.
+.oldstyle-numerals {
+  -moz-font-feature-settings: 'onum=1, kern=1';
+  -ms-font-feature-settings: 'onum' 1, 'kern' 1;
+  -webkit-font-feature-settings: 'onum' 1, 'kern' 1;
+  -o-font-feature-settings: 'onum' 1, 'kern' 1;
+  font-feature-settings: 'onum' 1, 'kern' 1;
+}

@@ -1,0 +1,125 @@
+/* CSS compiled from SCSS */
+/* --------------------------------------- */
+
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "nav";
+@import "typography";
+
+
+/* Styles */
+/* --------------------------------------- */
+
+// Base styling, feel free to change.
+
+body {
+  background-color: $headBackgroundColour;
+  color: $bodyColour;
+  overflow-x: hidden;
+}
+
+header {
+  background: $headBackgroundColour;
+  border-bottom: 1px solid darken($headBackgroundColour,10%);
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  font: 0/0 a;
+  color: transparent;
+  background: url(../img/logo.png);
+  width: 150px;
+  height: 40px;
+  margin: 1rem 0 1rem 5%;
+  @include breakpoint(break-1) {
+    margin: 1rem 0 1rem 4%;
+  }
+  @include breakpoint(break-2) {
+    margin: 1rem 0 1rem 3%;
+  }
+  @include breakpoint(break-3) {
+    margin: 1.6rem auto 0 auto; // Vertically centred
+    position: absolute;
+  }
+  @include breakpoint(break-3) {
+    margin: 1.9rem auto 0 auto; // Vertically centred
+  }
+}
+
+section {
+  background-color: $backgroundColour;
+  padding: 4rem 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $maxwidth-0;
+  position: relative;
+  width: 90%;
+  @include clearfix;
+  @include breakpoint(break-1) {
+    max-width: $maxwidth-1;
+  }
+  @include breakpoint(break-2) {
+    max-width: $maxwidth-2;
+  }
+  @include breakpoint(break-3) {
+    max-width: $maxwidth-3;
+    width: 100%;
+  }
+  @include breakpoint(break-4) {
+    max-width: $maxwidth-4;
+  }
+}
+
+.container--header {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  @include clearfix;
+  @include breakpoint(break-3) {
+    max-width: $maxwidth-3;
+    width: 100%;
+  }
+  @include breakpoint(break-4) {
+    max-width: $maxwidth-4;
+  }
+}
+
+footer {
+  background: $headBackgroundColour;
+  border-top: 1px solid darken($headBackgroundColour,10%);
+  p {
+    color: $headingColour;
+    font-family: $sans-serif;
+    padding: 1rem 0;
+    text-align: center;
+    @include fontsize-0(14);
+    @include breakpoint(break-1) {
+      @include fontsize-1(14);
+    }
+    @include breakpoint(break-2) {
+      @include fontsize-2(14);
+    }
+    @include breakpoint(break-3) {
+      @include fontsize-3(16);
+    }
+    @include breakpoint(break-4) {
+      @include fontsize-4(18);
+    }
+  }
+}
+
+img {
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+  -ms-interpolation-mode: bicubic;
+  @include breakpoint(break-1) {
+    margin: 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+}

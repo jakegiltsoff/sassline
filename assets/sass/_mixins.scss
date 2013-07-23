@@ -1,0 +1,51 @@
+// SCSS mixins
+// ---------------------------------------
+
+// Breakpoints.
+@mixin breakpoint($point) {
+  @if $point == break-1 {
+    @media screen and (min-width:$break-1) { @content; }
+  }
+  @else if $point == break-2 {
+    @media screen and (min-width:$break-2) { @content; }
+  }
+  @else if $point == break-3 {
+    @media screen and (min-width:$break-3)  { @content; }
+  }
+  @else if $point == break-4 {
+    @media screen and (min-width:$break-4)  { @content; }
+  }
+}
+
+// Root font-size in %.
+@mixin rootsize-0 { font-size: #{$rootsize-0/16*100%}; }
+@mixin rootsize-1 { font-size: #{$rootsize-1/16*100%}; }
+@mixin rootsize-2 { font-size: #{$rootsize-2/16*100%}; }
+@mixin rootsize-3 { font-size: #{$rootsize-3/16*100%}; }
+@mixin rootsize-4 { font-size: #{$rootsize-4/16*100%}; }
+
+// Font-size in rems.
+@mixin fontsize-0($value){ font-size: #{$value/$rootsize-0}rem; }
+@mixin fontsize-1($value){ font-size: #{$value/$rootsize-1}rem; }
+@mixin fontsize-2($value){ font-size: #{$value/$rootsize-2}rem; }
+@mixin fontsize-3($value){ font-size: #{$value/$rootsize-3}rem; }
+@mixin fontsize-4($value){ font-size: #{$value/$rootsize-4}rem; }
+
+// Display inline-block.
+@mixin inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+// Clearfix.
+@mixin clearfix {
+  *zoom: 1;
+  &:before, &:after{
+    display: table;
+    content: "";
+  }
+  &:after{
+    clear: both;
+  }
+}

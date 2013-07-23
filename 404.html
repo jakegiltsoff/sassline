@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sassline</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" />
+  <script src="/assets/js/responsive-nav.min.js"></script>
+  <!--[if lt IE 9]>
+  <script src="/assets/js/html5.min.js"></script>
+  <script src="/assets/js/respond.min.js"></script>
+  <![endif]-->
+  <script>
+  // Example of how to load in a smaller typekit kit on mobile and a larger character kit elsewhere
+  var kit;
+  if( /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    // Mobile kit - default characters
+    kit='kjn7uxg';
+  } else {
+    // Larger kit - all characters enabled
+    kit='inu1jda';
+  };
+  document.write('\x3Cscript src="//use.typekit.net/'+kit+'.js">\x3C/script>');
+  </script>
+  <script>try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+  <header>
+    <div class="container--header">
+      <h1 class="logo">Sassline</h1>
+      <div id="nav" class="main-nav">
+        <ul class="main-nav__list">
+          <li><a href="http://sassline.com">Home</span></a></li><li><a href="http://github.com/designbyjake/sassline">Github</a></li><li><a href="http://twitter.com/designbyjake">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="container">
+      <h1>404</h1>
+        <p>Take me <a href="/">home</a>.</p>
+    </div>
+  </section>
+  <footer>
+    <p>Make cool stuff.</p>
+  </footer>
+
+  <script>
+  var navigation = responsiveNav("#nav", {
+    label: "Menu",
+    insert: "before"
+  });
+  </script>
+</body>
+</html>
