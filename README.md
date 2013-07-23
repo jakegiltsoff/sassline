@@ -1,5 +1,4 @@
 # Sassline
-========
 
 Set text on the web to a baseline grid easily with rems and Sass. A starting point for prototyping, blogs or other web projects with base typography styling and no bloat.
 
