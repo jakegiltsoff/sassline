@@ -1,20 +1,18 @@
 # Sassline
 
-Set text on the web to a baseline grid easily with rems and Sass. A starting point for prototyping, blogs or other web projects with base typography styling and no bloat.
+Set text on the web to a baseline grid easily with rems and Sass. Sassline can be used for prototyping, blogs or other web projects. It has base recommended typography styling and mixins to work proportionally from the baseline grid. As little bloat as possible, simples.
 
 ## Do one thing well
 
 There are many different options when it comes to boilerplates, frameworks and pattern libraries these days. Sassline has one aim and one aim only – to spread better typography across the responsive environment that is the web.
 
-The idea is to have easy to use and maintain SCSS files utilising the power of Sass to speed up the, sometimes, complex calculations to set type on a baseline grid with a production ready CSS output. Using rems for the font-sizing and the spacing measurements gives a simple way to use the proportions of the baseline grid throughout the design.
+The idea is to have easy to use and maintain SCSS files utilising the power of Sass to speed up the, sometimes, complex calculations to set type on a baseline grid with a production ready CSS output. Using rems for the font-sizing and the spacing measurements gives a simple way to use the proportions of the baseline grid throughout the design. Sass mixins do all the heavy lifting so your job is easy and pixel fallbacks are included for full browser support – see [here](http://caniuse.com/rem) for more info.
 
 OpenType features are enabled to give the nicest formatting of text and some flourishes in the headings if available in the web font (and supported in the browser).
 
-Fallback pixel values are provided to use if desired for full browser support – see [here](http://caniuse.com/rem) for more info.
+## Root font-size = ½ line-height?
 
-## Font-size = line-height?
-
-Sassline is based on setting the root font-size as half the line-height of the paragraph text. The height of the baseline grid is then effectively set at 2rem. The styling included sets all the typographic elements to the baseline and takes into account element ordering, i.e. if there is a h2 followed by an h3. The spacing is set between elements with the Gestalt law of proximity (elements closer together are visually grouped).
+Sassline is based on setting the root font-size as half the line-height of the paragraph text. The height of the baseline grid is then effectively set at 2rem. The typographic styling included sets all elements to the baseline and is context aware, i.e. if there is a h2 followed by an h3 suitable spacing is applied. The spacing is set between elements with the Gestalt law of proximity (elements closer together are visually grouped).
 
 ## Why?
 
@@ -22,7 +20,7 @@ I recently wrote a dissertation on responsive typography, looking at which histo
 
 ## Documentation
 
-I am currently working on some more thorough documentation for Sassline, please check out the blog post [here](http://typenot.es/posts/baseline-rems) for now.
+Sassline is fully commented with details in the SCSS. I am currently working on some more thorough documentation, please check out the blog post [here](http://typenot.es/posts/baseline-rems) for a little more information for now.
 
 ## Responsive Nav
 
