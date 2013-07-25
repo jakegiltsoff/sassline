@@ -27,30 +27,42 @@ header {
 }
 
 .logo {
-  font: 0/0 a;
   color: transparent;
   background: url(../img/logo.png);
-  width: 150px;
+  font: 0/0 a;
   height: 40px;
-  margin: 1rem 0 1rem 5%;
+  width: 150px;
+  @include baseline-0(margin,1,5%);
   @include breakpoint(break-1) {
-    margin: 1rem 0 1rem 4%;
+    @include baseline-1(margin,1,5%);
   }
   @include breakpoint(break-2) {
-    margin: 1rem 0 1rem 3%;
+    @include baseline-2(margin,1,5%);
   }
   @include breakpoint(break-3) {
-    margin: 1.6rem auto 0 auto; // Vertically centred
+    @include baseline-3(margin,1.6,0); // Vertically centred
     position: absolute;
   }
-  @include breakpoint(break-3) {
-    margin: 1.9rem auto 0 auto; // Vertically centred
+  @include breakpoint(break-4) {
+    @include baseline-4(margin,1.9,0); // Vertically centred
   }
 }
 
 section {
   background-color: $backgroundColour;
-  padding: 4rem 0;
+  @include baseline-0(padding,4,0);
+  @include breakpoint(break-1) {
+    @include baseline-1(padding,4,0);
+  }
+  @include breakpoint(break-2) {
+    @include baseline-2(padding,4,0);
+  }
+  @include breakpoint(break-3) {
+    @include baseline-3(padding,4,0);
+  }
+  @include breakpoint(break-4) {
+    @include baseline-4(padding,4,0);
+  }
 }
 
 .container {
@@ -67,7 +79,6 @@ section {
   }
   @include breakpoint(break-3) {
     max-width: $maxwidth-3;
-    width: 100%;
   }
   @include breakpoint(break-4) {
     max-width: $maxwidth-4;
@@ -81,7 +92,6 @@ section {
   @include clearfix;
   @include breakpoint(break-3) {
     max-width: $maxwidth-3;
-    width: 100%;
   }
   @include breakpoint(break-4) {
     max-width: $maxwidth-4;
@@ -94,29 +104,33 @@ footer {
   p {
     color: $headingColour;
     font-family: $sans-serif;
-    padding: 1rem 0;
     text-align: center;
+    @include baseline-0(padding,1,0);
     @include fontsize-0(14);
     @include breakpoint(break-1) {
+      @include baseline-1(padding,1,0);
       @include fontsize-1(14);
     }
     @include breakpoint(break-2) {
+      @include baseline-2(padding,1,0);
       @include fontsize-2(14);
     }
     @include breakpoint(break-3) {
+      @include baseline-3(padding,1,0);
       @include fontsize-3(16);
     }
     @include breakpoint(break-4) {
+      @include baseline-4(padding,1,0);
       @include fontsize-4(18);
     }
   }
 }
 
 img {
+  -ms-interpolation-mode: bicubic;
   height: auto;
   vertical-align: middle;
   width: 100%;
-  -ms-interpolation-mode: bicubic;
   @include breakpoint(break-1) {
     margin: 0 auto;
     max-width: 100%;

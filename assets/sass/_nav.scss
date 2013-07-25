@@ -3,24 +3,25 @@
 
 /* Includes responsive-nav.js styles */
 #nav-toggle {
-  position: absolute;
-  right: 5%;
-  top: 1.6rem; // Vertically centred
+  color: $headingColour;
   display: block;
   font-family: $sans-serif;
-  color: $headingColour;
+  position: absolute;
+  right: 5%;
+  @include baseline-0(top,1.6); // Vertically centred
   &:hover, &:focus, &:active {
     color: lighten($bodyColour,10%);
   }
   @include fontsize-0(16);
   @include breakpoint(break-1) {
-    @include fontsize-1(18);
-    top: 1.2rem; // Vertically centred
     right: 4%;
+    @include baseline-1(top,1.2); // Vertically centred
+    @include fontsize-1(18);
   }
   @include breakpoint(break-2) {
-    @include fontsize-2(20);
     right: 3%;
+    @include baseline-2(top,1.2); // Vertically centred
+    @include fontsize-2(20);
   }
   @include breakpoint(break-3) {
     display: none;
@@ -28,37 +29,37 @@
 }
 
 .main-nav__list {
-  font-style: normal;
   background: $backgroundColour;
-  font-weight: 500;
+  display: block;
   font-family: $sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  list-style: none;
   margin: 0 auto;
   text-align: left;
-  display: block;
-  list-style: none;
   @include breakpoint(break-1) {
     border-top: 1px solid darken($headBackgroundColour,10%);
     text-align: center;
   }
   @include breakpoint(break-3) {
-    border-top: 0;
     background: $headBackgroundColour;
+    border-top: 0;
   }
   li {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    @include fontsize-0(14);
-    width: 100%;
     border-top: 1px solid darken($headBackgroundColour,10%);
     display: block;
-    position: relative;
+    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
     margin: 0;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+    @include fontsize-0(14);
     @include breakpoint(break-1) {
-      @include inline-block;
-      @include fontsize-1(14);
-      width: 33.333%; // 100/(number of nav elements)%
-      padding: 0;
       border-top: 0;
+      width: 25%; // 100 / (number of navigation elements)%
+      @include fontsize-1(14);
+      @include inline-block;
       &:last-child a {
         border-right: 0;
       }
@@ -67,33 +68,46 @@
       @include fontsize-2(14);
     }
     @include breakpoint(break-3) {
-      width: auto;
       border: 0;
-      padding-right: 2rem;
+      width: auto;
+      @include baseline-3(padding-right,2);
+    }
+    @include breakpoint(break-4) {
+      @include baseline-4(padding-right,2);
     }
     &:last-child {
       @include breakpoint(break-3) {
+        padding-right: 0;
+      }
+      @include breakpoint(break-4) {
         padding-right: 0;
       }
     }
     a {
       color: lighten($bodyColour,10%);
       display: block;
-      padding: 1rem 5%;
       position: relative;
+      @include baseline-0(padding,1,5%);
       &.current, &:hover {
-        color: $headingColour;
         background: darken($headBackgroundColour,5%);
+        color: $headingColour;
         @include breakpoint(break-3) {
           background: transparent;
         }
       }
       @include breakpoint(break-1) {
         border-right: 1px solid darken($headBackgroundColour,10%);
+        @include baseline-1(padding,1,5%);
+      }
+      @include breakpoint(break-2) {
+        @include baseline-2(padding,1,5%);
       }
       @include breakpoint(break-3) {
         border: 0;
-        padding: 2rem 0;
+        @include baseline-3(padding,2,0);
+      }
+      @include breakpoint(break-4) {
+        @include baseline-4(padding,2,0);
       }
     }
   }
@@ -101,19 +115,21 @@
 
 #nav {
   clip: rect(0 0 0 0);
-  max-height: 0;
-  position: relative;
   display: block;
-  overflow: hidden;
-  zoom: 1;
   float: none;
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  zoom: 1;
   @include breakpoint(break-3) {
-    @include inline-block;
     float: right;
+    @include inline-block;
   }
 }
 
-#nav.opened { max-height: 9999px; }
+#nav.opened {
+  max-height: 9999px;
+}
 
 #nav.closed {
   @include breakpoint(break-3) {

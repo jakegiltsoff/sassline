@@ -18,18 +18,50 @@
 }
 
 // Root font-size in %.
-@mixin rootsize-0 { font-size: #{$rootsize-0/16*100%}; }
-@mixin rootsize-1 { font-size: #{$rootsize-1/16*100%}; }
-@mixin rootsize-2 { font-size: #{$rootsize-2/16*100%}; }
-@mixin rootsize-3 { font-size: #{$rootsize-3/16*100%}; }
-@mixin rootsize-4 { font-size: #{$rootsize-4/16*100%}; }
+@mixin rootsize-0 { font-size: #{$rootsize-0 / 16 * 100%}; }
+@mixin rootsize-1 { font-size: #{$rootsize-1 / 16 * 100%}; }
+@mixin rootsize-2 { font-size: #{$rootsize-2 / 16 * 100%}; }
+@mixin rootsize-3 { font-size: #{$rootsize-3 / 16 * 100%}; }
+@mixin rootsize-4 { font-size: #{$rootsize-4 / 16 * 100%}; }
 
-// Font-size in rems.
-@mixin fontsize-0($value){ font-size: #{$value/$rootsize-0}rem; }
-@mixin fontsize-1($value){ font-size: #{$value/$rootsize-1}rem; }
-@mixin fontsize-2($value){ font-size: #{$value/$rootsize-2}rem; }
-@mixin fontsize-3($value){ font-size: #{$value/$rootsize-3}rem; }
-@mixin fontsize-4($value){ font-size: #{$value/$rootsize-4}rem; }
+// Font-size in rems. Pixel fallbacks for full browser support.
+@mixin fontsize-0($value) { font-size: #{$value}px; font-size: #{$value / $rootsize-0}rem; }
+@mixin fontsize-1($value) { font-size: #{$value}px; font-size: #{$value / $rootsize-1}rem; }
+@mixin fontsize-2($value) { font-size: #{$value}px; font-size: #{$value / $rootsize-2}rem; }
+@mixin fontsize-3($value) { font-size: #{$value}px; font-size: #{$value / $rootsize-3}rem; }
+@mixin fontsize-4($value) { font-size: #{$value}px; font-size: #{$value / $rootsize-4}rem; }
+
+// Spacing measurements relative to baseline grid. Pixel fallbacks for full browser support. % measurements or baselines can also be used for shorthand margins and padding.
+@mixin baseline-0($property,$baselines,$other: false) {
+  @if $other == false { #{$property}: #{$rootsize-0 * $baselines}px; #{$property}: #{$baselines}rem; }
+  @else if unit($other) == '%' { #{$property}: #{$rootsize-0 * $baselines}px $other; #{$property}: #{$baselines}rem $other; }
+  @else if $other == 0 { #{$property}: #{$rootsize-0 * $baselines}px 0; #{$property}: #{$baselines}rem 0; }
+  @else { #{$property}: #{$rootsize-0 * $baselines}px #{$rootsize-0 * $other}px; #{$property}: #{$baselines}rem #{$other}rem; }
+}
+@mixin baseline-1($property,$baselines,$other: false) {
+  @if $other == false { #{$property}: #{$rootsize-1 * $baselines}px; #{$property}: #{$baselines}rem; }
+  @else if unit($other) == '%' { #{$property}: #{$rootsize-1 * $baselines}px $other; #{$property}: #{$baselines}rem $other; }
+  @else if $other == 0 { #{$property}: #{$rootsize-1 * $baselines}px 0; #{$property}: #{$baselines}rem 0; }
+  @else { #{$property}: #{$rootsize-1 * $baselines}px #{$rootsize-1 * $other}px; #{$property}: #{$baselines}rem #{$other}rem; }
+}
+@mixin baseline-2($property,$baselines,$other: false) {
+  @if $other == false { #{$property}: #{$rootsize-2 * $baselines}px; #{$property}: #{$baselines}rem; }
+  @else if unit($other) == '%' { #{$property}: #{$rootsize-2 * $baselines}px $other; #{$property}: #{$baselines}rem $other; }
+  @else if $other == 0 { #{$property}: #{$rootsize-2 * $baselines}px 0; #{$property}: #{$baselines}rem 0; }
+  @else { #{$property}: #{$rootsize-2 * $baselines}px #{$rootsize-2 * $other}px; #{$property}: #{$baselines}rem #{$other}rem; }
+}
+@mixin baseline-3($property,$baselines,$other: false) {
+  @if $other == false { #{$property}: #{$rootsize-3 * $baselines}px; #{$property}: #{$baselines}rem; }
+  @else if unit($other) == '%' { #{$property}: #{$rootsize-3 * $baselines}px $other; #{$property}: #{$baselines}rem $other; }
+  @else if $other == 0 { #{$property}: #{$rootsize-3 * $baselines}px 0; #{$property}: #{$baselines}rem 0; }
+  @else { #{$property}: #{$rootsize-3 * $baselines}px #{$rootsize-3 * $other}px; #{$property}: #{$baselines}rem #{$other}rem; }
+}
+@mixin baseline-4($property,$baselines,$other: false) {
+  @if $other == false { #{$property}: #{$rootsize-4 * $baselines}px; #{$property}: #{$baselines}rem; }
+  @else if unit($other) == '%' { #{$property}: #{$rootsize-4 * $baselines}px $other; #{$property}: #{$baselines}rem $other; }
+  @else if $other == 0 { #{$property}: #{$rootsize-4 * $baselines}px 0; #{$property}: #{$baselines}rem 0; }
+  @else { #{$property}: #{$rootsize-4 * $baselines}px #{$rootsize-4 * $other}px; #{$property}: #{$baselines}rem #{$other}rem; }
+}
 
 // Display inline-block.
 @mixin inline-block {

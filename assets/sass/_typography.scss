@@ -20,23 +20,40 @@ html {
   }
 }
 
-// Site wide base styles.
+// Site-wide base styles.
 body {
-  line-height: 2rem;
+  @include baseline-0(line-height,2);
   font-family: $serif;
   font-style: normal;
   font-weight: 400;
+  @include fontsize-0(16);
+  @include breakpoint(break-1) {
+    @include baseline-1(line-height,2);
+    @include fontsize-1(17);
+  }
+  @include breakpoint(break-2) {
+    @include baseline-2(line-height,2);
+    @include fontsize-2(18);
+  }
+  @include breakpoint(break-3) {
+    @include baseline-3(line-height,2);
+    @include fontsize-3(20);
+  }
+  @include breakpoint(break-4) {
+    @include baseline-4(line-height,2);
+    @include fontsize-4(22);
+  }
 }
 
 // Links.
 a {
+  -webkit-transition: .1s color;
+  -moz-transition: .1s color;
+  -ms-transition: .1s color;
+  -o-transition: .1s color;
+  transition: .1s color;
   color: $linkColour;
   text-decoration: none;
-  -webkit-transition: .1s color;
-     -moz-transition: .1s color;
-      -ms-transition: .1s color;
-       -o-transition: .1s color;
-          transition: .1s color;
   &:hover, &:active, &:focus {
     color: $hoverColour;
     text-decoration: none;
@@ -45,177 +62,165 @@ a {
 
 // Paragraphs. OpenType ligatures and oldstyle numerals enabled if available.
 p {
+  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
   -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  line-height: 2rem;
-  margin-bottom: 2rem;
-  @include fontsize-0(16);
+  @include baseline-0(margin-bottom,2);
   @include breakpoint(break-1) {
-    @include fontsize-1(18);
+    @include baseline-1(margin-bottom,2);
   }
   @include breakpoint(break-2) {
-    @include fontsize-2(20);
+    @include baseline-2(margin-bottom,2);
   }
   @include breakpoint(break-3) {
-    @include fontsize-3(20);
+    @include baseline-3(margin-bottom,2);
   }
   @include breakpoint(break-4) {
-    @include fontsize-4(22);
+    @include baseline-4(margin-bottom,2);
   }
 }
 
-// Headings.
+// Headings. OpenType ligatures, discretionary ligatures and lining numerals enabled if available.
 h1, h2, h3, h4, h5, h6 {
+  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
+  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  color: $headingColour;
   font-family: $sans-serif;
   font-style: normal;
   font-weight: 700;
-  color: $headingColour;
   text-rendering: optimizelegibility;
 }
 
-// H1. OpenType ligatures, discretionary ligatures and lining numerals enabled if available.
+// Heading level 1.
 h1, .alpha {
-  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
-  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  line-height: 3rem;
+  @include baseline-0(line-height,3);
   @include fontsize-0(28);
   @include breakpoint(break-1) {
+    @include baseline-1(line-height,3);
     @include fontsize-1(30);
   }
   @include breakpoint(break-2) {
+    @include baseline-2(line-height,3);
     @include fontsize-2(32);
   }
   @include breakpoint(break-3) {
+    @include baseline-3(line-height,3);
     @include fontsize-3(36);
   }
   @include breakpoint(break-4) {
+    @include baseline-4(line-height,3);
     @include fontsize-4(40);
   }
 }
 
-// H2. OpenType ligatures, discretionary ligatures and lining numerals enabled if available.
+// Heading level 2.
 h2, .beta {
-  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
-  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  line-height: 2rem;
-  padding-top: 1rem;
+  @include baseline-0(padding-top,1);
   @include fontsize-0(22);
   @include breakpoint(break-1) {
+    @include baseline-1(padding-top,1);
     @include fontsize-1(24);
   }
   @include breakpoint(break-2) {
+    @include baseline-2(padding-top,1);
     @include fontsize-2(26);
   }
   @include breakpoint(break-3) {
+    @include baseline-3(padding-top,1);
     @include fontsize-3(30);
   }
   @include breakpoint(break-4) {
+    @include baseline-4(padding-top,1);
     @include fontsize-4(34);
   }
 }
 
-// H3. OpenType ligatures and lining numerals enabled if available.
+// Heading level 3.
 h3, .gamma {
-  -moz-font-feature-settings: 'liga=1, lnum=1, kern=1';
-  -ms-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  -webkit-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  line-height: 2rem;
-  padding-top: 1rem;
+  @include baseline-0(padding-top,1);
   @include fontsize-0(20);
   @include breakpoint(break-1) {
+    @include baseline-1(padding-top,1);
     @include fontsize-1(22);
   }
   @include breakpoint(break-2) {
+    @include baseline-2(padding-top,1);
     @include fontsize-2(24);
   }
   @include breakpoint(break-3) {
+    @include baseline-3(padding-top,1);
     @include fontsize-3(28);
   }
   @include breakpoint(break-4) {
+    @include baseline-4(padding-top,1);
     @include fontsize-4(30);
   }
 }
 
-// H4. OpenType ligatures and lining numerals enabled if available.
+// Heading level 4.
 h4, .delta {
-  -moz-font-feature-settings: 'liga=1, lnum=1, kern=1';
-  -ms-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  -webkit-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  line-height: 2rem;
+  @include baseline-0(padding-top,1);
   padding-top: 1rem;
   @include fontsize-0(18);
   @include breakpoint(break-1) {
+    @include baseline-1(padding-top,1);
     @include fontsize-1(20);
   }
   @include breakpoint(break-2) {
+    @include baseline-2(padding-top,1);
     @include fontsize-2(22);
   }
   @include breakpoint(break-3) {
+    @include baseline-3(padding-top,1);
     @include fontsize-3(26);
   }
   @include breakpoint(break-4) {
+    @include baseline-4(padding-top,1);
     @include fontsize-4(28);
   }
 }
 
-// H5. OpenType ligatures and lining numerals enabled if available.
+// Heading level 5.
 h5, .epsilon {
-  -moz-font-feature-settings: 'liga=1, lnum=1, kern=1';
-  -ms-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  -webkit-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  line-height: 2rem;
-  padding-top: 1rem;
+  @include baseline-0(padding-top,1);
   @include fontsize-0(17);
   @include breakpoint(break-1) {
+    @include baseline-1(padding-top,1);
     @include fontsize-1(19);
   }
   @include breakpoint(break-2) {
+    @include baseline-2(padding-top,1);
     @include fontsize-2(21);
   }
   @include breakpoint(break-3) {
+    @include baseline-3(padding-top,1);
     @include fontsize-3(24);
   }
   @include breakpoint(break-4) {
+    @include baseline-4(padding-top,1);
     @include fontsize-4(26);
   }
 }
 
-// H6. OpenType ligatures and lining numerals enabled if available.
+// Heading level 6.
 h6, .zeta {
-  -moz-font-feature-settings: 'liga=1, lnum=1, kern=1';
-  -ms-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  -webkit-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  font-feature-settings: 'liga' 1, 'lnum' 1, 'kern' 1;
-  line-height: 2rem;
-  padding-top: 1rem;
-  @include fontsize-0(16);
+  @include baseline-0(padding-top,1);
   @include breakpoint(break-1) {
-    @include fontsize-1(18);
+    @include baseline-1(padding-top,1);
   }
   @include breakpoint(break-2) {
-    @include fontsize-2(20);
+    @include baseline-2(padding-top,1);
   }
   @include breakpoint(break-3) {
-    @include fontsize-3(22);
+    @include baseline-3(padding-top,1);
   }
   @include breakpoint(break-4) {
-    @include fontsize-4(24);
+    @include baseline-4(padding-top,1);
   }
 }
 
@@ -227,33 +232,33 @@ h2 + p, h2 + ol, h2 + ul, h2 + blockquote p, h2 + pre,
 h3 + p, h3 + ol, h3 + ul, h3 + blockquote p, h3 + pre,
 .gamma + p, .gamma + ol, .gamma + ul, .gamma + blockquote p, .gamma + pre,
 img + p, img + ol, img + ul, img + blockquote p, img + pre {
-  margin-top: 2rem;
+  @include baseline-0(margin-top,2);
+  @include breakpoint(break-1) {
+    @include baseline-1(margin-top,2);
+  }
+  @include breakpoint(break-2) {
+    @include baseline-2(margin-top,2);
+  }
+  @include breakpoint(break-3) {
+    @include baseline-3(margin-top,2);
+  }
+  @include breakpoint(break-4) {
+    @include baseline-4(margin-top,2);
+  }
 }
 
 // Lists.
 ul, ol {
-  margin-bottom: 2rem;
+  @include baseline-0(margin-bottom,2);
   li {
     -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
     -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    line-height: 2rem;
-    @include fontsize-0(16);
-    margin-left: 2rem;
+    @include baseline-0(margin-left,2);
     @include breakpoint(break-1) {
-      @include fontsize-1(18);
       margin-left: 0;
-    }
-    @include breakpoint(break-2) {
-      @include fontsize-2(20);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize-3(22);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize-4(24);
     }
     a {
       color: $hoverColour;
@@ -261,6 +266,18 @@ ul, ol {
         color: $linkColour;
       }
     }
+  }
+  @include breakpoint(break-1) {
+    @include baseline-1(margin-bottom,2);
+  }
+  @include breakpoint(break-2) {
+    @include baseline-2(margin-bottom,2);
+  }
+  @include breakpoint(break-3) {
+    @include baseline-3(margin-bottom,2);
+  }
+  @include breakpoint(break-4) {
+    @include baseline-4(margin-bottom,2);
   }
 }
 
@@ -282,10 +299,10 @@ small, .caption {
     @include fontsize-1(14);
   }
   @include breakpoint(break-2) {
-    @include fontsize-2(14);
+    @include fontsize-2(16);
   }
   @include breakpoint(break-3) {
-    @include fontsize-3(16);
+    @include fontsize-3(17);
   }
   @include breakpoint(break-4) {
     @include fontsize-4(18);
@@ -301,50 +318,84 @@ h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption
 blockquote {
   p {
     font-style: italic;
-    padding-left: 2rem;
+    @include baseline-0(padding-left,2);
     border-left: 6px solid;
+    @include breakpoint(break-1) {
+      @include baseline-1(padding-left,2);
+    }
+    @include breakpoint(break-2) {
+      @include baseline-2(padding-left,2);
+    }
+    @include breakpoint(break-3) {
+      @include baseline-3(padding-left,2);
+    }
+    @include breakpoint(break-4) {
+      @include baseline-4(padding-left,2);
+    }
   }
 }
 
 // Horizontal rule.
 hr {
-  margin-top: 3.825em;
-  margin-bottom: 3.825em;
-  color: #d8d3ce;
-  background-color: #d8d3ce;
+  color: darken($backgroundColour,20%);
+  background-color: darken($backgroundColour,20%);
   border: 0;
-  border-bottom: 1px solid #d8d3ce;
+  border-bottom: 1px solid darken($backgroundColour,20%);
+  @include baseline-0(margin-bottom,3);
+  @include baseline-0(margin-top,3);
+  @include breakpoint(break-1) {
+    @include baseline-1(margin-bottom,3);
+    @include baseline-1(margin-top,3);
+  }
+  @include breakpoint(break-2) {
+    @include baseline-2(margin-bottom,3);
+    @include baseline-2(margin-top,3);
+  }
+  @include breakpoint(break-3) {
+    @include baseline-3(margin-bottom,3);
+    @include baseline-3(margin-top,3);
+  }
+  @include breakpoint(break-4) {
+    @include baseline-4(margin-bottom,3);
+    @include baseline-4(margin-top,3);
+  }
 }
 
 // Code block. Some styles from normalize included.
 code, pre {
-  padding: 0;
+  background-color: $codeBackgroundColour;
+  color: $white;
   font-family: Menlo, Monaco, "Courier New", monospace;
-  color: #FFF;
-}
-
-code {
-  padding: 0; color:#FFF; background-color: #002028; border:0;
 }
 
 pre {
+  border-radius: 4px;
   display: block;
-  padding: 1rem; margin: 0; background-color: #002028;
-  border: 0;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  margin-bottom: 2rem;
-  border-radius: 4px;
+  @include baseline-0(margin-bottom,2);
+  @include baseline-0(padding,1);
+  @include breakpoint(break-1) {
+    @include baseline-1(margin-bottom,2);
+    @include baseline-1(padding,1);
+  }
+  @include breakpoint(break-2) {
+    @include baseline-2(margin-bottom,2);
+    @include baseline-2(padding,1);
+  }
+  @include breakpoint(break-3) {
+    @include baseline-3(margin-bottom,2);
+    @include baseline-3(padding,1);
+  }
+  @include breakpoint(break-4) {
+    @include baseline-4(margin-bottom,2);
+    @include baseline-4(padding,1);
+  }
 }
 
 pre code {
-  padding: 0;
-  color: inherit;
-  background-color: transparent;
-  border: 0;
-  line-height: 2rem;
   @include fontsize-0(12);
   @include breakpoint(break-1) {
     @include fontsize-1(14);
@@ -363,6 +414,7 @@ pre code {
 // Letter space those capitals people, Jan Tschichold would be proud.
 .upper {
   text-transform: uppercase;
+  letter-spacing: 1px;
   letter-spacing: 0.1rem;
 }
 
