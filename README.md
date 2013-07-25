@@ -16,7 +16,7 @@ Getting the most out of OpenType features can end up with large typeface files b
 
 ## Root font-size = ½ line-height?
 
-Sassline is based on setting the root font-size as half the line-height of the paragraph text. The height of the baseline grid is then effectively set at 2rem. The typographic styling included sets all elements to the baseline and is context aware, i.e. if there is a h2 followed by an h3 suitable spacing is applied. The spacing is set between elements with the Gestalt law of proximity (elements closer together are visually grouped).
+Sassline is based on setting the root font-size as half the line-height of the paragraph text. The height of the baseline grid is then effectively set at 2rem. The typographic styling included sets all elements to the baseline and is context aware, i.e. if there is a h2 followed by a h3 suitable spacing is applied. The spacing is set between elements with the Gestalt law of proximity (elements closer together are visually grouped).
 
 ## Why?
 
