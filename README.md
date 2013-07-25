@@ -1,6 +1,6 @@
 # Sassline
 
-Set text on the web to a baseline grid easily with rems and Sass. Sassline can be used for prototyping, blogs or other web projects. It has recommended base typography styling and mixins to work proportionally from the baseline grid. As little bloat as possible, simples.
+Set text on the web to a baseline grid easily with rems and Sass. [Sassline](http://sassline.com) can be used for prototyping, blogs or other web projects. It has recommended base typography styling and mixins to work proportionally from the baseline grid. As little bloat as possible, simples.
 
 ## Do one thing well
 
@@ -29,6 +29,10 @@ Sassline is fully commented with details in the SCSS. I am currently working on 
 ## Responsive Nav
 
 Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-nav.js) plugin is included to provide a mobile ready navigation to work from.
+
+## Demo
+
+A Demo of Sassline in action can be viewed with web fonts [here](http://demo.sassline.com), and local fonts [here](http://demo.sassline.com/local-fonts)]
 
 ========
 
