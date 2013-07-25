@@ -10,6 +10,10 @@ The idea is to have easy to use and maintain SCSS files utilising the power of S
 
 OpenType features are enabled to give the nicest formatting of text and some flourishes in the headings if available in the web font (and supported in the browser).
 
+## Fallback fonts for mobiles
+
+Getting the most out of OpenType features can end up with large typeface files being served to your site as discussed on the [Typekit blog](http://blog.typekit.com/2013/04/17/fallback-fonts-on-mobile-devices). Included in Sassline is a method for including a smaller kit (without the full character sets) to mobile devices. Credit to [Rob Sterlini](http://robsterlini.co.uk) for helping to condense my JavaScript for this.
+
 ## Root font-size = ½ line-height?
 
 Sassline is based on setting the root font-size as half the line-height of the paragraph text. The height of the baseline grid is then effectively set at 2rem. The typographic styling included sets all elements to the baseline and is context aware, i.e. if there is a h2 followed by an h3 suitable spacing is applied. The spacing is set between elements with the Gestalt law of proximity (elements closer together are visually grouped).
