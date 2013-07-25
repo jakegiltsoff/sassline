@@ -418,6 +418,17 @@ pre code {
   letter-spacing: 0.1rem;
 }
 
+// Real small caps.
+.small-caps {
+  -moz-font-feature-settings: 'smcp=1, kern=1';
+  -ms-font-feature-settings: 'smcp' 1, 'kern' 1;
+  -webkit-font-feature-settings: 'smcp' 1, 'kern' 1;
+  -o-font-feature-settings: 'smcp' 1, 'kern' 1;
+  font-feature-settings: 'smcp' 1, 'kern' 1;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+}
+
 // Consistent height numbers with OpenType.
 .lining-numerals {
   -moz-font-feature-settings: 'lnum=1, kern=1';
