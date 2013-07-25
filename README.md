@@ -32,7 +32,7 @@ Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-
 
 ## Demo
 
-A Demo of Sassline in action can be viewed with web fonts [here](http://demo.sassline.com), and local fonts [here](http://demo.sassline.com/local-fonts).
+A demo of Sassline in action can be viewed with web fonts [here](http://demo.sassline.com), and local fonts [here](http://demo.sassline.com/local-fonts).
 
 ========
 
