@@ -1,6 +1,6 @@
 # Sassline
 
-Set text on the web to a baseline grid easily with rems and Sass. Sassline can be used for prototyping, blogs or other web projects. It has base recommended typography styling and mixins to work proportionally from the baseline grid. As little bloat as possible, simples.
+Set text on the web to a baseline grid easily with rems and Sass. Sassline can be used for prototyping, blogs or other web projects. It has recommended base typography styling and mixins to work proportionally from the baseline grid. As little bloat as possible, simples.
 
 ## Do one thing well
 
