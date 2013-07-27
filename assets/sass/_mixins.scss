@@ -34,30 +34,35 @@
 // Spacing measurements relative to baseline grid. Pixel fallbacks for full browser support. % measurements or baselines can also be used for shorthand margins and padding.
 @mixin baseline-0($property,$baselines,$other: false) {
   @if $other == false { #{$property}: #{$rootsize-0 * $baselines}px; #{$property}: #{$baselines}rem; }
+  @else if $other == auto { #{$property}: #{$rootsize-0 * $baselines}px auto; #{$property}: #{$baselines}rem auto; }
   @else if unit($other) == '%' { #{$property}: #{$rootsize-0 * $baselines}px $other; #{$property}: #{$baselines}rem $other; }
   @else if $other == 0 { #{$property}: #{$rootsize-0 * $baselines}px 0; #{$property}: #{$baselines}rem 0; }
   @else { #{$property}: #{$rootsize-0 * $baselines}px #{$rootsize-0 * $other}px; #{$property}: #{$baselines}rem #{$other}rem; }
 }
 @mixin baseline-1($property,$baselines,$other: false) {
   @if $other == false { #{$property}: #{$rootsize-1 * $baselines}px; #{$property}: #{$baselines}rem; }
+  @else if $other == auto { #{$property}: #{$rootsize-1 * $baselines}px auto; #{$property}: #{$baselines}rem auto; }
   @else if unit($other) == '%' { #{$property}: #{$rootsize-1 * $baselines}px $other; #{$property}: #{$baselines}rem $other; }
   @else if $other == 0 { #{$property}: #{$rootsize-1 * $baselines}px 0; #{$property}: #{$baselines}rem 0; }
   @else { #{$property}: #{$rootsize-1 * $baselines}px #{$rootsize-1 * $other}px; #{$property}: #{$baselines}rem #{$other}rem; }
 }
 @mixin baseline-2($property,$baselines,$other: false) {
   @if $other == false { #{$property}: #{$rootsize-2 * $baselines}px; #{$property}: #{$baselines}rem; }
+  @else if $other == auto { #{$property}: #{$rootsize-2 * $baselines}px auto; #{$property}: #{$baselines}rem auto; }
   @else if unit($other) == '%' { #{$property}: #{$rootsize-2 * $baselines}px $other; #{$property}: #{$baselines}rem $other; }
   @else if $other == 0 { #{$property}: #{$rootsize-2 * $baselines}px 0; #{$property}: #{$baselines}rem 0; }
   @else { #{$property}: #{$rootsize-2 * $baselines}px #{$rootsize-2 * $other}px; #{$property}: #{$baselines}rem #{$other}rem; }
 }
 @mixin baseline-3($property,$baselines,$other: false) {
   @if $other == false { #{$property}: #{$rootsize-3 * $baselines}px; #{$property}: #{$baselines}rem; }
+  @else if $other == auto { #{$property}: #{$rootsize-3 * $baselines}px auto; #{$property}: #{$baselines}rem auto; }
   @else if unit($other) == '%' { #{$property}: #{$rootsize-3 * $baselines}px $other; #{$property}: #{$baselines}rem $other; }
   @else if $other == 0 { #{$property}: #{$rootsize-3 * $baselines}px 0; #{$property}: #{$baselines}rem 0; }
   @else { #{$property}: #{$rootsize-3 * $baselines}px #{$rootsize-3 * $other}px; #{$property}: #{$baselines}rem #{$other}rem; }
 }
 @mixin baseline-4($property,$baselines,$other: false) {
   @if $other == false { #{$property}: #{$rootsize-4 * $baselines}px; #{$property}: #{$baselines}rem; }
+  @else if $other == auto { #{$property}: #{$rootsize-4 * $baselines}px auto; #{$property}: #{$baselines}rem auto; }
   @else if unit($other) == '%' { #{$property}: #{$rootsize-4 * $baselines}px $other; #{$property}: #{$baselines}rem $other; }
   @else if $other == 0 { #{$property}: #{$rootsize-4 * $baselines}px 0; #{$property}: #{$baselines}rem 0; }
   @else { #{$property}: #{$rootsize-4 * $baselines}px #{$rootsize-4 * $other}px; #{$property}: #{$baselines}rem #{$other}rem; }
