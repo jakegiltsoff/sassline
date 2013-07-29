@@ -12,7 +12,7 @@ OpenType features are enabled to give the nicest formatting of text and some flo
 
 ## Fallback fonts for mobiles
 
-Getting the most out of OpenType features can end up with large typeface files being served to your site as discussed on the [Typekit blog](http://blog.typekit.com/2013/04/17/fallback-fonts-on-mobile-devices). Included in Sassline is a method for including a smaller kit (without the full character sets) to mobile devices. Credit to [Rob Sterlini](http://robsterlini.co.uk) for helping to condense my JavaScript for this.
+Getting the most out of OpenType features can end up with large typeface files being served to your site as discussed on the [Typekit blog](http://blog.typekit.com/2013/04/17/fallback-fonts-on-mobile-devices). Included in Sassline is a method for using a smaller kit (without the full character sets) on mobile devices. Credit to [Rob Sterlini](http://robsterlini.co.uk) for helping to condense my JavaScript for this.
 
 ## Root font-size = ½ line-height?
 
