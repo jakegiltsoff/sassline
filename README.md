@@ -2,6 +2,10 @@
 
 Set text on the web to a baseline grid easily with rems and Sass. [Sassline](http://sassline.com) can be used for prototyping, blogs or other web projects. It has recommended base typography styling and mixins to work proportionally from the baseline grid. As little bloat as possible, simples.
 
+## v1.1
+
+Please note that in the latest version of Sassline, pixel fallbacks for the rems are not included. The reason I made this in the first place was to have an easy place to start projects, and the mixins were proving overly complicated for what I wanted to achieve. A version of Sassline with pixel fallbacks is available in the Fallback branch. See the browser support for rems [here](http://caniuse.com/#feat=rem), spoiler alert – it’s actually pretty high.
+
 ## Do one thing well
 
 There are many different options when it comes to boilerplates, frameworks and pattern libraries these days. Sassline has one aim and one aim only – to spread better typography across the responsive environment that is the web.
@@ -24,7 +28,7 @@ I recently wrote a dissertation on responsive typography, looking at which histo
 
 ## Documentation
 
-Sassline is fully commented with details in the SCSS. I am currently working on some more thorough documentation, please check out the blog post [here](http://typenot.es/posts/baseline-rems) for a little more information for now.
+Sassline is fully commented with details in the SCSS and aims to be as simple as possible to use. Set the font sizes with the font-size mixin and use rems for everything else.
 
 ## Responsive Nav
 

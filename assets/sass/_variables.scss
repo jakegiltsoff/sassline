@@ -23,8 +23,8 @@ $maxwidth-3: #{620 / $rootsize-3}rem; // 620px wide
 $maxwidth-4: #{700 / $rootsize-4}rem; // 700px wide
 
 // Add the typefaces here. A Regular, Italic and Bold weight of a serif & Regular and Bold weight of a sans-serif are recommended to use. Keep the fallbacks if you like.
-$serif: Georgia, Times, serif;
-$sans-serif: Helvetica, Arial, sans-serif;
+$serif: "skolar", Georgia, Times, serif;
+$sans-serif: "freight-sans-pro", Helvetica, Arial, sans-serif;
 
 // Text colours. British English, there is totally a 'u' in there.
 $headingColour: #212121;
@@ -34,6 +34,6 @@ $hoverColour: #212121;
 $white: #FFFFFF;
 
 // Background colours.
-$headBackgroundColour: #C5C5C5;
+$headBackgroundColour: #F8F7F3;
 $backgroundColour: #FCFCFC;
 $codeBackgroundColour: #002028;

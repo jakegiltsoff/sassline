@@ -22,25 +22,21 @@ html {
 
 // Site-wide base styles.
 body {
-  @include baseline-0(line-height,2);
+  line-height: 2rem;
   font-family: $serif;
   font-style: normal;
   font-weight: 400;
   @include fontsize-0(16);
   @include breakpoint(break-1) {
-    @include baseline-1(line-height,2);
     @include fontsize-1(17);
   }
   @include breakpoint(break-2) {
-    @include baseline-2(line-height,2);
     @include fontsize-2(18);
   }
   @include breakpoint(break-3) {
-    @include baseline-3(line-height,2);
     @include fontsize-3(20);
   }
   @include breakpoint(break-4) {
-    @include baseline-4(line-height,2);
     @include fontsize-4(22);
   }
 }
@@ -60,29 +56,17 @@ a {
   }
 }
 
-// Paragraphs. OpenType ligatures and oldstyle numerals enabled if available.
+// Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
 p {
   -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
   -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  @include baseline-0(margin-bottom,2);
-  @include breakpoint(break-1) {
-    @include baseline-1(margin-bottom,2);
-  }
-  @include breakpoint(break-2) {
-    @include baseline-2(margin-bottom,2);
-  }
-  @include breakpoint(break-3) {
-    @include baseline-3(margin-bottom,2);
-  }
-  @include breakpoint(break-4) {
-    @include baseline-4(margin-bottom,2);
-  }
+  margin-bottom: 2rem;
 }
 
-// Headings. OpenType ligatures, discretionary ligatures and lining numerals enabled if available.
+// Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
 h1, h2, h3, h4, h5, h6 {
   -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
@@ -98,130 +82,98 @@ h1, h2, h3, h4, h5, h6 {
 
 // Heading level 1.
 h1, .alpha {
-  @include baseline-0(line-height,3);
+  padding-top: 1rem;
+  line-height: 3rem;
   @include fontsize-0(28);
   @include breakpoint(break-1) {
-    @include baseline-1(line-height,3);
     @include fontsize-1(30);
   }
   @include breakpoint(break-2) {
-    @include baseline-2(line-height,3);
     @include fontsize-2(32);
   }
   @include breakpoint(break-3) {
-    @include baseline-3(line-height,3);
     @include fontsize-3(36);
   }
   @include breakpoint(break-4) {
-    @include baseline-4(line-height,3);
     @include fontsize-4(40);
   }
 }
 
 // Heading level 2.
 h2, .beta {
-  @include baseline-0(padding-top,1);
+  padding-top: 1rem;
   @include fontsize-0(22);
   @include breakpoint(break-1) {
-    @include baseline-1(padding-top,1);
     @include fontsize-1(24);
   }
   @include breakpoint(break-2) {
-    @include baseline-2(padding-top,1);
     @include fontsize-2(26);
   }
   @include breakpoint(break-3) {
-    @include baseline-3(padding-top,1);
     @include fontsize-3(30);
   }
   @include breakpoint(break-4) {
-    @include baseline-4(padding-top,1);
     @include fontsize-4(34);
   }
 }
 
 // Heading level 3.
 h3, .gamma {
-  @include baseline-0(padding-top,1);
+  padding-top: 1rem;
   @include fontsize-0(20);
   @include breakpoint(break-1) {
-    @include baseline-1(padding-top,1);
     @include fontsize-1(22);
   }
   @include breakpoint(break-2) {
-    @include baseline-2(padding-top,1);
     @include fontsize-2(24);
   }
   @include breakpoint(break-3) {
-    @include baseline-3(padding-top,1);
     @include fontsize-3(28);
   }
   @include breakpoint(break-4) {
-    @include baseline-4(padding-top,1);
     @include fontsize-4(30);
   }
 }
 
 // Heading level 4.
 h4, .delta {
-  @include baseline-0(padding-top,1);
   padding-top: 1rem;
   @include fontsize-0(18);
   @include breakpoint(break-1) {
-    @include baseline-1(padding-top,1);
     @include fontsize-1(20);
   }
   @include breakpoint(break-2) {
-    @include baseline-2(padding-top,1);
     @include fontsize-2(22);
   }
   @include breakpoint(break-3) {
-    @include baseline-3(padding-top,1);
     @include fontsize-3(26);
   }
   @include breakpoint(break-4) {
-    @include baseline-4(padding-top,1);
     @include fontsize-4(28);
   }
 }
 
 // Heading level 5.
 h5, .epsilon {
-  @include baseline-0(padding-top,1);
+  padding-top: 1rem;
   @include fontsize-0(17);
   @include breakpoint(break-1) {
-    @include baseline-1(padding-top,1);
     @include fontsize-1(19);
   }
   @include breakpoint(break-2) {
-    @include baseline-2(padding-top,1);
     @include fontsize-2(21);
   }
   @include breakpoint(break-3) {
-    @include baseline-3(padding-top,1);
     @include fontsize-3(24);
   }
   @include breakpoint(break-4) {
-    @include baseline-4(padding-top,1);
     @include fontsize-4(26);
   }
 }
 
 // Heading level 6.
 h6, .zeta {
-  @include baseline-0(padding-top,1);
-  @include breakpoint(break-1) {
-    @include baseline-1(padding-top,1);
-  }
-  @include breakpoint(break-2) {
-    @include baseline-2(padding-top,1);
-  }
-  @include breakpoint(break-3) {
-    @include baseline-3(padding-top,1);
-  }
-  @include breakpoint(break-4) {
-    @include baseline-4(padding-top,1);
-  }
+  padding-top: 1rem;
 }
 
 // Nice spacing after high level headings and images. Text sits directly below h4, h5 and h6.
@@ -229,34 +181,25 @@ h1 + p, h1 + ol, h1 + ul, h1 + blockquote p, h1 + pre,
 .alpha + p, .alpha + ol, .alpha + ul, .alpha + blockquote p, .alpha + pre,
 h2 + p, h2 + ol, h2 + ul, h2 + blockquote p, h2 + pre,
 .beta + p, .beta + ol, .beta + ul, .beta + blockquote p, .beta + pre,
-h3 + p, h3 + ol, h3 + ul, h3 + blockquote p, h3 + pre,
-.gamma + p, .gamma + ol, .gamma + ul, .gamma + blockquote p, .gamma + pre,
 img + p, img + ol, img + ul, img + blockquote p, img + pre {
-  @include baseline-0(margin-top,2);
-  @include breakpoint(break-1) {
-    @include baseline-1(margin-top,2);
-  }
-  @include breakpoint(break-2) {
-    @include baseline-2(margin-top,2);
-  }
-  @include breakpoint(break-3) {
-    @include baseline-3(margin-top,2);
-  }
-  @include breakpoint(break-4) {
-    @include baseline-4(margin-top,2);
-  }
+  margin-top: 2rem;
+}
+
+// Remove padding-top from first heading
+section > .container > :first-child {
+  padding-top: 0;
 }
 
 // Lists.
 ul, ol {
-  @include baseline-0(margin-bottom,2);
+  margin-bottom: 2rem;
   li {
     -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
     -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    @include baseline-0(margin-left,2);
+    margin-left: 2rem;
     @include breakpoint(break-1) {
       margin-left: 0;
     }
@@ -266,18 +209,6 @@ ul, ol {
         color: $linkColour;
       }
     }
-  }
-  @include breakpoint(break-1) {
-    @include baseline-1(margin-bottom,2);
-  }
-  @include breakpoint(break-2) {
-    @include baseline-2(margin-bottom,2);
-  }
-  @include breakpoint(break-3) {
-    @include baseline-3(margin-bottom,2);
-  }
-  @include breakpoint(break-4) {
-    @include baseline-4(margin-bottom,2);
   }
 }
 
@@ -318,20 +249,8 @@ h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption
 blockquote {
   p {
     font-style: italic;
-    @include baseline-0(padding-left,2);
-    border-left: 6px solid;
-    @include breakpoint(break-1) {
-      @include baseline-1(padding-left,2);
-    }
-    @include breakpoint(break-2) {
-      @include baseline-2(padding-left,2);
-    }
-    @include breakpoint(break-3) {
-      @include baseline-3(padding-left,2);
-    }
-    @include breakpoint(break-4) {
-      @include baseline-4(padding-left,2);
-    }
+    padding-left: 2rem;
+    border-left: 0.5rem solid;
   }
 }
 
@@ -341,24 +260,8 @@ hr {
   background-color: darken($backgroundColour,20%);
   border: 0;
   border-bottom: 1px solid darken($backgroundColour,20%);
-  @include baseline-0(margin-bottom,3);
-  @include baseline-0(margin-top,3);
-  @include breakpoint(break-1) {
-    @include baseline-1(margin-bottom,3);
-    @include baseline-1(margin-top,3);
-  }
-  @include breakpoint(break-2) {
-    @include baseline-2(margin-bottom,3);
-    @include baseline-2(margin-top,3);
-  }
-  @include breakpoint(break-3) {
-    @include baseline-3(margin-bottom,3);
-    @include baseline-3(margin-top,3);
-  }
-  @include breakpoint(break-4) {
-    @include baseline-4(margin-bottom,3);
-    @include baseline-4(margin-top,3);
-  }
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 // Code block. Some styles from normalize included.
@@ -369,30 +272,14 @@ code, pre {
 }
 
 pre {
-  border-radius: 4px;
+  border-radius: 0.5rem;
   display: block;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  @include baseline-0(margin-bottom,2);
-  @include baseline-0(padding,1);
-  @include breakpoint(break-1) {
-    @include baseline-1(margin-bottom,2);
-    @include baseline-1(padding,1);
-  }
-  @include breakpoint(break-2) {
-    @include baseline-2(margin-bottom,2);
-    @include baseline-2(padding,1);
-  }
-  @include breakpoint(break-3) {
-    @include baseline-3(margin-bottom,2);
-    @include baseline-3(padding,1);
-  }
-  @include breakpoint(break-4) {
-    @include baseline-4(margin-bottom,2);
-    @include baseline-4(padding,1);
-  }
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 pre code {
@@ -414,7 +301,6 @@ pre code {
 // Letter space those capitals people, Jan Tschichold would be proud.
 .upper {
   text-transform: uppercase;
-  letter-spacing: 1px;
   letter-spacing: 0.1rem;
 }
 
@@ -425,7 +311,6 @@ pre code {
   -webkit-font-feature-settings: 'smcp' 1, 'kern' 1;
   -o-font-feature-settings: 'smcp' 1, 'kern' 1;
   font-feature-settings: 'smcp' 1, 'kern' 1;
-  letter-spacing: 1px;
   letter-spacing: 0.1rem;
 }
 

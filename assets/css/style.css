@@ -54,12 +54,10 @@ caption, th, td {
 #nav-toggle {
   color: #212121;
   display: block;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
   position: absolute;
   right: 5%;
-  top: 19.2px;
-  top: 1.6rem;
-  font-size: 16px;
+  top: 1.5rem;
   font-size: 1.33333rem;
 }
 #nav-toggle:hover, #nav-toggle:focus, #nav-toggle:active {
@@ -68,18 +66,13 @@ caption, th, td {
 @media screen and (min-width: 40em) {
   #nav-toggle {
     right: 4%;
-    top: 16.8px;
-    top: 1.2rem;
-    font-size: 18px;
+    top: 1rem;
     font-size: 1.28571rem;
   }
 }
 @media screen and (min-width: 50em) {
   #nav-toggle {
     right: 3%;
-    top: 18px;
-    top: 1.2rem;
-    font-size: 20px;
     font-size: 1.33333rem;
   }
 }
@@ -92,7 +85,7 @@ caption, th, td {
 .main-nav__list {
   background: #fcfcfc;
   display: block;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   list-style: none;
@@ -101,33 +94,30 @@ caption, th, td {
 }
 @media screen and (min-width: 40em) {
   .main-nav__list {
-    border-top: 1px solid #acacac;
+    border-top: 0.1rem solid #e5e2d3;
     text-align: center;
   }
 }
 @media screen and (min-width: 64em) {
   .main-nav__list {
-    background: #c5c5c5;
+    background: #f8f7f3;
     border-top: 0;
   }
 }
 .main-nav__list li {
-  border-top: 1px solid #acacac;
+  border-top: 0.1rem solid #e5e2d3;
   display: block;
-  letter-spacing: 1px;
   letter-spacing: 0.1rem;
   margin: 0;
   position: relative;
   text-transform: uppercase;
   width: 100%;
-  font-size: 14px;
   font-size: 1.16667rem;
 }
 @media screen and (min-width: 40em) {
   .main-nav__list li {
     border-top: 0;
-    width: 25%;
-    font-size: 14px;
+    width: 33.333%;
     font-size: 1rem;
     display: inline-block;
     *display: inline;
@@ -139,7 +129,6 @@ caption, th, td {
 }
 @media screen and (min-width: 50em) {
   .main-nav__list li {
-    font-size: 14px;
     font-size: 0.93333rem;
   }
 }
@@ -147,22 +136,10 @@ caption, th, td {
   .main-nav__list li {
     border: 0;
     width: auto;
-    padding-right: 34px;
-    padding-right: 2rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .main-nav__list li {
-    padding-right: 36px;
     padding-right: 2rem;
   }
 }
 @media screen and (min-width: 64em) {
-  .main-nav__list li:last-child {
-    padding-right: 0;
-  }
-}
-@media screen and (min-width: 100em) {
   .main-nav__list li:last-child {
     padding-right: 0;
   }
@@ -171,11 +148,10 @@ caption, th, td {
   color: #4b4b4b;
   display: block;
   position: relative;
-  padding: 12px 5%;
   padding: 1rem 5%;
 }
 .main-nav__list li a.current, .main-nav__list li a:hover {
-  background: #b8b8b8;
+  background: #efece3;
   color: #212121;
 }
 @media screen and (min-width: 64em) {
@@ -185,27 +161,12 @@ caption, th, td {
 }
 @media screen and (min-width: 40em) {
   .main-nav__list li a {
-    border-right: 1px solid #acacac;
-    padding: 14px 5%;
-    padding: 1rem 5%;
-  }
-}
-@media screen and (min-width: 50em) {
-  .main-nav__list li a {
-    padding: 15px 5%;
-    padding: 1rem 5%;
+    border-right: 0.1rem solid #e5e2d3;
   }
 }
 @media screen and (min-width: 64em) {
   .main-nav__list li a {
     border: 0;
-    padding: 34px 0;
-    padding: 2rem 0;
-  }
-}
-@media screen and (min-width: 100em) {
-  .main-nav__list li a {
-    padding: 36px 0;
     padding: 2rem 0;
   }
 }
@@ -267,43 +228,29 @@ html {
 }
 
 body {
-  line-height: 24px;
   line-height: 2rem;
-  font-family: Georgia, Times, serif;
+  font-family: "skolar", Georgia, Times, serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   font-size: 1.33333rem;
 }
 @media screen and (min-width: 40em) {
   body {
-    line-height: 28px;
-    line-height: 2rem;
-    font-size: 17px;
     font-size: 1.21429rem;
   }
 }
 @media screen and (min-width: 50em) {
   body {
-    line-height: 30px;
-    line-height: 2rem;
-    font-size: 18px;
     font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 64em) {
   body {
-    line-height: 34px;
-    line-height: 2rem;
-    font-size: 20px;
     font-size: 1.17647rem;
   }
 }
 @media screen and (min-width: 100em) {
   body {
-    line-height: 36px;
-    line-height: 2rem;
-    font-size: 22px;
     font-size: 1.22222rem;
   }
 }
@@ -328,32 +275,7 @@ p {
   -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  margin-bottom: 24px;
   margin-bottom: 2rem;
-}
-@media screen and (min-width: 40em) {
-  p {
-    margin-bottom: 28px;
-    margin-bottom: 2rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  p {
-    margin-bottom: 30px;
-    margin-bottom: 2rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  p {
-    margin-bottom: 34px;
-    margin-bottom: 2rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  p {
-    margin-bottom: 36px;
-    margin-bottom: 2rem;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -363,298 +285,155 @@ h1, h2, h3, h4, h5, h6 {
   -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   color: #212121;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   text-rendering: optimizelegibility;
 }
 
 h1, .alpha {
-  line-height: 36px;
+  padding-top: 1rem;
   line-height: 3rem;
-  font-size: 28px;
   font-size: 2.33333rem;
 }
 @media screen and (min-width: 40em) {
   h1, .alpha {
-    line-height: 42px;
-    line-height: 3rem;
-    font-size: 30px;
     font-size: 2.14286rem;
   }
 }
 @media screen and (min-width: 50em) {
   h1, .alpha {
-    line-height: 45px;
-    line-height: 3rem;
-    font-size: 32px;
     font-size: 2.13333rem;
   }
 }
 @media screen and (min-width: 64em) {
   h1, .alpha {
-    line-height: 51px;
-    line-height: 3rem;
-    font-size: 36px;
     font-size: 2.11765rem;
   }
 }
 @media screen and (min-width: 100em) {
   h1, .alpha {
-    line-height: 54px;
-    line-height: 3rem;
-    font-size: 40px;
     font-size: 2.22222rem;
   }
 }
 
 h2, .beta {
-  padding-top: 12px;
   padding-top: 1rem;
-  font-size: 22px;
   font-size: 1.83333rem;
 }
 @media screen and (min-width: 40em) {
   h2, .beta {
-    padding-top: 14px;
-    padding-top: 1rem;
-    font-size: 24px;
     font-size: 1.71429rem;
   }
 }
 @media screen and (min-width: 50em) {
   h2, .beta {
-    padding-top: 15px;
-    padding-top: 1rem;
-    font-size: 26px;
     font-size: 1.73333rem;
   }
 }
 @media screen and (min-width: 64em) {
   h2, .beta {
-    padding-top: 17px;
-    padding-top: 1rem;
-    font-size: 30px;
     font-size: 1.76471rem;
   }
 }
 @media screen and (min-width: 100em) {
   h2, .beta {
-    padding-top: 18px;
-    padding-top: 1rem;
-    font-size: 34px;
     font-size: 1.88889rem;
   }
 }
 
 h3, .gamma {
-  padding-top: 12px;
   padding-top: 1rem;
-  font-size: 20px;
   font-size: 1.66667rem;
 }
 @media screen and (min-width: 40em) {
   h3, .gamma {
-    padding-top: 14px;
-    padding-top: 1rem;
-    font-size: 22px;
     font-size: 1.57143rem;
   }
 }
 @media screen and (min-width: 50em) {
   h3, .gamma {
-    padding-top: 15px;
-    padding-top: 1rem;
-    font-size: 24px;
     font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 64em) {
   h3, .gamma {
-    padding-top: 17px;
-    padding-top: 1rem;
-    font-size: 28px;
     font-size: 1.64706rem;
   }
 }
 @media screen and (min-width: 100em) {
   h3, .gamma {
-    padding-top: 18px;
-    padding-top: 1rem;
-    font-size: 30px;
     font-size: 1.66667rem;
   }
 }
 
 h4, .delta {
-  padding-top: 12px;
   padding-top: 1rem;
-  padding-top: 1rem;
-  font-size: 18px;
   font-size: 1.5rem;
 }
 @media screen and (min-width: 40em) {
   h4, .delta {
-    padding-top: 14px;
-    padding-top: 1rem;
-    font-size: 20px;
     font-size: 1.42857rem;
   }
 }
 @media screen and (min-width: 50em) {
   h4, .delta {
-    padding-top: 15px;
-    padding-top: 1rem;
-    font-size: 22px;
     font-size: 1.46667rem;
   }
 }
 @media screen and (min-width: 64em) {
   h4, .delta {
-    padding-top: 17px;
-    padding-top: 1rem;
-    font-size: 26px;
     font-size: 1.52941rem;
   }
 }
 @media screen and (min-width: 100em) {
   h4, .delta {
-    padding-top: 18px;
-    padding-top: 1rem;
-    font-size: 28px;
     font-size: 1.55556rem;
   }
 }
 
 h5, .epsilon {
-  padding-top: 12px;
   padding-top: 1rem;
-  font-size: 17px;
   font-size: 1.41667rem;
 }
 @media screen and (min-width: 40em) {
   h5, .epsilon {
-    padding-top: 14px;
-    padding-top: 1rem;
-    font-size: 19px;
     font-size: 1.35714rem;
   }
 }
 @media screen and (min-width: 50em) {
   h5, .epsilon {
-    padding-top: 15px;
-    padding-top: 1rem;
-    font-size: 21px;
     font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 64em) {
   h5, .epsilon {
-    padding-top: 17px;
-    padding-top: 1rem;
-    font-size: 24px;
     font-size: 1.41176rem;
   }
 }
 @media screen and (min-width: 100em) {
   h5, .epsilon {
-    padding-top: 18px;
-    padding-top: 1rem;
-    font-size: 26px;
     font-size: 1.44444rem;
   }
 }
 
 h6, .zeta {
-  padding-top: 12px;
   padding-top: 1rem;
-}
-@media screen and (min-width: 40em) {
-  h6, .zeta {
-    padding-top: 14px;
-    padding-top: 1rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  h6, .zeta {
-    padding-top: 15px;
-    padding-top: 1rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  h6, .zeta {
-    padding-top: 17px;
-    padding-top: 1rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  h6, .zeta {
-    padding-top: 18px;
-    padding-top: 1rem;
-  }
 }
 
 h1 + p, h1 + ol, h1 + ul, h1 + blockquote p, h1 + pre,
 .alpha + p, .alpha + ol, .alpha + ul, .alpha + blockquote p, .alpha + pre,
 h2 + p, h2 + ol, h2 + ul, h2 + blockquote p, h2 + pre,
 .beta + p, .beta + ol, .beta + ul, .beta + blockquote p, .beta + pre,
-h3 + p, h3 + ol, h3 + ul, h3 + blockquote p, h3 + pre,
-.gamma + p, .gamma + ol, .gamma + ul, .gamma + blockquote p, .gamma + pre,
 img + p, img + ol, img + ul, img + blockquote p, img + pre {
-  margin-top: 24px;
   margin-top: 2rem;
 }
-@media screen and (min-width: 40em) {
-  h1 + p, h1 + ol, h1 + ul, h1 + blockquote p, h1 + pre,
-  .alpha + p, .alpha + ol, .alpha + ul, .alpha + blockquote p, .alpha + pre,
-  h2 + p, h2 + ol, h2 + ul, h2 + blockquote p, h2 + pre,
-  .beta + p, .beta + ol, .beta + ul, .beta + blockquote p, .beta + pre,
-  h3 + p, h3 + ol, h3 + ul, h3 + blockquote p, h3 + pre,
-  .gamma + p, .gamma + ol, .gamma + ul, .gamma + blockquote p, .gamma + pre,
-  img + p, img + ol, img + ul, img + blockquote p, img + pre {
-    margin-top: 28px;
-    margin-top: 2rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  h1 + p, h1 + ol, h1 + ul, h1 + blockquote p, h1 + pre,
-  .alpha + p, .alpha + ol, .alpha + ul, .alpha + blockquote p, .alpha + pre,
-  h2 + p, h2 + ol, h2 + ul, h2 + blockquote p, h2 + pre,
-  .beta + p, .beta + ol, .beta + ul, .beta + blockquote p, .beta + pre,
-  h3 + p, h3 + ol, h3 + ul, h3 + blockquote p, h3 + pre,
-  .gamma + p, .gamma + ol, .gamma + ul, .gamma + blockquote p, .gamma + pre,
-  img + p, img + ol, img + ul, img + blockquote p, img + pre {
-    margin-top: 30px;
-    margin-top: 2rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  h1 + p, h1 + ol, h1 + ul, h1 + blockquote p, h1 + pre,
-  .alpha + p, .alpha + ol, .alpha + ul, .alpha + blockquote p, .alpha + pre,
-  h2 + p, h2 + ol, h2 + ul, h2 + blockquote p, h2 + pre,
-  .beta + p, .beta + ol, .beta + ul, .beta + blockquote p, .beta + pre,
-  h3 + p, h3 + ol, h3 + ul, h3 + blockquote p, h3 + pre,
-  .gamma + p, .gamma + ol, .gamma + ul, .gamma + blockquote p, .gamma + pre,
-  img + p, img + ol, img + ul, img + blockquote p, img + pre {
-    margin-top: 34px;
-    margin-top: 2rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  h1 + p, h1 + ol, h1 + ul, h1 + blockquote p, h1 + pre,
-  .alpha + p, .alpha + ol, .alpha + ul, .alpha + blockquote p, .alpha + pre,
-  h2 + p, h2 + ol, h2 + ul, h2 + blockquote p, h2 + pre,
-  .beta + p, .beta + ol, .beta + ul, .beta + blockquote p, .beta + pre,
-  h3 + p, h3 + ol, h3 + ul, h3 + blockquote p, h3 + pre,
-  .gamma + p, .gamma + ol, .gamma + ul, .gamma + blockquote p, .gamma + pre,
-  img + p, img + ol, img + ul, img + blockquote p, img + pre {
-    margin-top: 36px;
-    margin-top: 2rem;
-  }
+
+section > .container > :first-child {
+  padding-top: 0;
 }
 
 ul, ol {
-  margin-bottom: 24px;
   margin-bottom: 2rem;
 }
 ul li, ol li {
@@ -663,7 +442,6 @@ ul li, ol li {
   -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  margin-left: 24px;
   margin-left: 2rem;
 }
 @media screen and (min-width: 40em) {
@@ -677,30 +455,6 @@ ul li a, ol li a {
 ul li a:hover, ul li a:active, ul li a:focus, ol li a:hover, ol li a:active, ol li a:focus {
   color: #0c89db;
 }
-@media screen and (min-width: 40em) {
-  ul, ol {
-    margin-bottom: 28px;
-    margin-bottom: 2rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  ul, ol {
-    margin-bottom: 30px;
-    margin-bottom: 2rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  ul, ol {
-    margin-bottom: 34px;
-    margin-bottom: 2rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  ul, ol {
-    margin-bottom: 36px;
-    margin-bottom: 2rem;
-  }
-}
 
 b, strong, .bold {
   font-weight: 600;
@@ -711,31 +465,26 @@ em, i, .italic {
 }
 
 small, .caption {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 @media screen and (min-width: 40em) {
   small, .caption {
-    font-size: 14px;
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 50em) {
   small, .caption {
-    font-size: 16px;
     font-size: 1.06667rem;
   }
 }
 @media screen and (min-width: 64em) {
   small, .caption {
-    font-size: 17px;
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 100em) {
   small, .caption {
-    font-size: 18px;
     font-size: 1rem;
   }
 }
@@ -746,33 +495,8 @@ h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption
 
 blockquote p {
   font-style: italic;
-  padding-left: 24px;
   padding-left: 2rem;
-  border-left: 6px solid;
-}
-@media screen and (min-width: 40em) {
-  blockquote p {
-    padding-left: 28px;
-    padding-left: 2rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  blockquote p {
-    padding-left: 30px;
-    padding-left: 2rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  blockquote p {
-    padding-left: 34px;
-    padding-left: 2rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  blockquote p {
-    padding-left: 36px;
-    padding-left: 2rem;
-  }
+  border-left: 0.5rem solid;
 }
 
 hr {
@@ -780,42 +504,8 @@ hr {
   background-color: #c9c9c9;
   border: 0;
   border-bottom: 1px solid #c9c9c9;
-  margin-bottom: 36px;
-  margin-bottom: 3rem;
-  margin-top: 36px;
   margin-top: 3rem;
-}
-@media screen and (min-width: 40em) {
-  hr {
-    margin-bottom: 42px;
-    margin-bottom: 3rem;
-    margin-top: 42px;
-    margin-top: 3rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  hr {
-    margin-bottom: 45px;
-    margin-bottom: 3rem;
-    margin-top: 45px;
-    margin-top: 3rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  hr {
-    margin-bottom: 51px;
-    margin-bottom: 3rem;
-    margin-top: 51px;
-    margin-top: 3rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  hr {
-    margin-bottom: 54px;
-    margin-bottom: 3rem;
-    margin-top: 54px;
-    margin-top: 3rem;
-  }
+  margin-bottom: 3rem;
 }
 
 code, pre {
@@ -825,82 +515,42 @@ code, pre {
 }
 
 pre {
-  border-radius: 4px;
+  border-radius: 0.5rem;
   display: block;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  margin-bottom: 24px;
   margin-bottom: 2rem;
-  padding: 12px;
   padding: 1rem;
-}
-@media screen and (min-width: 40em) {
-  pre {
-    margin-bottom: 28px;
-    margin-bottom: 2rem;
-    padding: 14px;
-    padding: 1rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  pre {
-    margin-bottom: 30px;
-    margin-bottom: 2rem;
-    padding: 15px;
-    padding: 1rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  pre {
-    margin-bottom: 34px;
-    margin-bottom: 2rem;
-    padding: 17px;
-    padding: 1rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  pre {
-    margin-bottom: 36px;
-    margin-bottom: 2rem;
-    padding: 18px;
-    padding: 1rem;
-  }
 }
 
 pre code {
-  font-size: 12px;
   font-size: 1rem;
 }
 @media screen and (min-width: 40em) {
   pre code {
-    font-size: 14px;
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 50em) {
   pre code {
-    font-size: 16px;
     font-size: 1.06667rem;
   }
 }
 @media screen and (min-width: 64em) {
   pre code {
-    font-size: 17px;
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 100em) {
   pre code {
-    font-size: 18px;
     font-size: 1rem;
   }
 }
 
 .upper {
   text-transform: uppercase;
-  letter-spacing: 1px;
   letter-spacing: 0.1rem;
 }
 
@@ -910,7 +560,6 @@ pre code {
   -webkit-font-feature-settings: 'smcp' 1, 'kern' 1;
   -o-font-feature-settings: 'smcp' 1, 'kern' 1;
   font-feature-settings: 'smcp' 1, 'kern' 1;
-  letter-spacing: 1px;
   letter-spacing: 0.1rem;
 }
 
@@ -933,14 +582,14 @@ pre code {
 /* Styles */
 /* --------------------------------------- */
 body {
-  background-color: #c5c5c5;
+  background-color: #f8f7f3;
   color: #313131;
   overflow-x: hidden;
 }
 
 header {
-  background: #c5c5c5;
-  border-bottom: 1px solid #acacac;
+  background: #f8f7f3;
+  border-bottom: 0.1rem solid #e5e2d3;
   position: relative;
   z-index: 1;
 }
@@ -951,63 +600,23 @@ header {
   font: 0/0 a;
   height: 40px;
   width: 150px;
-  margin: 12px 5%;
   margin: 1rem 5%;
-}
-@media screen and (min-width: 40em) {
-  .logo {
-    margin: 14px 5%;
-    margin: 1rem 5%;
-  }
-}
-@media screen and (min-width: 50em) {
-  .logo {
-    margin: 15px 5%;
-    margin: 1rem 5%;
-  }
 }
 @media screen and (min-width: 64em) {
   .logo {
-    margin: 27.2px 0;
-    margin: 1.6rem 0;
+    margin: 1.5rem 0%;
     position: absolute;
   }
 }
 @media screen and (min-width: 100em) {
   .logo {
-    margin: 34.2px 0;
-    margin: 1.9rem 0;
+    margin: 2rem 0;
   }
 }
 
 section {
   background-color: #fcfcfc;
-  padding: 48px 0;
   padding: 4rem 0;
-}
-@media screen and (min-width: 40em) {
-  section {
-    padding: 56px 0;
-    padding: 4rem 0;
-  }
-}
-@media screen and (min-width: 50em) {
-  section {
-    padding: 60px 0;
-    padding: 4rem 0;
-  }
-}
-@media screen and (min-width: 64em) {
-  section {
-    padding: 68px 0;
-    padding: 4rem 0;
-  }
-}
-@media screen and (min-width: 100em) {
-  section {
-    padding: 72px 0;
-    padding: 4rem 0;
-  }
 }
 
 .container {
@@ -1070,47 +679,34 @@ section {
 }
 
 footer {
-  background: #c5c5c5;
-  border-top: 1px solid #acacac;
+  background: #f8f7f3;
+  border-top: 0.1rem solid #e5e2d3;
 }
 footer p {
   color: #212121;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
   text-align: center;
-  padding: 12px 0;
   padding: 1rem 0;
-  font-size: 14px;
+  margin: 0;
   font-size: 1.16667rem;
 }
 @media screen and (min-width: 40em) {
   footer p {
-    padding: 14px 0;
-    padding: 1rem 0;
-    font-size: 14px;
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 50em) {
   footer p {
-    padding: 15px 0;
-    padding: 1rem 0;
-    font-size: 14px;
     font-size: 0.93333rem;
   }
 }
 @media screen and (min-width: 64em) {
   footer p {
-    padding: 17px 0;
-    padding: 1rem 0;
-    font-size: 16px;
     font-size: 0.94118rem;
   }
 }
 @media screen and (min-width: 100em) {
   footer p {
-    padding: 18px 0;
-    padding: 1rem 0;
-    font-size: 18px;
     font-size: 1rem;
   }
 }

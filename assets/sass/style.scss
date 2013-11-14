@@ -21,7 +21,7 @@ body {
 
 header {
   background: $headBackgroundColour;
-  border-bottom: 1px solid darken($headBackgroundColour,10%);
+  border-bottom: 0.1rem solid darken($headBackgroundColour,10%);
   position: relative;
   z-index: 1;
 }
@@ -32,37 +32,19 @@ header {
   font: 0/0 a;
   height: 40px;
   width: 150px;
-  @include baseline-0(margin,1,5%);
-  @include breakpoint(break-1) {
-    @include baseline-1(margin,1,5%);
-  }
-  @include breakpoint(break-2) {
-    @include baseline-2(margin,1,5%);
-  }
+  margin: 1rem 5%;
   @include breakpoint(break-3) {
-    @include baseline-3(margin,1.6,0); // Vertically centred
+    margin: 1.5rem 0%;
     position: absolute;
   }
   @include breakpoint(break-4) {
-    @include baseline-4(margin,1.9,0); // Vertically centred
+    margin: 2rem 0;
   }
 }
 
 section {
   background-color: $backgroundColour;
-  @include baseline-0(padding,4,0);
-  @include breakpoint(break-1) {
-    @include baseline-1(padding,4,0);
-  }
-  @include breakpoint(break-2) {
-    @include baseline-2(padding,4,0);
-  }
-  @include breakpoint(break-3) {
-    @include baseline-3(padding,4,0);
-  }
-  @include breakpoint(break-4) {
-    @include baseline-4(padding,4,0);
-  }
+  padding: 4rem 0;
 }
 
 .container {
@@ -100,27 +82,24 @@ section {
 
 footer {
   background: $headBackgroundColour;
-  border-top: 1px solid darken($headBackgroundColour,10%);
+  border-top: 0.1rem solid darken($headBackgroundColour,10%);
   p {
     color: $headingColour;
     font-family: $sans-serif;
     text-align: center;
-    @include baseline-0(padding,1,0);
+    padding: 1rem 0;
+    margin: 0;
     @include fontsize-0(14);
     @include breakpoint(break-1) {
-      @include baseline-1(padding,1,0);
       @include fontsize-1(14);
     }
     @include breakpoint(break-2) {
-      @include baseline-2(padding,1,0);
       @include fontsize-2(14);
     }
     @include breakpoint(break-3) {
-      @include baseline-3(padding,1,0);
       @include fontsize-3(16);
     }
     @include breakpoint(break-4) {
-      @include baseline-4(padding,1,0);
       @include fontsize-4(18);
     }
   }

@@ -8,19 +8,18 @@
   font-family: $sans-serif;
   position: absolute;
   right: 5%;
-  @include baseline-0(top,1.6); // Vertically centred
+  top: 1.5rem;
   &:hover, &:focus, &:active {
     color: lighten($bodyColour,10%);
   }
   @include fontsize-0(16);
   @include breakpoint(break-1) {
     right: 4%;
-    @include baseline-1(top,1.2); // Vertically centred
+    top: 1rem;
     @include fontsize-1(18);
   }
   @include breakpoint(break-2) {
     right: 3%;
-    @include baseline-2(top,1.2); // Vertically centred
     @include fontsize-2(20);
   }
   @include breakpoint(break-3) {
@@ -38,7 +37,7 @@
   margin: 0 auto;
   text-align: left;
   @include breakpoint(break-1) {
-    border-top: 1px solid darken($headBackgroundColour,10%);
+    border-top: 0.1rem solid darken($headBackgroundColour,10%);
     text-align: center;
   }
   @include breakpoint(break-3) {
@@ -46,9 +45,8 @@
     border-top: 0;
   }
   li {
-    border-top: 1px solid darken($headBackgroundColour,10%);
+    border-top: 0.1rem solid darken($headBackgroundColour,10%);
     display: block;
-    letter-spacing: 1px;
     letter-spacing: 0.1rem;
     margin: 0;
     position: relative;
@@ -57,7 +55,7 @@
     @include fontsize-0(14);
     @include breakpoint(break-1) {
       border-top: 0;
-      width: 25%; // 100 / (number of navigation elements)%
+      width: 33.333%; // 100 / (number of navigation elements)%
       @include fontsize-1(14);
       @include inline-block;
       &:last-child a {
@@ -70,16 +68,10 @@
     @include breakpoint(break-3) {
       border: 0;
       width: auto;
-      @include baseline-3(padding-right,2);
-    }
-    @include breakpoint(break-4) {
-      @include baseline-4(padding-right,2);
+      padding-right: 2rem;
     }
     &:last-child {
       @include breakpoint(break-3) {
-        padding-right: 0;
-      }
-      @include breakpoint(break-4) {
         padding-right: 0;
       }
     }
@@ -87,7 +79,7 @@
       color: lighten($bodyColour,10%);
       display: block;
       position: relative;
-      @include baseline-0(padding,1,5%);
+      padding: 1rem 5%;
       &.current, &:hover {
         background: darken($headBackgroundColour,5%);
         color: $headingColour;
@@ -96,18 +88,11 @@
         }
       }
       @include breakpoint(break-1) {
-        border-right: 1px solid darken($headBackgroundColour,10%);
-        @include baseline-1(padding,1,5%);
-      }
-      @include breakpoint(break-2) {
-        @include baseline-2(padding,1,5%);
+        border-right: 0.1rem solid darken($headBackgroundColour,10%);
       }
       @include breakpoint(break-3) {
         border: 0;
-        @include baseline-3(padding,2,0);
-      }
-      @include breakpoint(break-4) {
-        @include baseline-4(padding,2,0);
+        padding: 2rem 0;
       }
     }
   }
