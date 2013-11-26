@@ -57,7 +57,7 @@
       border-top: 0;
       width: 33.333%; // 100 / (number of navigation elements)%
       @include fontsize-1(14);
-      @include inline-block;
+      display: inline-block;
       &:last-child a {
         border-right: 0;
       }
@@ -108,7 +108,7 @@
   zoom: 1;
   @include breakpoint(break-3) {
     float: right;
-    @include inline-block;
+    display: inline-block;
   }
 }
 

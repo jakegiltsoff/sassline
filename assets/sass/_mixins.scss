@@ -31,16 +31,8 @@
 @mixin fontsize-3($value) { font-size: #{$value / $rootsize-3}rem; }
 @mixin fontsize-4($value) { font-size: #{$value / $rootsize-4}rem; }
 
-// Display inline-block.
-@mixin inline-block {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-
 // Clearfix.
 @mixin clearfix {
-  *zoom: 1;
   &:before, &:after{
     display: table;
     content: "";

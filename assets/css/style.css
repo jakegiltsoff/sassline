@@ -120,8 +120,6 @@ caption, th, td {
     width: 33.333%;
     font-size: 1rem;
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
   }
   .main-nav__list li:last-child a {
     border-right: 0;
@@ -184,8 +182,6 @@ caption, th, td {
   #nav {
     float: right;
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
   }
 }
 
@@ -288,7 +284,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
-  text-rendering: optimizelegibility;
 }
 
 h1, .alpha {
@@ -624,7 +619,6 @@ section {
   max-width: 41.66667rem;
   position: relative;
   width: 90%;
-  *zoom: 1;
 }
 .container:before, .container:after {
   display: table;
@@ -658,7 +652,6 @@ section {
   margin: 0 auto;
   position: relative;
   width: 100%;
-  *zoom: 1;
 }
 .container--header:before, .container--header:after {
   display: table;
