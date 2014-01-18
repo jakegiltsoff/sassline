@@ -24,7 +24,7 @@ Sassline is based on setting the root font-size as half the line-height of the p
 
 ## Why?
 
-I recently wrote a dissertation on responsive typography, looking at which historical typographic conventions are best suited to text in a responsive environment. Sassline takes some of my thoughts from this and puts them into action. You can also read some more about how it came about [here](http://typenot.es/posts/baseline-rems).
+I recently wrote a dissertation on responsive typography, looking at which historical typographic conventions are best suited to text in a responsive environment. Sassline takes some of my thoughts from this and puts them into action. You can also read some more about how it came about [here](http://typenot.es/posts/baseline-rem).
 
 ## Documentation
 
