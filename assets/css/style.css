@@ -54,7 +54,7 @@ caption, th, td {
 #nav-toggle {
   color: #212121;
   display: block;
-  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   position: absolute;
   right: 5%;
   top: 1.5rem;
@@ -85,7 +85,7 @@ caption, th, td {
 .main-nav__list {
   background: #fcfcfc;
   display: block;
-  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   list-style: none;
@@ -225,7 +225,7 @@ html {
 
 body {
   line-height: 2rem;
-  font-family: "skolar", Georgia, Times, serif;
+  font-family: Georgia, Times, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.33333rem;
@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
   -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   color: #212121;
-  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
 }
@@ -460,7 +460,7 @@ em, i, .italic {
 }
 
 small, .caption {
-  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
 @media screen and (min-width: 40em) {
@@ -677,7 +677,7 @@ footer {
 }
 footer p {
   color: #212121;
-  font-family: "freight-sans-pro", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   text-align: center;
   padding: 1rem 0;
   margin: 0;
