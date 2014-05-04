@@ -1,123 +1,141 @@
 /* Navigation */
 /* --------------------------------------- */
 
-/* Includes responsive-nav.js styles */
-#nav-toggle {
-  color: $headingColour;
-  display: block;
-  font-family: $sans-serif;
-  position: absolute;
-  right: 5%;
-  top: 1.5rem;
-  &:hover, &:focus, &:active {
-    color: lighten($bodyColour,10%);
+/* responsive-nav.js styles */
+.nav-collapse {
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
   }
-  @include fontsize-0(16);
+  li {
+    width: 100%;
+    display: block;
+  }
+  &.opened {
+    max-height: 9999px;
+  }
+}
+
+.js {
+  .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+    @include breakpoint(break-1) {
+      position: relative;
+      max-height: none;
+    }
+  }
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   @include breakpoint(break-1) {
-    right: 4%;
-    top: 1rem;
-    @include fontsize-1(18);
-  }
-  @include breakpoint(break-2) {
-    right: 3%;
-    @include fontsize-2(20);
-  }
-  @include breakpoint(break-3) {
     display: none;
   }
 }
 
-.main-nav__list {
-  background: $backgroundColour;
-  display: block;
-  font-family: $sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  list-style: none;
-  margin: 0 auto;
-  text-align: left;
+/* Demo overrides. Delete if not wanted. */
+.main-nav {
   @include breakpoint(break-1) {
-    border-top: 0.1rem solid darken($headBackgroundColour,10%);
-    text-align: center;
+    display: inline-block;
+    width: calc(100% - 165px);
+    vertical-align: middle;
   }
-  @include breakpoint(break-3) {
-    background: $headBackgroundColour;
-    border-top: 0;
+  .main-nav__list {
+    width: 165px;
+    margin-left: 3%;
+    background-color: $linkColour;
+    border-top: 0.1rem solid $white;
+    text-align: center;
+    @include breakpoint(break-1) {
+      width: 100%;
+      background-color: transparent;
+      border: 0;
+      margin-left: 0;
+      text-align: right;
+    }
   }
   li {
-    border-top: 0.1rem solid darken($headBackgroundColour,10%);
-    display: block;
-    letter-spacing: 0.1rem;
-    margin: 0;
-    position: relative;
-    text-transform: uppercase;
-    width: 100%;
-    @include fontsize-0(14);
+    font-family: $sans-serif;
+    @include fontsize-0(16);
+    a {
+      display: block;
+      padding: 10px 3%;
+      color: #FFF;
+      border-bottom: 0.1rem solid $white;
+      &:hover, &:active, &:focus {
+        background-color: lighten($linkColour,35%);
+        color: $hoverColour;
+      }
+    }
     @include breakpoint(break-1) {
-      border-top: 0;
-      width: 33.333%; // 100 / (number of navigation elements)%
-      @include fontsize-1(14);
+      @include fontsize-1(16);
       display: inline-block;
-      &:last-child a {
-        border-right: 0;
+      width: auto;
+      margin-right: 2rem;
+      padding-top: 7px; // Vertical centring
+      a {
+        color: $white;
+        border: 0;
+        display: inline;
+        padding: 0;
+        &:hover, &:active, &:focus {
+          background-color: transparent;
+          color: $linkColour;
+        }
       }
     }
     @include breakpoint(break-2) {
-      @include fontsize-2(14);
+      @include fontsize-2(16);
     }
     @include breakpoint(break-3) {
-      border: 0;
-      width: auto;
-      padding-right: 2rem;
+      @include fontsize-3(16);
     }
-    &:last-child {
-      @include breakpoint(break-3) {
-        padding-right: 0;
-      }
+    @include breakpoint(break-4) {
+      @include fontsize-4(16);
     }
-    a {
-      color: lighten($bodyColour,10%);
-      display: block;
+  }
+}
+
+.js {
+  .nav-collapse {
+    @include breakpoint(break-1) {
+      display: inline-block;
       position: relative;
-      padding: 1rem 5%;
-      &.current, &:hover {
-        background: darken($headBackgroundColour,5%);
-        color: $headingColour;
-        @include breakpoint(break-3) {
-          background: transparent;
-        }
-      }
-      @include breakpoint(break-1) {
-        border-right: 0.1rem solid darken($headBackgroundColour,10%);
-      }
-      @include breakpoint(break-3) {
-        border: 0;
-        padding: 2rem 0;
-      }
+      max-height: none;
     }
   }
-}
-
-#nav {
-  clip: rect(0 0 0 0);
-  display: block;
-  float: none;
-  max-height: 0;
-  overflow: hidden;
-  position: relative;
-  zoom: 1;
-  @include breakpoint(break-3) {
-    float: right;
-    display: inline-block;
-  }
-}
-
-#nav.opened {
-  max-height: 9999px;
-}
-
-#nav.closed {
-  @include breakpoint(break-3) {
-    max-height: none;
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 20px;
+    &:after {
+      content: '\2630';
+      @include fontsize-0(30);
+    }
+    &.active:after {
+      content: '\2715';
+    }
+    @include breakpoint(break-1) {
+      display: none;
+    }
   }
 }

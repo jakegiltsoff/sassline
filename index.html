@@ -22,17 +22,14 @@
   <script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-  <header id="top">
-    <div class="container--header">
-      <h1 class="logo">Sassline</h1>
-      <div id="nav" class="main-nav">
-        <ul class="main-nav__list">
-          <li><a href="http://sassline.com">Website</span></a></li
-         ><li><a href="http://demo.sassline.com">Demo</span></a></li
-         ><li><a href="http://github.com/designbyjake/sassline">Github</a></li>
-        </ul>
-      </div>
-    </div>
+  <header class="global-header">
+    <h1 class="global-header__logo">Sassline</h1>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li><a href="http://sassline.com">Website</span></a></li
+       ><li><a href="http://github.com/designbyjake/sassline">Github</a></li>
+      </ul>
+    </nav>
   </header>
   <section>
     <div class="container typeset">
@@ -102,7 +99,7 @@
 
       <h6>Heading level 6</h6>
 
-      <p>Paragraph with <b>bold</b>, <i>italic</i> and <a href="#top">link</a> styles. * Stars show the ideal range * of the line-length.</p>
+      <p>Paragraph with <b>bold</b>, <i>italic</i>, <a href="#top">link</a> and <code>code</code> styles. * Stars show the ideal range * of the line-length.</p>
 
       <blockquote><p>Blockquote</p></blockquote>
 
@@ -122,15 +119,10 @@
 
     </div>
   </section>
-  <footer>
-    <p>Make cool stuff.</p>
+  <footer class="global-footer">
+    <p>Hodor</p>
   </footer>
 
-  <script>
-  var navigation = responsiveNav("#nav", {
-    label: "Menu",
-    insert: "before"
-  });
-  </script>
+  <script>var navigation = responsiveNav(".main-nav");</script>
 </body>
 </html>

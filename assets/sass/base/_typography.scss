@@ -270,8 +270,11 @@ a {
   blockquote {
     p {
       font-style: italic;
-      padding-left: 2rem;
+      padding-left: 1rem;
       border-left: 0.1rem solid $linkColour;
+      @include breakpoint(break-1) {
+        padding-left: 2rem;
+      }
     }
   }
 
@@ -285,7 +288,7 @@ a {
     margin-bottom: 3rem;
   }
 
-  // Code block. Some styles from normalize included.
+  // Code block.
   code, pre {
     background-color: $codeBackgroundColour;
     color: $white;
@@ -303,7 +306,7 @@ a {
     padding: 1rem;
   }
 
-  pre code {
+  code {
     @include fontsize-0(12);
     @include breakpoint(break-1) {
       @include fontsize-1(14);
