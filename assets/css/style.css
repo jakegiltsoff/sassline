@@ -135,7 +135,7 @@ a:hover, a:active, a:focus {
 }
 .typeset p {
   -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+  -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
@@ -143,7 +143,7 @@ a:hover, a:active, a:focus {
 }
 .typeset h1, .typeset h2, .typeset h3, .typeset h4, .typeset h5, .typeset h6 {
   -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
+  -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -291,9 +291,9 @@ a:hover, a:active, a:focus {
   margin-bottom: 2rem;
 }
 .typeset ul li, .typeset ol li {
-  -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
-  -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   margin-left: 2rem;
@@ -399,24 +399,24 @@ a:hover, a:active, a:focus {
   letter-spacing: 0.1rem;
 }
 .typeset .small-caps {
-  -moz-font-feature-settings: 'smcp=1, kern=1';
-  -ms-font-feature-settings: 'smcp' 1, 'kern' 1;
   -webkit-font-feature-settings: 'smcp' 1, 'kern' 1;
+  -moz-font-feature-settings: 'smcp' 1, 'kern' 1;
+  -ms-font-feature-settings: 'smcp' 1, 'kern' 1;
   -o-font-feature-settings: 'smcp' 1, 'kern' 1;
   font-feature-settings: 'smcp' 1, 'kern' 1;
   letter-spacing: 0.1rem;
 }
 .typeset .lining-numerals {
-  -moz-font-feature-settings: 'lnum=1, kern=1';
-  -ms-font-feature-settings: 'lnum' 1, 'kern' 1;
   -webkit-font-feature-settings: 'lnum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'lnum' 1, 'kern' 1;
+  -ms-font-feature-settings: 'lnum' 1, 'kern' 1;
   -o-font-feature-settings: 'lnum' 1, 'kern' 1;
   font-feature-settings: 'lnum' 1, 'kern' 1;
 }
 .typeset .oldstyle-numerals {
-  -moz-font-feature-settings: 'onum=1, kern=1';
-  -ms-font-feature-settings: 'onum' 1, 'kern' 1;
   -webkit-font-feature-settings: 'onum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'onum' 1, 'kern' 1;
+  -ms-font-feature-settings: 'onum' 1, 'kern' 1;
   -o-font-feature-settings: 'onum' 1, 'kern' 1;
   font-feature-settings: 'onum' 1, 'kern' 1;
 }
