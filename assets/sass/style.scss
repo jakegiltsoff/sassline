@@ -1,11 +1,13 @@
 /* CSS compiled from SCSS */
 /* --------------------------------------- */
 
-@import "variables";
-@import "mixins";
-@import "reset";
-@import "nav";
-@import "typography";
+@import "base/reset";
+@import "base/variables";
+@import "base/mixins";
+@import "base/typography";
+
+// Import all modules with SASS globbing.
+@import "modules/*";
 
 
 /* Styles */
@@ -51,7 +53,7 @@ section {
   margin: 0 auto;
   max-width: $maxwidth-0;
   position: relative;
-  width: 90%;
+  width: 94%;
   @include clearfix;
   @include breakpoint(break-1) {
     max-width: $maxwidth-1;

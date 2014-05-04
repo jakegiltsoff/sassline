@@ -20,6 +20,7 @@ output_style = :expanded
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
 
+require 'sass-globbing'
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:
