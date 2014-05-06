@@ -18,6 +18,14 @@
   "templateDefaultLayout": "layout",
   "templateDefaultPage": "index",
   "templateDirectory": "templates",
+  "sass": {
+    "outputStyle": "nested",
+    "sourceMap": false,
+    "cache": false,
+    "lineNumbers": false,
+    "debugInfo": true,
+    "globbing": true
+  },
   "type": "simple",
-  "useCompass": true
+  "useCompass": false
 }

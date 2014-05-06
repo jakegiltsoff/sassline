@@ -2,108 +2,101 @@
 /* --------------------------------------- */
 /* Reset */
 /* --------------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_reset\.scss}line{font-family:\000035}}
 * {
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_reset\.scss}line{font-family:\000036}}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_reset\.scss}line{font-family:\000037}}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_reset\.scss}line{font-family:\000038}}
 html, body {
-  height: 100%;
-}
+  height: 100%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_reset\.scss}line{font-family:\000039}}
 a img {
-  border: none;
-}
+  border: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_reset\.scss}line{font-family:\0000310}}
 blockquote {
-  quotes: none;
-}
+  quotes: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_reset\.scss}line{font-family:\0000311}}
 blockquote:before, blockquote:after {
   content: '';
-  content: none;
-}
+  content: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_reset\.scss}line{font-family:\0000312}}
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_reset\.scss}line{font-family:\0000313}}
 caption, th, td {
   text-align: left;
   font-weight: normal;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 /* Typography */
 /* --------------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\000035}}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-size: 75%;
-}
-@media screen and (min-width: 40em) {
-  html {
-    font-size: 87.5%;
-  }
-}
-@media screen and (min-width: 50em) {
-  html {
-    font-size: 93.75%;
-  }
-}
-@media screen and (min-width: 64em) {
-  html {
-    font-size: 106.25%;
-  }
-}
-@media screen and (min-width: 100em) {
-  html {
-    font-size: 112.5%;
-  }
-}
+  font-size: 75%; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\000035}}
+    html {
+      font-size: 87.5%; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\000035}}
+    html {
+      font-size: 93.75%; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\000035}}
+    html {
+      font-size: 106.25%; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\000035}}
+    html {
+      font-size: 112.5%; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000324}}
 body {
   line-height: 2rem;
   font-family: "edita", Georgia, Times, serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.33333rem;
-}
-@media screen and (min-width: 40em) {
-  body {
-    font-size: 1.21429rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  body {
-    font-size: 1.2rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  body {
-    font-size: 1.17647rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  body {
-    font-size: 1.22222rem;
-  }
-}
+  font-size: 1.33333rem; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000324}}
+    body {
+      font-size: 1.21429rem; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000324}}
+    body {
+      font-size: 1.2rem; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000324}}
+    body {
+      font-size: 1.17647rem; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000324}}
+    body {
+      font-size: 1.22222rem; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000345}}
 a {
   -webkit-transition: .1s color;
   -moz-transition: .1s color;
@@ -111,36 +104,36 @@ a {
   -o-transition: .1s color;
   transition: .1s color;
   color: #d52836;
-  text-decoration: none;
-}
-a:hover, a:active, a:focus {
-  color: #494949;
-  text-decoration: none;
-}
+  text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000353}}
+  a:hover, a:active, a:focus {
+    color: #494949;
+    text-decoration: none; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000363}}
 .typeset p a, .typeset li a {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#efa7ad));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #efa7ad 50%);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #efa7ad 50%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#efa7ad));
+  background-image: -webkit-linear-gradient(top, transparent 50%, #efa7ad 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #efa7ad 50%);
   background-repeat: repeat-x;
   -webkit-background-size: 2px 2px;
   background-size: 2px 2px;
   background-position: 0 90%;
-  text-shadow: 1px 0 #FFF,2px 0 #FFF,-1px 0 #FFF,-2px 0 #FFF;
-}
-.typeset p a:hover, .typeset p a:active, .typeset p a:focus, .typeset li a:hover, .typeset li a:active, .typeset li a:focus {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#969696));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #969696 50%);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #969696 50%);
-}
+  text-shadow: 1px 0 #FFF,2px 0 #FFF,-1px 0 #FFF,-2px 0 #FFF; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000372}}
+  .typeset p a:hover, .typeset p a:active, .typeset p a:focus, .typeset li a:hover, .typeset li a:active, .typeset li a:focus {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#969696));
+    background-image: -webkit-linear-gradient(top, transparent 50%, #969696 50%);
+    background-image: linear-gradient(to bottom, transparent 50%, #969696 50%); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000380}}
 .typeset p {
   -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  margin-bottom: 2rem;
-}
+  margin-bottom: 2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\0000390}}
 .typeset h1, .typeset h2, .typeset h3, .typeset h4, .typeset h5, .typeset h6 {
   -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -150,222 +143,196 @@ a:hover, a:active, a:focus {
   color: #2e2e2e;
   font-family: "ratio", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 700;
-}
+  font-weight: 700; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003103}}
 .typeset h1, .typeset .alpha {
   padding-top: 1rem;
   line-height: 2.5rem;
-  font-size: 2.33333rem;
-}
-@media screen and (min-width: 40em) {
-  .typeset h1, .typeset .alpha {
-    font-size: 2.14286rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .typeset h1, .typeset .alpha {
-    font-size: 2.13333rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .typeset h1, .typeset .alpha {
-    font-size: 2.35294rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .typeset h1, .typeset .alpha {
-    font-size: 2.55556rem;
-  }
-}
+  font-size: 2.33333rem; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003103}}
+    .typeset h1, .typeset .alpha {
+      font-size: 2.14286rem; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003103}}
+    .typeset h1, .typeset .alpha {
+      font-size: 2.13333rem; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003103}}
+    .typeset h1, .typeset .alpha {
+      font-size: 2.35294rem; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003103}}
+    .typeset h1, .typeset .alpha {
+      font-size: 2.55556rem; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003122}}
 .typeset h2, .typeset .beta {
   padding-top: 1rem;
   line-height: 2.5rem;
-  font-size: 1.83333rem;
-}
-@media screen and (min-width: 40em) {
-  .typeset h2, .typeset .beta {
-    font-size: 1.71429rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .typeset h2, .typeset .beta {
-    font-size: 1.73333rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .typeset h2, .typeset .beta {
-    font-size: 1.88235rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .typeset h2, .typeset .beta {
-    font-size: 2rem;
-  }
-}
+  font-size: 1.83333rem; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003122}}
+    .typeset h2, .typeset .beta {
+      font-size: 1.71429rem; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003122}}
+    .typeset h2, .typeset .beta {
+      font-size: 1.73333rem; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003122}}
+    .typeset h2, .typeset .beta {
+      font-size: 1.88235rem; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003122}}
+    .typeset h2, .typeset .beta {
+      font-size: 2rem; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003141}}
 .typeset h3, .typeset .gamma {
   padding-top: 1rem;
-  font-size: 1.66667rem;
-}
-@media screen and (min-width: 40em) {
-  .typeset h3, .typeset .gamma {
-    font-size: 1.57143rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .typeset h3, .typeset .gamma {
-    font-size: 1.6rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .typeset h3, .typeset .gamma {
-    font-size: 1.64706rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .typeset h3, .typeset .gamma {
-    font-size: 1.66667rem;
-  }
-}
+  font-size: 1.66667rem; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003141}}
+    .typeset h3, .typeset .gamma {
+      font-size: 1.57143rem; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003141}}
+    .typeset h3, .typeset .gamma {
+      font-size: 1.6rem; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003141}}
+    .typeset h3, .typeset .gamma {
+      font-size: 1.64706rem; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003141}}
+    .typeset h3, .typeset .gamma {
+      font-size: 1.66667rem; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003159}}
 .typeset h4, .typeset .delta {
   padding-top: 1rem;
-  font-size: 1.5rem;
-}
-@media screen and (min-width: 40em) {
-  .typeset h4, .typeset .delta {
-    font-size: 1.42857rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .typeset h4, .typeset .delta {
-    font-size: 1.46667rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .typeset h4, .typeset .delta {
-    font-size: 1.52941rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .typeset h4, .typeset .delta {
-    font-size: 1.55556rem;
-  }
-}
+  font-size: 1.5rem; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003159}}
+    .typeset h4, .typeset .delta {
+      font-size: 1.42857rem; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003159}}
+    .typeset h4, .typeset .delta {
+      font-size: 1.46667rem; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003159}}
+    .typeset h4, .typeset .delta {
+      font-size: 1.52941rem; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003159}}
+    .typeset h4, .typeset .delta {
+      font-size: 1.55556rem; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003177}}
 .typeset h5, .typeset .epsilon {
   padding-top: 1rem;
-  font-size: 1.41667rem;
-}
-@media screen and (min-width: 40em) {
-  .typeset h5, .typeset .epsilon {
-    font-size: 1.35714rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .typeset h5, .typeset .epsilon {
-    font-size: 1.4rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .typeset h5, .typeset .epsilon {
-    font-size: 1.41176rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .typeset h5, .typeset .epsilon {
-    font-size: 1.44444rem;
-  }
-}
+  font-size: 1.41667rem; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003177}}
+    .typeset h5, .typeset .epsilon {
+      font-size: 1.35714rem; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003177}}
+    .typeset h5, .typeset .epsilon {
+      font-size: 1.4rem; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003177}}
+    .typeset h5, .typeset .epsilon {
+      font-size: 1.41176rem; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003177}}
+    .typeset h5, .typeset .epsilon {
+      font-size: 1.44444rem; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003195}}
 .typeset h6, .typeset .zeta {
-  padding-top: 1rem;
-}
+  padding-top: 1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003200}}
 .typeset h1 + p, .typeset h1 + ol, .typeset h1 + ul, .typeset h1 + blockquote p, .typeset h1 + pre,
 .typeset .alpha + p, .typeset .alpha + ol, .typeset .alpha + ul, .typeset .alpha + blockquote p, .typeset .alpha + pre,
 .typeset h2 + p, .typeset h2 + ol, .typeset h2 + ul, .typeset h2 + blockquote p, .typeset h2 + pre,
 .typeset .beta + p, .typeset .beta + ol, .typeset .beta + ul, .typeset .beta + blockquote p, .typeset .beta + pre,
 .typeset img + p, .typeset img + ol, .typeset img + ul, .typeset img + blockquote p, .typeset img + pre {
-  margin-top: 2rem;
-}
+  margin-top: 2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003209}}
 .typeset section > .container > :first-child {
-  padding-top: 0;
-}
+  padding-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003214}}
 .typeset ul, .typeset ol {
-  margin-bottom: 2rem;
-}
-.typeset ul li, .typeset ol li {
-  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  margin-left: 2rem;
-}
-@media screen and (min-width: 40em) {
+  margin-bottom: 2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003216}}
   .typeset ul li, .typeset ol li {
-    margin-left: 0;
-  }
-}
-.typeset ul li a, .typeset ol li a {
-  color: #494949;
-}
-.typeset ul li a:hover, .typeset ul li a:active, .typeset ul li a:focus, .typeset ol li a:hover, .typeset ol li a:active, .typeset ol li a:focus {
-  color: #d52836;
-}
+    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    margin-left: 2rem; }
+    @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003216}}
+      .typeset ul li, .typeset ol li {
+        margin-left: 0; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003226}}
+    .typeset ul li a, .typeset ol li a {
+      color: #494949; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003228}}
+      .typeset ul li a:hover, .typeset ul li a:active, .typeset ul li a:focus, .typeset ol li a:hover, .typeset ol li a:active, .typeset ol li a:focus {
+        color: #d52836; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003236}}
 .typeset b, .typeset strong, .typeset .bold {
-  font-weight: 700;
-}
+  font-weight: 700; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003241}}
 .typeset em, .typeset i, .typeset .italic {
-  font-style: italic;
-}
+  font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003246}}
 .typeset small, .typeset .caption {
   color: #7e7e7e;
   font-family: "ratio", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-}
-@media screen and (min-width: 40em) {
-  .typeset small, .typeset .caption {
-    font-size: 1rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .typeset small, .typeset .caption {
-    font-size: 1.06667rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .typeset small, .typeset .caption {
-    font-size: 1rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .typeset small, .typeset .caption {
-    font-size: 1rem;
-  }
-}
+  font-size: 1rem; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003246}}
+    .typeset small, .typeset .caption {
+      font-size: 1rem; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003246}}
+    .typeset small, .typeset .caption {
+      font-size: 1.06667rem; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003246}}
+    .typeset small, .typeset .caption {
+      font-size: 1rem; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003246}}
+    .typeset small, .typeset .caption {
+      font-size: 1rem; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003265}}
 .typeset h1 + .caption, .typeset .alpha + .caption, .typeset h2 + .caption, .typeset .beta + .caption, .typeset h3 + .caption, .typeset .gamma + .caption, .typeset img + .caption {
-  margin-top: 0;
-}
+  margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003271}}
 .typeset blockquote p {
   font-style: italic;
   padding-left: 1rem;
-  border-left: 0.1rem solid #d52836;
-}
-@media screen and (min-width: 40em) {
-  .typeset blockquote p {
-    padding-left: 2rem;
-  }
-}
+  border-left: 0.1rem solid #d52836; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003271}}
+    .typeset blockquote p {
+      padding-left: 2rem; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003282}}
 .typeset hr {
   color: #c9c9c9;
   background-color: #c9c9c9;
   border: 0;
   border-bottom: 1px solid #c9c9c9;
   margin-top: 3rem;
-  margin-bottom: 3rem;
-}
+  margin-bottom: 3rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003292}}
 .typeset code, .typeset pre {
   background-color: #29323a;
   color: white;
-  font-family: Menlo, Monaco, "Courier New", monospace;
-}
+  font-family: Menlo, Monaco, "Courier New", monospace; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003298}}
 .typeset pre {
   border-radius: 0.5rem;
   display: block;
@@ -374,70 +341,65 @@ a:hover, a:active, a:focus {
   word-break: break-all;
   word-wrap: break-word;
   margin-bottom: 2rem;
-  padding: 1rem;
-}
+  padding: 1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003309}}
 .typeset code {
-  font-size: 1rem;
-}
-@media screen and (min-width: 40em) {
-  .typeset code {
-    font-size: 1rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .typeset code {
-    font-size: 1.06667rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .typeset code {
-    font-size: 1rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .typeset code {
-    font-size: 1rem;
-  }
-}
+  font-size: 1rem; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003309}}
+    .typeset code {
+      font-size: 1rem; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003309}}
+    .typeset code {
+      font-size: 1.06667rem; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003309}}
+    .typeset code {
+      font-size: 1rem; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003309}}
+    .typeset code {
+      font-size: 1rem; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003326}}
 .typeset .upper {
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-}
+  letter-spacing: 0.1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003332}}
 .typeset .small-caps {
   -webkit-font-feature-settings: 'smcp' 1, 'kern' 1;
   -moz-font-feature-settings: 'smcp' 1, 'kern' 1;
   -ms-font-feature-settings: 'smcp' 1, 'kern' 1;
   -o-font-feature-settings: 'smcp' 1, 'kern' 1;
   font-feature-settings: 'smcp' 1, 'kern' 1;
-  letter-spacing: 0.1rem;
-}
+  letter-spacing: 0.1rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003342}}
 .typeset .lining-numerals {
   -webkit-font-feature-settings: 'lnum' 1, 'kern' 1;
   -moz-font-feature-settings: 'lnum' 1, 'kern' 1;
   -ms-font-feature-settings: 'lnum' 1, 'kern' 1;
   -o-font-feature-settings: 'lnum' 1, 'kern' 1;
-  font-feature-settings: 'lnum' 1, 'kern' 1;
-}
+  font-feature-settings: 'lnum' 1, 'kern' 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_typography\.scss}line{font-family:\00003351}}
 .typeset .oldstyle-numerals {
   -webkit-font-feature-settings: 'onum' 1, 'kern' 1;
   -moz-font-feature-settings: 'onum' 1, 'kern' 1;
   -ms-font-feature-settings: 'onum' 1, 'kern' 1;
   -o-font-feature-settings: 'onum' 1, 'kern' 1;
-  font-feature-settings: 'onum' 1, 'kern' 1;
-}
+  font-feature-settings: 'onum' 1, 'kern' 1; }
 
 /* Header demo styles */
 /* --------------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_header\.scss}line{font-family:\000034}}
 .global-header {
   background-color: #fcfcfc;
-  font-size: 0;
-}
-@media screen and (min-width: 40em) {
-  .global-header {
-    background-color: #29323a;
-  }
-}
+  font-size: 0; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_header\.scss}line{font-family:\000034}}
+    .global-header {
+      background-color: #29323a; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_header\.scss}line{font-family:\0000312}}
 .global-header__logo {
   background-image: url(../img/logo.png);
   background-size: cover;
@@ -447,255 +409,234 @@ a:hover, a:active, a:focus {
   height: 60px;
   width: 165px;
   margin-left: 3%;
-  vertical-align: middle;
-}
-@media screen and (min-width: 40em) {
-  .global-header__logo {
-    margin-left: 0;
-  }
-}
+  vertical-align: middle; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_header\.scss}line{font-family:\0000312}}
+    .global-header__logo {
+      margin-left: 0; } }
 
 /* Navigation */
 /* --------------------------------------- */
 /* responsive-nav.js styles */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\000036}}
 .nav-collapse ul {
   margin: 0;
   padding: 0;
   width: 100%;
   display: block;
-  list-style: none;
-}
+  list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000313}}
 .nav-collapse li {
   width: 100%;
-  display: block;
-}
+  display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000317}}
 .nav-collapse.opened {
-  max-height: 9999px;
-}
+  max-height: 9999px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000323}}
 .js .nav-collapse {
   clip: rect(0 0 0 0);
   max-height: 0;
   position: absolute;
   display: block;
   overflow: hidden;
-  zoom: 1;
-}
-@media screen and (min-width: 40em) {
-  .js .nav-collapse {
-    position: relative;
-    max-height: none;
-  }
-}
+  zoom: 1; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000323}}
+    .js .nav-collapse {
+      position: relative;
+      max-height: none; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000337}}
 .disable-pointer-events {
-  pointer-events: none !important;
-}
+  pointer-events: none !important; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000341}}
 .nav-toggle {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
-  user-select: none;
-}
-@media screen and (min-width: 40em) {
-  .nav-toggle {
-    display: none;
-  }
-}
+  user-select: none; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000341}}
+    .nav-toggle {
+      display: none; } }
 
 /* Demo overrides. Delete if not wanted. */
 @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000355}}
   .main-nav {
     display: inline-block;
     width: calc(100% - 165px);
-    vertical-align: middle;
-  }
-}
+    vertical-align: middle; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000361}}
 .main-nav .main-nav__list {
   width: 165px;
   margin-left: 3%;
   background-color: #d52836;
   border-top: 0.1rem solid white;
-  text-align: center;
-}
-@media screen and (min-width: 40em) {
-  .main-nav .main-nav__list {
-    width: 100%;
-    background-color: transparent;
-    border: 0;
-    margin-left: 0;
-    text-align: right;
-  }
-}
+  text-align: center; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000361}}
+    .main-nav .main-nav__list {
+      width: 100%;
+      background-color: transparent;
+      border: 0;
+      margin-left: 0;
+      text-align: right; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000375}}
 .main-nav li {
   font-family: "ratio", Helvetica, Arial, sans-serif;
-  font-size: 1.33333rem;
-}
-.main-nav li a {
-  display: block;
-  padding: 10px 3%;
-  color: #FFF;
-  border-bottom: 0.1rem solid white;
-}
-.main-nav li a:hover, .main-nav li a:active, .main-nav li a:focus {
-  background-color: #f3bdc1;
-  color: #494949;
-}
-@media screen and (min-width: 40em) {
-  .main-nav li {
-    font-size: 1.14286rem;
-    display: inline-block;
-    width: auto;
-    margin-right: 2rem;
-    padding-top: 7px;
-  }
+  font-size: 1.33333rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000378}}
   .main-nav li a {
-    color: white;
-    border: 0;
-    display: inline;
-    padding: 0;
-  }
-  .main-nav li a:hover, .main-nav li a:active, .main-nav li a:focus {
-    background-color: transparent;
-    color: #d52836;
-  }
-}
-@media screen and (min-width: 50em) {
-  .main-nav li {
-    font-size: 1.06667rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .main-nav li {
-    font-size: 0.94118rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .main-nav li {
-    font-size: 0.88889rem;
-  }
-}
+    display: block;
+    padding: 10px 3%;
+    color: #FFF;
+    border-bottom: 0.1rem solid white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000383}}
+    .main-nav li a:hover, .main-nav li a:active, .main-nav li a:focus {
+      background-color: #f3bdc1;
+      color: #494949; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000375}}
+    .main-nav li {
+      font-size: 1.14286rem;
+      display: inline-block;
+      width: auto;
+      margin-right: 2rem;
+      padding-top: 7px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000394}}
+      .main-nav li a {
+        color: white;
+        border: 0;
+        display: inline;
+        padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000399}}
+        .main-nav li a:hover, .main-nav li a:active, .main-nav li a:focus {
+          background-color: transparent;
+          color: #d52836; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000375}}
+    .main-nav li {
+      font-size: 1.06667rem; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000375}}
+    .main-nav li {
+      font-size: 0.94118rem; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\0000375}}
+    .main-nav li {
+      font-size: 0.88889rem; } }
 
 @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\00003118}}
   .js .nav-collapse {
     display: inline-block;
     position: relative;
-    max-height: none;
-  }
-}
+    max-height: none; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\00003125}}
 .js .nav-toggle {
   display: block;
   position: absolute;
   right: 5%;
-  top: 20px;
-}
-.js .nav-toggle:after {
-  content: '\2630';
-  font-size: 2.5rem;
-}
-.js .nav-toggle.active:after {
-  content: '\2715';
-}
-@media screen and (min-width: 40em) {
-  .js .nav-toggle {
-    display: none;
-  }
-}
+  top: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\00003130}}
+  .js .nav-toggle:after {
+    content: '\2630';
+    font-size: 2.5rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\00003134}}
+  .js .nav-toggle.active:after {
+    content: '\2715'; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/modules\/_nav\.scss}line{font-family:\00003125}}
+    .js .nav-toggle {
+      display: none; } }
 
 /* Styles */
 /* --------------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000318}}
 body {
   background-color: #29323a;
   color: #494949;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000324}}
 section {
   background-color: #fcfcfc;
-  padding: 4rem 0;
-}
+  padding: 4rem 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000329}}
 .container {
   margin: 0 auto;
   max-width: 41.66667rem;
   position: relative;
-  width: 94%;
-}
-.container:before, .container:after {
-  display: table;
-  content: "";
-}
-.container:after {
-  clear: both;
-}
-@media screen and (min-width: 40em) {
-  .container {
-    max-width: 39.28571rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .container {
-    max-width: 40rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .container {
-    max-width: 40rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .container {
-    max-width: 41.66667rem;
-  }
-}
+  width: 94%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_mixins\.scss}line{font-family:\0000336}}
+  .container:before, .container:after {
+    display: table;
+    content: ""; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/base\/_mixins\.scss}line{font-family:\0000340}}
+  .container:after {
+    clear: both; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000329}}
+    .container {
+      max-width: 39.28571rem; } }
+  @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000329}}
+    .container {
+      max-width: 40rem; } }
+  @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000329}}
+    .container {
+      max-width: 40rem; } }
+  @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000329}}
+    .container {
+      max-width: 41.66667rem; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000349}}
 .global-footer {
   background: #29323a;
-  border-top: 0.1rem solid #14181c;
-}
-.global-footer p {
-  color: white;
-  font-family: "ratio", Helvetica, Arial, sans-serif;
-  text-align: center;
-  padding: 1rem 0;
-  margin: 0;
-  font-size: 1.16667rem;
-}
-@media screen and (min-width: 40em) {
+  border-top: 0.1rem solid #14181c; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000352}}
   .global-footer p {
-    font-size: 1rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .global-footer p {
-    font-size: 0.93333rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .global-footer p {
-    font-size: 0.94118rem;
-  }
-}
-@media screen and (min-width: 100em) {
-  .global-footer p {
-    font-size: 1rem;
-  }
-}
+    color: white;
+    font-family: "ratio", Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+    font-size: 1.16667rem; }
+    @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000352}}
+      .global-footer p {
+        font-size: 1rem; } }
+    @media screen and (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000352}}
+      .global-footer p {
+        font-size: 0.93333rem; } }
+    @media screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000352}}
+      .global-footer p {
+        font-size: 0.94118rem; } }
+    @media screen and (min-width: 100em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000352}}
+      .global-footer p {
+        font-size: 1rem; } }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000374}}
 img {
   -ms-interpolation-mode: bicubic;
   height: auto;
   vertical-align: middle;
-  width: 100%;
-}
-@media screen and (min-width: 40em) {
-  img {
-    margin: 0 auto;
-    max-width: 100%;
-    width: auto;
-  }
-}
+  width: 100%; }
+  @media screen and (min-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakegiltsoff\/Git\/sassline\/assets\/sass\/style\.scss}line{font-family:\0000374}}
+    img {
+      margin: 0 auto;
+      max-width: 100%;
+      width: auto; } }

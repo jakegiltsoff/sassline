@@ -4,32 +4,32 @@
 // Breakpoints.
 @mixin breakpoint($point) {
   @if $point == break-1 {
-    @media screen and (min-width:$break-1) { @content; }
+    @media screen and (min-width: #{map-get($breakpoints, break-1) / 16 * 1em} ) { @content; }
   }
   @else if $point == break-2 {
-    @media screen and (min-width:$break-2) { @content; }
+    @media screen and (min-width: #{map-get($breakpoints, break-2) / 16 * 1em}) { @content; }
   }
   @else if $point == break-3 {
-    @media screen and (min-width:$break-3)  { @content; }
+    @media screen and (min-width: #{map-get($breakpoints, break-3) / 16 * 1em}) { @content; }
   }
   @else if $point == break-4 {
-    @media screen and (min-width:$break-4)  { @content; }
+    @media screen and (min-width: #{map-get($breakpoints, break-4) / 16 * 1em}) { @content; }
   }
 }
 
 // Root font-size in %.
-@mixin rootsize-0 { font-size: #{$rootsize-0 / 16 * 100%}; }
-@mixin rootsize-1 { font-size: #{$rootsize-1 / 16 * 100%}; }
-@mixin rootsize-2 { font-size: #{$rootsize-2 / 16 * 100%}; }
-@mixin rootsize-3 { font-size: #{$rootsize-3 / 16 * 100%}; }
-@mixin rootsize-4 { font-size: #{$rootsize-4 / 16 * 100%}; }
+@mixin rootsize-0 { font-size: #{map-get($rootsizes, rootsize-0) / 16 * 100%}; }
+@mixin rootsize-1 { font-size: #{map-get($rootsizes, rootsize-1) / 16 * 100%}; }
+@mixin rootsize-2 { font-size: #{map-get($rootsizes, rootsize-2) / 16 * 100%}; }
+@mixin rootsize-3 { font-size: #{map-get($rootsizes, rootsize-3) / 16 * 100%}; }
+@mixin rootsize-4 { font-size: #{map-get($rootsizes, rootsize-4) / 16 * 100%}; }
 
 // Font-size in rems. Pixel fallbacks for full browser support.
-@mixin fontsize-0($value) { font-size: #{$value / $rootsize-0}rem; }
-@mixin fontsize-1($value) { font-size: #{$value / $rootsize-1}rem; }
-@mixin fontsize-2($value) { font-size: #{$value / $rootsize-2}rem; }
-@mixin fontsize-3($value) { font-size: #{$value / $rootsize-3}rem; }
-@mixin fontsize-4($value) { font-size: #{$value / $rootsize-4}rem; }
+@mixin fontsize-0($value) { font-size: #{$value / map-get($rootsizes, rootsize-0)}rem; }
+@mixin fontsize-1($value) { font-size: #{$value / map-get($rootsizes, rootsize-1)}rem; }
+@mixin fontsize-2($value) { font-size: #{$value / map-get($rootsizes, rootsize-2)}rem; }
+@mixin fontsize-3($value) { font-size: #{$value / map-get($rootsizes, rootsize-3)}rem; }
+@mixin fontsize-4($value) { font-size: #{$value / map-get($rootsizes, rootsize-4)}rem; }
 
 // Clearfix.
 @mixin clearfix {

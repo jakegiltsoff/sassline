@@ -4,6 +4,7 @@
 // Import Sassline base SCSS files in order so variables are read correctly.
 @import "base/reset";
 @import "base/variables";
+@import "base/modular-scale";
 @import "base/mixins";
 @import "base/typography";
 
@@ -13,10 +14,9 @@
 /* Styles */
 /* --------------------------------------- */
 
-// Demo styles. Remove and split into modules as modules/_header.scss
-
+// Demo styles. Remove and split into modules (as modules/_header.scss).
 body {
-  background-color: $headBackgroundColour; // If short page footer will get this, hence not using $backgroundColour.
+  background-color: $headBackgroundColour; //  Beneath the footer gets this if short page, hence not using $backgroundColour.
   color: $bodyColour;
   overflow-x: hidden;
 }
