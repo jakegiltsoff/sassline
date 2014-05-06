@@ -23,7 +23,7 @@
     "sourceMap": false,
     "cache": false,
     "lineNumbers": false,
-    "debugInfo": true,
+    "debugInfo": false,
     "globbing": true
   },
   "type": "simple",

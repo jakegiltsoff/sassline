@@ -26,7 +26,7 @@ body {
   font-family: $serif;
   font-style: normal;
   font-weight: 400;
-  @include fontsize-0(16);
+  @include fontsize-0(zeta);
   @include breakpoint(break-1) {
     @include fontsize-1(17);
   }

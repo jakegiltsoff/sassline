@@ -24,12 +24,102 @@
 @mixin rootsize-3 { font-size: #{map-get($rootsizes, rootsize-3) / 16 * 100%}; }
 @mixin rootsize-4 { font-size: #{map-get($rootsizes, rootsize-4) / 16 * 100%}; }
 
-// Font-size in rems. Pixel fallbacks for full browser support.
-@mixin fontsize-0($value) { font-size: #{$value / map-get($rootsizes, rootsize-0)}rem; }
-@mixin fontsize-1($value) { font-size: #{$value / map-get($rootsizes, rootsize-1)}rem; }
-@mixin fontsize-2($value) { font-size: #{$value / map-get($rootsizes, rootsize-2)}rem; }
-@mixin fontsize-3($value) { font-size: #{$value / map-get($rootsizes, rootsize-3)}rem; }
-@mixin fontsize-4($value) { font-size: #{$value / map-get($rootsizes, rootsize-4)}rem; }
+// Font-size in rems. Work out a way to loop through greek letters - only work if those.
+@mixin fontsize-0($value) {
+  @if number("#{$value}") != false {
+    font-size: #{$value / map-get($rootsizes, rootsize-0)}rem;
+  } @else {
+    font-size: #{map-fetch($modular-scale, scale-0 $value) / map-get($rootsizes, rootsize-0)}rem;
+  }
+}
+@mixin fontsize-1($value) {
+  @if number("#{$value}") != false {
+    font-size: #{$value / map-get($rootsizes, rootsize-1)}rem;
+  } @else {
+    font-size: #{map-fetch($modular-scale, scale-1 $value) / map-get($rootsizes, rootsize-1)}rem;
+  }
+}
+@mixin fontsize-2($value) {
+  @if number("#{$value}") != false {
+    font-size: #{$value / map-get($rootsizes, rootsize-2)}rem;
+  } @else {
+    font-size: #{map-fetch($modular-scale, scale-2 $value) / map-get($rootsizes, rootsize-2)}rem;
+  }
+}
+@mixin fontsize-3($value) {
+  @if number("#{$value}") != false {
+    font-size: #{$value / map-get($rootsizes, rootsize-3)}rem;
+  } @else {
+    font-size: #{map-fetch($modular-scale, scale-3 $value) / map-get($rootsizes, rootsize-3)}rem;
+  }
+}
+@mixin fontsize-4($value) {
+  @if number("#{$value}") != false {
+    font-size: #{$value / map-get($rootsizes, rootsize-4)}rem;
+  } @else {
+    font-size: #{map-fetch($modular-scale, scale-4 $value) / map-get($rootsizes, rootsize-4)}rem;
+  }
+}
+
+// Set all fontsizes. Work out a way to loop through breakpoints.
+@mixin fontsize-all($value) {
+  @if number("#{$value}") != false {
+    font-size: #{$value / map-get($rootsizes, rootsize-0)}rem;
+  } @else {
+    font-size: #{map-fetch($modular-scale, scale-0 $value) / map-get($rootsizes, rootsize-0)}rem;
+  }
+}
+
+
+// Extending Sass maps functionality to get into nested maps. https://gist.github.com/jlong/8760275
+@function map-fetch($map, $keys) {
+  $key: nth($keys, 1);
+  $length: length($keys);
+  $value: map-get($map, $key);
+  @if ($length > 1) {
+    $rest: ();
+    @for $i from 2 through $length {
+      $rest: append($rest, nth($keys, $i))
+    }
+    @return map-fetch($value, $rest)
+  } @else {
+    @return $value;
+  }
+}
+
+// Is it a number? Adapted from http://hugogiraudel.com/2014/01/15/sass-string-to-number/
+@function number($string) {
+  // Matrices
+  $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
+  $numbers:  0   1   2   3   4   5   6   7   8   9;
+  // Result
+  $result: 0;
+  $divider: 0;
+  // Looping through all characters
+  @for $i from 1 through str-length($string) {
+    $character: str-slice($string, $i, $i);
+    $index: index($strings, $character);
+    @if $character == '.' {
+      $divider: 1;
+    }
+    @else {
+      @if not $index {
+        @return false;
+      }
+      $number: nth($numbers, $index);
+      @if $divider == 0 {
+        $result: $result * 10;
+      }
+      @else {
+        // Move the decimal dot to the left
+        $divider: $divider * 10;
+        $number: $number / $divider;
+      }
+      $result: $result + $number;
+    }
+  }
+  @return $result;
+}
 
 // Clearfix.
 @mixin clearfix {
