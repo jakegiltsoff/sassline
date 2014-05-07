@@ -1,60 +1,71 @@
 // SCSS mixins
 // ---------------------------------------
 
-// Breakpoints.
-@mixin breakpoint($point) {
-  @if $point == break-1 {
-    @media screen and (min-width: #{map-get($breakpoints, break-1) / 16 * 1em} ) { @content; }
-  }
-  @else if $point == break-2 {
-    @media screen and (min-width: #{map-get($breakpoints, break-2) / 16 * 1em}) { @content; }
-  }
-  @else if $point == break-3 {
-    @media screen and (min-width: #{map-get($breakpoints, break-3) / 16 * 1em}) { @content; }
-  }
-  @else if $point == break-4 {
-    @media screen and (min-width: #{map-get($breakpoints, break-4) / 16 * 1em}) { @content; }
+// Breakpoints. Either set one to one of the breakpoint variables, or use a different number. Defaults to min-width, but both min-max and max-width is available too. Parts based on https://gist.github.com/timknight/03e6335b8816aa534cf7
+@mixin breakpoint($break: 0, $max: 0) {
+  $value: type-of($break);
+  @if $value == string {
+    @if map-has-key($breakpoints, $break) {
+      @media screen and (min-width: #{map-get($breakpoints, $break) / 16 * 1em} ) { @content; }
+    } @else {
+      @warn "#{$break} is not a set breakpoint variable";
+    }
+  } @else if $value == number {
+    $query: "all" !default;
+    @if      $break != 0 and $max != 0 { $query: "(min-width: #{$break / 16 * 1em}) and (max-width: #{$max / 16 * 1em})"; }
+    @else if $break != 0 and $max == 0 { $query: "(min-width: #{$break / 16 * 1em})"; }
+    @else if $break == 0 and $max != 0 { $query: "(max-width: #{$max / 16 * 1em})"; }
+    @media #{$query} { @content; }
+  } @else {
+    @warn "#{$break} is not valid to use as a breakpoint";
   }
 }
 
-// Root font-size in %.
+// Root font-size in %. Need to loop these based on number of breakpoints in map
 @mixin rootsize-0 { font-size: #{map-get($rootsizes, rootsize-0) / 16 * 100%}; }
 @mixin rootsize-1 { font-size: #{map-get($rootsizes, rootsize-1) / 16 * 100%}; }
 @mixin rootsize-2 { font-size: #{map-get($rootsizes, rootsize-2) / 16 * 100%}; }
 @mixin rootsize-3 { font-size: #{map-get($rootsizes, rootsize-3) / 16 * 100%}; }
 @mixin rootsize-4 { font-size: #{map-get($rootsizes, rootsize-4) / 16 * 100%}; }
 
+// Need to use @for to loop through by getting number of values in $rootsizes
+@mixin rootsize-all {
+  @each $value in $rootsizes {
+    @media screen and (min-width: #{map-get($breakpoints, break-#{value}) / 16 * 1em} ) { font-size: #{map-get($rootsizes, $value) / 16 * 100%}; }
+  }
+}
+
 // Font-size in rems. Work out a way to loop through greek letters - only work if those.
 @mixin fontsize-0($value) {
-  @if number("#{$value}") != false {
+  @if type-of($value) == number {
     font-size: #{$value / map-get($rootsizes, rootsize-0)}rem;
   } @else {
     font-size: #{map-fetch($modular-scale, scale-0 $value) / map-get($rootsizes, rootsize-0)}rem;
   }
 }
 @mixin fontsize-1($value) {
-  @if number("#{$value}") != false {
+  @if type-of($value) == number {
     font-size: #{$value / map-get($rootsizes, rootsize-1)}rem;
   } @else {
     font-size: #{map-fetch($modular-scale, scale-1 $value) / map-get($rootsizes, rootsize-1)}rem;
   }
 }
 @mixin fontsize-2($value) {
-  @if number("#{$value}") != false {
+  @if type-of($value) == number {
     font-size: #{$value / map-get($rootsizes, rootsize-2)}rem;
   } @else {
     font-size: #{map-fetch($modular-scale, scale-2 $value) / map-get($rootsizes, rootsize-2)}rem;
   }
 }
 @mixin fontsize-3($value) {
-  @if number("#{$value}") != false {
+  @if type-of($value) == number {
     font-size: #{$value / map-get($rootsizes, rootsize-3)}rem;
   } @else {
     font-size: #{map-fetch($modular-scale, scale-3 $value) / map-get($rootsizes, rootsize-3)}rem;
   }
 }
 @mixin fontsize-4($value) {
-  @if number("#{$value}") != false {
+  @if type-of($value) == number {
     font-size: #{$value / map-get($rootsizes, rootsize-4)}rem;
   } @else {
     font-size: #{map-fetch($modular-scale, scale-4 $value) / map-get($rootsizes, rootsize-4)}rem;
@@ -85,40 +96,6 @@
   } @else {
     @return $value;
   }
-}
-
-// Is it a number? Adapted from http://hugogiraudel.com/2014/01/15/sass-string-to-number/
-@function number($string) {
-  // Matrices
-  $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
-  $numbers:  0   1   2   3   4   5   6   7   8   9;
-  // Result
-  $result: 0;
-  $divider: 0;
-  // Looping through all characters
-  @for $i from 1 through str-length($string) {
-    $character: str-slice($string, $i, $i);
-    $index: index($strings, $character);
-    @if $character == '.' {
-      $divider: 1;
-    }
-    @else {
-      @if not $index {
-        @return false;
-      }
-      $number: nth($numbers, $index);
-      @if $divider == 0 {
-        $result: $result * 10;
-      }
-      @else {
-        // Move the decimal dot to the left
-        $divider: $divider * 10;
-        $number: $number / $divider;
-      }
-      $result: $result + $number;
-    }
-  }
-  @return $result;
 }
 
 // Clearfix.

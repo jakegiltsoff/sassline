@@ -1,7 +1,8 @@
 // SCSS variables
 // ---------------------------------------
 
-// Breakpoint sizes in ems. Note: not relative to root font-size.
+// Breakpoint sizes in ems. Add more values here to add more breakpoints. Change names if you prefer, it wont break the mixin.
+// Note: not relative to root font-size.
 $breakpoints: (
   break-0: 0,     // 0px       Mobile first
   break-1: 640,   // 640px   ~ Small tablet up
@@ -10,7 +11,8 @@ $breakpoints: (
   break-4: 1600   // 1600px  ~ Large desktop up
 );
 
-// Root font-sizes. Set to half desired line-height of body text.
+// Root font-sizes for each breakpoint. Set to half desired line-height of body text.
+// Make sure to have as many sizes as breakpoints above.
 $rootsizes: (
   rootsize-0: 12,   // 24px line-height body text
   rootsize-1: 14,   // 28px line-height body text
