@@ -1,7 +1,8 @@
 // SCSS variables
 // ---------------------------------------
 
-// Breakpoint sizes in ems. Add more values here to add more breakpoints. Change names if you prefer, it wont break the mixin.
+// Breakpoint sizes in ems. Add more values here to add more breakpoints.
+// Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
 // Note: not relative to root font-size.
 $breakpoints: (
   break-0: 0,     // 0px       Mobile first
@@ -32,7 +33,7 @@ $maxwidth-4: #{750 / map-get($rootsizes, rootsize-4)}rem; // 720px wide
 $serif: "edita", Georgia, Times, serif;
 $sans-serif: "ratio", Helvetica, Arial, sans-serif;
 
-// Text colours. British English, there is totally a 'u' in there.
+// Text colours. British English.
 $headingColour: #2E2E2E;
 $bodyColour: #494949;
 $linkColour: #D52836;

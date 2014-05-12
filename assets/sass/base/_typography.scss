@@ -5,19 +5,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  @include rootsize-0;
-  @include breakpoint(break-1) {
-    @include rootsize-1;
-  }
-  @include breakpoint(break-2) {
-    @include rootsize-2;
-  }
-  @include breakpoint(break-3) {
-    @include rootsize-3;
-  }
-  @include breakpoint(break-4) {
-    @include rootsize-4;
-  }
+  @include rootsize;
 }
 
 // Site-wide base styles.
@@ -28,16 +16,16 @@ body {
   font-weight: 400;
   @include fontsize-0(zeta);
   @include breakpoint(break-1) {
-    @include fontsize-1(17);
+    @include fontsize-1(zeta);
   }
   @include breakpoint(break-2) {
-    @include fontsize-2(18);
+    @include fontsize-2(zeta);
   }
   @include breakpoint(break-3) {
-    @include fontsize-3(20);
+    @include fontsize-3(zeta);
   }
   @include breakpoint(break-4) {
-    @include fontsize-4(22);
+    @include fontsize-4(zeta);
   }
 }
 

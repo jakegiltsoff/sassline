@@ -1,16 +1,20 @@
 // SCSS mixins
 // ---------------------------------------
 
-// Breakpoints. Either set one to one of the breakpoint variables, or use a different number. Defaults to min-width, but both min-max and max-width is available too. Parts based on https://gist.github.com/timknight/03e6335b8816aa534cf7
+// Breakpoints. Either set one to one of the breakpoint variables, or use a custom value for minor breakpoints.
+// Defaults to min-width, but both min->max and max-width are available too.
+// Parts based on https://gist.github.com/timknight/03e6335b8816aa534cf7
 @mixin breakpoint($break: 0, $max: 0) {
   $value: type-of($break);
   @if $value == string {
+    // If using 'break-1', 'break-2' etc output the correct breakpoints from map.
     @if map-has-key($breakpoints, $break) {
       @media screen and (min-width: #{map-get($breakpoints, $break) / 16 * 1em} ) { @content; }
     } @else {
       @warn "#{$break} is not a set breakpoint variable";
     }
   } @else if $value == number {
+    // If using other numbers output value in ems either for min, min & max or max width breakpoints.
     $query: "all" !default;
     @if      $break != 0 and $max != 0 { $query: "(min-width: #{$break / 16 * 1em}) and (max-width: #{$max / 16 * 1em})"; }
     @else if $break != 0 and $max == 0 { $query: "(min-width: #{$break / 16 * 1em})"; }
@@ -21,17 +25,18 @@
   }
 }
 
-// Root font-size in %. Need to loop these based on number of breakpoints in map
-@mixin rootsize-0 { font-size: #{map-get($rootsizes, rootsize-0) / 16 * 100%}; }
-@mixin rootsize-1 { font-size: #{map-get($rootsizes, rootsize-1) / 16 * 100%}; }
-@mixin rootsize-2 { font-size: #{map-get($rootsizes, rootsize-2) / 16 * 100%}; }
-@mixin rootsize-3 { font-size: #{map-get($rootsizes, rootsize-3) / 16 * 100%}; }
-@mixin rootsize-4 { font-size: #{map-get($rootsizes, rootsize-4) / 16 * 100%}; }
-
-// Need to use @for to loop through by getting number of values in $rootsizes
-@mixin rootsize-all {
-  @each $value in $rootsizes {
-    @media screen and (min-width: #{map-get($breakpoints, break-#{value}) / 16 * 1em} ) { font-size: #{map-get($rootsizes, $value) / 16 * 100%}; }
+// Root font-size in %, outputted in correct breakpoints.
+@mixin rootsize {
+  $values: map-values($rootsizes);
+  $length: length($rootsizes);
+  $points: map-values($breakpoints);
+  @for $i from 1 through $length {
+    @if nth($points, $i) == 0 { font-size: nth($values, $i) / 16 * 100%; }
+    @else {
+      @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
+        font-size: nth($values, $i) / 16 * 100%;
+      }
+    }
   }
 }
 
@@ -81,6 +86,14 @@
   }
 }
 
+@mixin fontsize($fontsize, $breakpoint: 0) {
+  @if type-of($fontsize) == number {
+    font-size: #{$fontsize / map-get($rootsizes, rootsize-0)}rem;
+  } @else if map-has-key($map, $fontsize){
+    font-size: #{map-fetch($modular-scale, scale-0 $fontsize) / map-get($rootsizes, rootsize-0)}rem;
+  }
+}
+
 
 // Extending Sass maps functionality to get into nested maps. https://gist.github.com/jlong/8760275
 @function map-fetch($map, $keys) {
@@ -96,6 +109,12 @@
   } @else {
     @return $value;
   }
+}
+
+@function has-in-scale($scale) {
+  $test: map-get($modular-scale, $scale);
+  $output: map-keys($test);
+  @return $output;
 }
 
 // Clearfix.
