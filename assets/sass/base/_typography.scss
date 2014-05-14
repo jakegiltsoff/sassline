@@ -91,18 +91,18 @@ a {
   h1, .alpha {
     padding-top: 1rem;
     line-height: 2.5rem;
-    @include fontsize-0(28);
+    @include fontsize(28, 0);
     @include breakpoint(break-1) {
-      @include fontsize-1(30);
+      @include fontsize(30, 1);
     }
     @include breakpoint(break-2) {
-      @include fontsize-2(32);
+      @include fontsize(32, 2);
     }
     @include breakpoint(break-3) {
-      @include fontsize-3(40);
+      @include fontsize(40, 3);
     }
     @include breakpoint(break-4) {
-      @include fontsize-4(46);
+      @include fontsize(46, 4);
     }
   }
 

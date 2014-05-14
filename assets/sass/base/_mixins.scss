@@ -87,11 +87,30 @@
 }
 
 @mixin fontsize($fontsize, $breakpoint: 0) {
-  @if type-of($fontsize) == number {
-    font-size: #{$fontsize / map-get($rootsizes, rootsize-0)}rem;
-  } @else if map-has-key($map, $fontsize){
-    font-size: #{map-fetch($modular-scale, scale-0 $fontsize) / map-get($rootsizes, rootsize-0)}rem;
+  $font-value: type-of($fontsize);
+  $break-value: type-of($fontsize);
+  $length: length($breakpoints);
+  @if $break-value == number and $breakpoint <= ($length - 1) and $breakpoint >= 0 {
+
+    $in-scale: in-modular-scale(scale-#{$breakpoint}, $fontsize);
+
+    @if $font-value == number {
+      font-size: #{$fontsize / map-get($rootsizes, rootsize-#{$breakpoint})}rem;
+    } @else if $in-scale == true {
+      font-size: #{map-fetch($modular-scale, scale-#{$breakpoint} $fontsize) / map-get($rootsizes, rootsize-#{$breakpoint})}rem;
+    }
+
+  } @else if $breakpoint == all {
+
+    // finish
+
+  } @else {
+    @warn "#{$breakpoint} is not valid to use as a breakpoint";
   }
+
+
+
+
 }
 
 
@@ -111,9 +130,10 @@
   }
 }
 
-@function has-in-scale($scale) {
-  $test: map-get($modular-scale, $scale);
-  $output: map-keys($test);
+// Value in scale in $modular-scale?
+@function in-modular-scale($scale, $key) {
+  $map: map-get($modular-scale, $scale);
+  $output: map-has-key($map, $key);
   @return $output;
 }
 
