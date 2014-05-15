@@ -1,0 +1,33 @@
+/* Global demo styles */
+/* --------------------------------------- */
+
+body {
+  background-color: $headBackgroundColour; //  Beneath the footer gets this if short page, hence not using $backgroundColour.
+  color: $bodyColour;
+  overflow-x: hidden;
+}
+
+section {
+  background-color: $backgroundColour;
+  padding: 4rem 0;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 94%;
+  @include clearfix;
+  @include maxwidth;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+  @include breakpoint(break-1) {
+    margin: 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+}

@@ -1,0 +1,15 @@
+/* Footer demo styles */
+/* --------------------------------------- */
+
+.global-footer {
+  background: $headBackgroundColour;
+  border-top: 0.1rem solid darken($headBackgroundColour,10%);
+  p {
+    color: $white;
+    font-family: $sans-serif;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+    @include fontsize(eta, all);
+  }
+}
