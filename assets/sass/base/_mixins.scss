@@ -27,17 +27,18 @@
 
 // Root font-size in %, outputted in correct breakpoints.
 @mixin rootsize {
-  $values: map-values($rootsizes);
+  $sizes: map-values($rootsizes);
   $length: length($rootsizes);
   $points: map-values($breakpoints);
-  @for $i from 1 through $length {
-    @if nth($points, $i) == 0 { font-size: nth($values, $i) / 16 * 100%; }
-    @else {
-      @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
-        font-size: nth($values, $i) / 16 * 100%;
-      }
+
+  font-size: nth($sizes, 1) / 16 * 100%;
+
+  @for $i from 2 through $length {
+    @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
+      font-size: nth($sizes, $i) / 16 * 100%;
     }
   }
+
 }
 
 // Font-size in rems. Work out a way to loop through greek letters - only work if those.
@@ -88,28 +89,64 @@
 
 @mixin fontsize($fontsize, $breakpoint: 0) {
   $font-value: type-of($fontsize);
-  $break-value: type-of($fontsize);
+  $break-value: type-of($breakpoint);
   $length: length($breakpoints);
+  $sizes: map-values($rootsizes);
+  $points: map-values($breakpoints);
+
   @if $break-value == number and $breakpoint <= ($length - 1) and $breakpoint >= 0 {
 
     $in-scale: in-modular-scale(scale-#{$breakpoint}, $fontsize);
 
     @if $font-value == number {
-      font-size: #{$fontsize / map-get($rootsizes, rootsize-#{$breakpoint})}rem;
+
+      font-size: #{$fontsize / nth($sizes, 1)}rem;
+
     } @else if $in-scale == true {
-      font-size: #{map-fetch($modular-scale, scale-#{$breakpoint} $fontsize) / map-get($rootsizes, rootsize-#{$breakpoint})}rem;
+
+      font-size: #{map-fetch($modular-scale, scale-#{$breakpoint} $fontsize) / nth($sizes, $i)}rem;
+
+    } @else {
+      @warn "#{$fontsize} is not a valid scale variable";
     }
 
   } @else if $breakpoint == all {
 
-    // finish
+    $in-first-scale: in-modular-scale(scale-0, $fontsize);
+
+    @if $font-value == number {
+
+      font-size: #{$fontsize / nth($sizes, 1)}rem;
+
+      @for $i from 2 through $length {
+        @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
+          font-size: #{$fontsize / nth($sizes, $i)}rem;
+        }
+      }
+
+    } @else if $in-first-scale == true {
+
+      $e: map-fetch($modular-scale, scale-0 $fontsize);
+
+      font-size: #{$e / nth($sizes, 1)}rem;
+
+      @for $i from 2 through $length {
+
+        $z: map-get($modular-scale, scale-#{$i - 1});
+        $zz: map-get($z, $fontsize);
+
+        @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
+          font-size: #{$zz / nth($sizes, $i)}rem;
+        }
+      }
+
+    } @else {
+      @warn "#{$fontsize} is not a valid scale variable";
+    }
 
   } @else {
     @warn "#{$breakpoint} is not valid to use as a breakpoint";
   }
-
-
-
 
 }
 

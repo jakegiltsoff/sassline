@@ -91,19 +91,7 @@ a {
   h1, .alpha {
     padding-top: 1rem;
     line-height: 2.5rem;
-    @include fontsize(28, 0);
-    @include breakpoint(break-1) {
-      @include fontsize(30, 1);
-    }
-    @include breakpoint(break-2) {
-      @include fontsize(32, 2);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize(40, 3);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize(46, 4);
-    }
+    @include fontsize(alpha, all);
   }
 
   // Heading level 2.
