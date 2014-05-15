@@ -28,22 +28,10 @@ section {
 
 .container {
   margin: 0 auto;
-  max-width: $maxwidth-0;
   position: relative;
   width: 94%;
   @include clearfix;
-  @include breakpoint(break-1) {
-    max-width: $maxwidth-1;
-  }
-  @include breakpoint(break-2) {
-    max-width: $maxwidth-2;
-  }
-  @include breakpoint(break-3) {
-    max-width: $maxwidth-3;
-  }
-  @include breakpoint(break-4) {
-    max-width: $maxwidth-4;
-  }
+  @include maxwidth;
 }
 
 .global-footer {
@@ -55,19 +43,7 @@ section {
     text-align: center;
     padding: 1rem 0;
     margin: 0;
-    @include fontsize-0(14);
-    @include breakpoint(break-1) {
-      @include fontsize-1(14);
-    }
-    @include breakpoint(break-2) {
-      @include fontsize-2(14);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize-3(16);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize-4(18);
-    }
+    @include fontsize(eta, all);
   }
 }
 

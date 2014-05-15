@@ -74,7 +74,7 @@
   }
   li {
     font-family: $sans-serif;
-    @include fontsize-0(16);
+    @include fontsize(16, all);
     a {
       display: block;
       padding: 10px 3%;
@@ -86,7 +86,6 @@
       }
     }
     @include breakpoint(break-1) {
-      @include fontsize-1(16);
       display: inline-block;
       width: auto;
       margin-right: 2rem;
@@ -101,15 +100,6 @@
           color: $linkColour;
         }
       }
-    }
-    @include breakpoint(break-2) {
-      @include fontsize-2(16);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize-3(16);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize-4(16);
     }
   }
 }
@@ -129,7 +119,7 @@
     top: 20px;
     &:after {
       content: '\2630';
-      @include fontsize-0(30);
+      @include fontsize(30);
     }
     &.active:after {
       content: '\2715';

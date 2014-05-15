@@ -1,11 +1,15 @@
 // SCSS mixins
 // ---------------------------------------
 
+
 // Breakpoints. Either set one to one of the breakpoint variables, or use a custom value for minor breakpoints.
 // Defaults to min-width, but both min->max and max-width are available too.
 // Parts based on https://gist.github.com/timknight/03e6335b8816aa534cf7
 @mixin breakpoint($break: 0, $max: 0) {
+  // Type of break variable
   $value: type-of($break);
+
+  // If it is a string (i.e. a breakpoint variable).
   @if $value == string {
     // If using 'break-1', 'break-2' etc output the correct breakpoints from map.
     @if map-has-key($breakpoints, $break) {
@@ -13,6 +17,8 @@
     } @else {
       @warn "#{$break} is not a set breakpoint variable";
     }
+
+  // If it is a number, use this for the breakpoint.
   } @else if $value == number {
     // If using other numbers output value in ems either for min, min & max or max width breakpoints.
     $query: "all" !default;
@@ -20,6 +26,7 @@
     @else if $break != 0 and $max == 0 { $query: "(min-width: #{$break / 16 * 1em})"; }
     @else if $break == 0 and $max != 0 { $query: "(max-width: #{$max / 16 * 1em})"; }
     @media #{$query} { @content; }
+
   } @else {
     @warn "#{$break} is not valid to use as a breakpoint";
   }
@@ -27,116 +34,112 @@
 
 // Root font-size in %, outputted in correct breakpoints.
 @mixin rootsize {
+  // Number of breakpoints.
+  $length: length($breakpoints);
+  // List of rootsizes and breakpoints.
   $sizes: map-values($rootsizes);
-  $length: length($rootsizes);
   $points: map-values($breakpoints);
 
   font-size: nth($sizes, 1) / 16 * 100%;
 
+  // Loop through breakpoints.
   @for $i from 2 through $length {
     @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
       font-size: nth($sizes, $i) / 16 * 100%;
     }
   }
-
 }
 
-// Font-size in rems. Work out a way to loop through greek letters - only work if those.
-@mixin fontsize-0($value) {
-  @if type-of($value) == number {
-    font-size: #{$value / map-get($rootsizes, rootsize-0)}rem;
-  } @else {
-    font-size: #{map-fetch($modular-scale, scale-0 $value) / map-get($rootsizes, rootsize-0)}rem;
-  }
-}
-@mixin fontsize-1($value) {
-  @if type-of($value) == number {
-    font-size: #{$value / map-get($rootsizes, rootsize-1)}rem;
-  } @else {
-    font-size: #{map-fetch($modular-scale, scale-1 $value) / map-get($rootsizes, rootsize-1)}rem;
-  }
-}
-@mixin fontsize-2($value) {
-  @if type-of($value) == number {
-    font-size: #{$value / map-get($rootsizes, rootsize-2)}rem;
-  } @else {
-    font-size: #{map-fetch($modular-scale, scale-2 $value) / map-get($rootsizes, rootsize-2)}rem;
-  }
-}
-@mixin fontsize-3($value) {
-  @if type-of($value) == number {
-    font-size: #{$value / map-get($rootsizes, rootsize-3)}rem;
-  } @else {
-    font-size: #{map-fetch($modular-scale, scale-3 $value) / map-get($rootsizes, rootsize-3)}rem;
-  }
-}
-@mixin fontsize-4($value) {
-  @if type-of($value) == number {
-    font-size: #{$value / map-get($rootsizes, rootsize-4)}rem;
-  } @else {
-    font-size: #{map-fetch($modular-scale, scale-4 $value) / map-get($rootsizes, rootsize-4)}rem;
+// Max-widths for typeset containers, outputted in correct breakpoints.
+@mixin maxwidth {
+  // Number of breakpoints.
+  $length: length($breakpoints);
+  // List of rootsizes, breakpoints and max-widths.
+  $sizes: map-values($rootsizes);
+  $points: map-values($breakpoints);
+  $widths: map-values($maxwidths);
+
+  max-width: #{nth($widths, 1) / nth($sizes, 1)}rem;
+
+  // Loop through breakpoints.
+  @for $i from 2 through $length {
+    @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
+      max-width: #{nth($widths, $i) / nth($sizes, $i)}rem;
+    }
   }
 }
 
-// Set all fontsizes. Work out a way to loop through breakpoints.
-@mixin fontsize-all($value) {
-  @if number("#{$value}") != false {
-    font-size: #{$value / map-get($rootsizes, rootsize-0)}rem;
-  } @else {
-    font-size: #{map-fetch($modular-scale, scale-0 $value) / map-get($rootsizes, rootsize-0)}rem;
-  }
+// Value in scale in $modular-scale?
+// Used in following font size mixin.
+@function in-modular-scale($scale, $key) {
+  $map: map-get($modular-scale, $scale);
+  $output: map-has-key($map, $key);
+  @return $output;
 }
 
+// Font-size in rems. Either set per breakpoint or for all.
+// Use values as you would for pixels i.e. 16 or use values from the modular scale.
 @mixin fontsize($fontsize, $breakpoint: 0) {
+  // Type of chosen variables.
   $font-value: type-of($fontsize);
   $break-value: type-of($breakpoint);
+  // Number of breakpoints.
   $length: length($breakpoints);
+  // List of rootsizes and breakpoints.
   $sizes: map-values($rootsizes);
   $points: map-values($breakpoints);
 
+  // If specifying a breakpoint to use (and breakpoint exists).
   @if $break-value == number and $breakpoint <= ($length - 1) and $breakpoint >= 0 {
 
+    // Check if value exists in scale.
     $in-scale: in-modular-scale(scale-#{$breakpoint}, $fontsize);
 
+    // If using a number for fontsize.
     @if $font-value == number {
-
       font-size: #{$fontsize / nth($sizes, 1)}rem;
 
+    // If using a variable from the scale for fontsize.
     } @else if $in-scale == true {
+      $get-scale: map-get($modular-scale, scale-#{$breakpoint});
+      $get-size: map-get($get-scale, $fontsize);
 
-      font-size: #{map-fetch($modular-scale, scale-#{$breakpoint} $fontsize) / nth($sizes, $i)}rem;
+      font-size: #{$get-size / nth($sizes, $i)}rem;
 
     } @else {
       @warn "#{$fontsize} is not a valid scale variable";
     }
 
+  // If want to use value for all breakpoints.
   } @else if $breakpoint == all {
 
+    // Check if value exists in first scale (not fool proof but better than checking multiple times).
     $in-first-scale: in-modular-scale(scale-0, $fontsize);
 
+    // If using a number for fontsize.
     @if $font-value == number {
-
       font-size: #{$fontsize / nth($sizes, 1)}rem;
 
+      // Loop through breakpoints.
       @for $i from 2 through $length {
         @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
           font-size: #{$fontsize / nth($sizes, $i)}rem;
         }
       }
 
+    // If using a variable from the scale for fontsize.
     } @else if $in-first-scale == true {
+      $get-scale: map-get($modular-scale, scale-0);
+      $get-size: map-get($get-scale, $fontsize);
+      font-size: #{$get-size / nth($sizes, 1)}rem;
 
-      $e: map-fetch($modular-scale, scale-0 $fontsize);
-
-      font-size: #{$e / nth($sizes, 1)}rem;
-
+      // Loop through breakpoints.
       @for $i from 2 through $length {
-
-        $z: map-get($modular-scale, scale-#{$i - 1});
-        $zz: map-get($z, $fontsize);
+        $get-scale: map-get($modular-scale, scale-#{$i - 1});
+        $get-size: map-get($get-scale, $fontsize);
 
         @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
-          font-size: #{$zz / nth($sizes, $i)}rem;
+          font-size: #{$get-size / nth($sizes, $i)}rem;
         }
       }
 
@@ -147,31 +150,6 @@
   } @else {
     @warn "#{$breakpoint} is not valid to use as a breakpoint";
   }
-
-}
-
-
-// Extending Sass maps functionality to get into nested maps. https://gist.github.com/jlong/8760275
-@function map-fetch($map, $keys) {
-  $key: nth($keys, 1);
-  $length: length($keys);
-  $value: map-get($map, $key);
-  @if ($length > 1) {
-    $rest: ();
-    @for $i from 2 through $length {
-      $rest: append($rest, nth($keys, $i))
-    }
-    @return map-fetch($value, $rest)
-  } @else {
-    @return $value;
-  }
-}
-
-// Value in scale in $modular-scale?
-@function in-modular-scale($scale, $key) {
-  $map: map-get($modular-scale, $scale);
-  $output: map-has-key($map, $key);
-  @return $output;
 }
 
 // Clearfix.

@@ -14,19 +14,7 @@ body {
   font-family: $serif;
   font-style: normal;
   font-weight: 400;
-  @include fontsize-0(zeta);
-  @include breakpoint(break-1) {
-    @include fontsize-1(zeta);
-  }
-  @include breakpoint(break-2) {
-    @include fontsize-2(zeta);
-  }
-  @include breakpoint(break-3) {
-    @include fontsize-3(zeta);
-  }
-  @include breakpoint(break-4) {
-    @include fontsize-4(zeta);
-  }
+  @include fontsize(zeta, all);
 }
 
 // Links.
@@ -98,73 +86,25 @@ a {
   h2, .beta {
     padding-top: 1rem;
     line-height: 2.5rem;
-    @include fontsize-0(22);
-    @include breakpoint(break-1) {
-      @include fontsize-1(24);
-    }
-    @include breakpoint(break-2) {
-      @include fontsize-2(26);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize-3(32);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize-4(36);
-    }
+    @include fontsize(beta, all);
   }
 
   // Heading level 3.
   h3, .gamma {
     padding-top: 1rem;
-    @include fontsize-0(20);
-    @include breakpoint(break-1) {
-      @include fontsize-1(22);
-    }
-    @include breakpoint(break-2) {
-      @include fontsize-2(24);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize-3(28);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize-4(30);
-    }
+    @include fontsize(gamma, all);
   }
 
   // Heading level 4.
   h4, .delta {
     padding-top: 1rem;
-    @include fontsize-0(18);
-    @include breakpoint(break-1) {
-      @include fontsize-1(20);
-    }
-    @include breakpoint(break-2) {
-      @include fontsize-2(22);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize-3(26);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize-4(28);
-    }
+    @include fontsize(delta, all);
   }
 
   // Heading level 5.
   h5, .epsilon {
     padding-top: 1rem;
-    @include fontsize-0(17);
-    @include breakpoint(break-1) {
-      @include fontsize-1(19);
-    }
-    @include breakpoint(break-2) {
-      @include fontsize-2(21);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize-3(24);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize-4(26);
-    }
+    @include fontsize(epsilon, all);
   }
 
   // Heading level 6.
@@ -218,23 +158,14 @@ a {
     font-style: italic;
   }
 
-  // Caption or inline small text.
+  // Caption and inline small text.
   small, .caption {
-    color: $captionColour;
     font-family: $sans-serif;
-    @include fontsize-0(12);
-    @include breakpoint(break-1) {
-      @include fontsize-1(14);
-    }
-    @include breakpoint(break-2) {
-      @include fontsize-2(16);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize-3(17);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize-4(18);
-    }
+    @include fontsize(theta, all);
+  }
+
+  .caption {
+    color: $captionColour;
   }
 
   // Nice spacing for captions.
@@ -283,19 +214,7 @@ a {
   }
 
   code {
-    @include fontsize-0(12);
-    @include breakpoint(break-1) {
-      @include fontsize-1(14);
-    }
-    @include breakpoint(break-2) {
-      @include fontsize-2(16);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize-3(17);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize-4(18);
-    }
+    @include fontsize(theta, all);
   }
 
   // Letter space those capitals people, Jan Tschichold would be proud.
