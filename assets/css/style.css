@@ -519,3 +519,21 @@ img {
   @media screen and (min-width: 40em) {
     .js .nav-toggle {
       display: none; } }
+
+.baseline .container {
+  background: -webkit-linear-gradient(top, rgba(51, 51, 51, 0.2) 0, rgba(51, 51, 51, 0.2) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 2px);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0px, rgba(51, 51, 51, 0.2)), color-stop(1px, rgba(51, 51, 51, 0.2)), color-stop(1px, rgba(255, 255, 255, 0)), color-stop(2px, rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.2) 0, rgba(51, 51, 51, 0.2) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 2px);
+  background-size: 100% 12px; }
+  @media screen and (min-width: 40em) {
+    .baseline .container {
+      background-size: 100% 14px; } }
+  @media screen and (min-width: 50em) {
+    .baseline .container {
+      background-size: 100% 15px; } }
+  @media screen and (min-width: 64em) {
+    .baseline .container {
+      background-size: 100% 17px; } }
+  @media screen and (min-width: 100em) {
+    .baseline .container {
+      background-size: 100% 18px; } }
