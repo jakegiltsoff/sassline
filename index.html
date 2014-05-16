@@ -28,14 +28,15 @@
     <h1 class="global-header__logo">Sassline</h1>
     <nav class="main-nav">
       <ul class="main-nav__list">
-        <li><a href="http://sassline.com">Website</span></a></li
+        <li><span id="gridtoggle">Toggle Grid</span></li
+       ><li><a href="http://sassline.com">Website</a></li
        ><li><a href="http://github.com/designbyjake/sassline">Github</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="baseline">
-    <div class="container typeset">
+  <section>
+    <div id="baseline" class="container typeset">
       <h1>Lorem ipsum dolor sit&nbsp;amet</h1>
 
       <p class="caption">Labore reprehenderit corporis ullam distinctio&nbsp;ex.</p>
@@ -55,10 +56,6 @@
 
       <p>Proident dolores corrupti consequatur voluptatibus labore commodi quos. <b>Incidunt mollitia</b> tempora assumenda laborum voluptate accusamus dolore optio incididunt. Maiores at duis consequatur corrupti consectetur, aliquam optio commodo accusamus distinctio, necessitatibus&nbsp;nostrum.</p>
 
-      <img src="http://placekitten.com/800/500" alt="Place that kitten">
-
-      <p class="caption">Aliquid reiciendis et velit commodi nisi blanditiis&nbsp;quaerat. </p>
-
       <h2>Repellat optio</h2>
 
       <h3>Ad perferendis omnis</h3>
@@ -66,6 +63,10 @@
       <p>Pariatur animi quis. Dolorem cupiditate <a href="#top">praesentium duis</a> iusto corrupti nobis nostrud, exercitation consequatur. Nulla minim dignissimos reprehenderit voluptatem. Recusandae delectus iure vel asperiores saepe dolorum omnis eu aliquam&nbsp;similique.</p>
 
       <blockquote><p>Fuga rerum laboris officia cupidatat, excepteur aliquid ut quis facere, cumque harum optio dignissimos. Duis repellat tempore dolor blanditiis alias impedit officiis ut&nbsp;consectetur.</p></blockquote>
+
+      <pre><code>body {
+  color: blue;
+}</code></pre>
 
       <h4>Quibusdam illum quo</h4>
 
@@ -126,6 +127,21 @@
     <p>Hodor</p>
   </footer>
 
-  <script>var navigation = responsiveNav(".main-nav");</script>
+  <script>
+  var navigation = responsiveNav(".main-nav");
+
+
+    function changeClass()
+    {
+        if ( document.getElementById("baseline").className.match(/(?:^|\s)show-grid(?!\S)/) ) {
+          document.getElementById("baseline").className = document.getElementById("baseline").className.replace( /(?:^|\s)show-grid(?!\S)/g , '' )
+        } else { document.getElementById("baseline").className += " show-grid"; }
+    }
+
+    window.onload = function()
+    {
+        document.getElementById("gridtoggle").addEventListener( 'click' , changeClass );
+    }
+  </script>
 </body>
 </html>

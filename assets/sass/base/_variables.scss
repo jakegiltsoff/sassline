@@ -34,8 +34,33 @@ $maxwidths: (
 );
 
 // Add typefaces here.
+$bodytype: (
+  font-family: '"edita", Georgia, Times, serif',
+  weights: (
+    regular: 400,
+    bold: 700
+  ),
+  styles: (
+    regluar-italic: italic
+  ),
+  cap-height: 0.68
+);
+
+$headingtype: (
+  font-family: '"ratio", Helvetica, Arial, sans-serif',
+  weights: (
+    regular: 400,
+    bold: 700
+  ),
+  cap-height: 0.74
+);
+
 $serif: "edita", Georgia, Times, serif;
 $sans-serif: "ratio", Helvetica, Arial, sans-serif;
+
+$serifcap: 0.68;
+$sanscap: 0.74;
+$monocap: 0.8;
 
 // Text colours. British English.
 $headingColour: #2E2E2E;

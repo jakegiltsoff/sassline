@@ -94,7 +94,6 @@ a {
   background-image: -webkit-linear-gradient(top, transparent 50%, #efa7ad 50%);
   background-image: linear-gradient(to bottom, transparent 50%, #efa7ad 50%);
   background-repeat: repeat-x;
-  -webkit-background-size: 2px 2px;
   background-size: 2px 2px;
   background-position: 0 90%;
   text-shadow: 1px 0 #FFF,2px 0 #FFF,-1px 0 #FFF,-2px 0 #FFF; }
@@ -108,7 +107,8 @@ a {
   -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-  margin-bottom: 2rem; }
+  margin-bottom: calc(2rem - 10.52px);
+  padding-top: 10.52px; }
 .typeset h1, .typeset h2, .typeset h3, .typeset h4, .typeset h5, .typeset h6 {
   -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -120,9 +120,10 @@ a {
   font-style: normal;
   font-weight: 700; }
 .typeset h1, .typeset .alpha {
-  padding-top: 1rem;
-  line-height: 2.5rem;
-  font-size: 2.33333rem; }
+  line-height: 3rem;
+  font-size: 2.33333rem;
+  margin-bottom: calc(1rem - 8.5px);
+  padding-top: 8.5px; }
   @media screen and (min-width: 40em) {
     .typeset h1, .typeset .alpha {
       font-size: 2.14286rem; } }
@@ -136,9 +137,10 @@ a {
     .typeset h1, .typeset .alpha {
       font-size: 2.77778rem; } }
 .typeset h2, .typeset .beta {
-  padding-top: 1rem;
-  line-height: 2.5rem;
-  font-size: 2.08333rem; }
+  line-height: 3rem;
+  font-size: 2.08333rem;
+  margin-bottom: calc(1rem - 10.72px);
+  padding-top: 10.72px; }
   @media screen and (min-width: 40em) {
     .typeset h2, .typeset .beta {
       font-size: 1.9rem; } }
@@ -152,8 +154,10 @@ a {
     .typeset h2, .typeset .beta {
       font-size: 2.43889rem; } }
 .typeset h3, .typeset .gamma {
-  padding-top: 1rem;
-  font-size: 1.86667rem; }
+  line-height: 3rem;
+  font-size: 1.86667rem;
+  margin-bottom: calc(1rem - 14.05px);
+  padding-top: 14.05px; }
   @media screen and (min-width: 40em) {
     .typeset h3, .typeset .gamma {
       font-size: 1.71429rem; } }
@@ -167,8 +171,9 @@ a {
     .typeset h3, .typeset .gamma {
       font-size: 1.96111rem; } }
 .typeset h4, .typeset .delta {
-  padding-top: 1rem;
-  font-size: 1.66667rem; }
+  font-size: 1.66667rem;
+  margin-bottom: -6.53px;
+  padding-top: 6.53px; }
   @media screen and (min-width: 40em) {
     .typeset h4, .typeset .delta {
       font-size: 1.52143rem; } }
@@ -182,8 +187,9 @@ a {
     .typeset h4, .typeset .delta {
       font-size: 1.72778rem; } }
 .typeset h5, .typeset .epsilon {
-  padding-top: 1rem;
-  font-size: 1.49167rem; }
+  font-size: 1.49167rem;
+  margin-bottom: -8.75px;
+  padding-top: 8.75px; }
   @media screen and (min-width: 40em) {
     .typeset h5, .typeset .epsilon {
       font-size: 1.37143rem; } }
@@ -197,17 +203,11 @@ a {
     .typeset h5, .typeset .epsilon {
       font-size: 1.38889rem; } }
 .typeset h6, .typeset .zeta {
-  padding-top: 1rem; }
-.typeset h1 + p, .typeset h1 + ol, .typeset h1 + ul, .typeset h1 + blockquote p, .typeset h1 + pre,
-.typeset .alpha + p, .typeset .alpha + ol, .typeset .alpha + ul, .typeset .alpha + blockquote p, .typeset .alpha + pre,
-.typeset h2 + p, .typeset h2 + ol, .typeset h2 + ul, .typeset h2 + blockquote p, .typeset h2 + pre,
-.typeset .beta + p, .typeset .beta + ol, .typeset .beta + ul, .typeset .beta + blockquote p, .typeset .beta + pre,
-.typeset img + p, .typeset img + ol, .typeset img + ul, .typeset img + blockquote p, .typeset img + pre {
-  margin-top: 2rem; }
-.typeset section > .container > :first-child {
-  padding-top: 0; }
+  margin-bottom: -9.86px;
+  padding-top: 9.86px; }
 .typeset ul, .typeset ol {
-  margin-bottom: 2rem; }
+  margin-bottom: calc(2rem - 10.52px);
+  padding-top: 10.52px; }
   .typeset ul li, .typeset ol li {
     -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
@@ -242,36 +242,44 @@ a {
     .typeset small, .typeset .caption {
       font-size: 0.86667rem; } }
 .typeset .caption {
-  color: #7e7e7e; }
-.typeset h1 + .caption, .typeset .alpha + .caption, .typeset h2 + .caption, .typeset .beta + .caption, .typeset h3 + .caption, .typeset .gamma + .caption, .typeset img + .caption {
-  margin-top: 0; }
+  color: #7e7e7e;
+  padding-top: 12.56px;
+  margin-bottom: calc(2rem - 12.56px); }
+.typeset h1 + .caption, .typeset .alpha + .caption, .typeset h2 + .caption, .typeset .beta + .caption, .typeset h3 + .caption, .typeset .gamma + .caption {
+  margin-top: -1rem; }
 .typeset blockquote p {
   font-style: italic;
   padding-left: 1rem;
-  border-left: 0.1rem solid #d52836; }
-  @media screen and (min-width: 40em) {
-    .typeset blockquote p {
-      padding-left: 2rem; } }
+  border-left: 0.1rem solid #d52836;
+  margin-bottom: calc(3rem - 21.04px);
+  padding-bottom: 10.52px; }
+@media screen and (min-width: 40em) {
+  .typeset blockquote {
+    margin-left: -1rem; } }
 .typeset hr {
-  color: #c9c9c9;
-  background-color: #c9c9c9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#c9c9c9));
+  background-image: -webkit-linear-gradient(top, transparent 50%, #c9c9c9 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #c9c9c9 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 50%;
   border: 0;
-  border-bottom: 1px solid #c9c9c9;
-  margin-top: 3rem;
-  margin-bottom: 3rem; }
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin: 0; }
 .typeset code, .typeset pre {
   background-color: #29323a;
   color: white;
   font-family: Menlo, Monaco, "Courier New", monospace; }
 .typeset pre {
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   display: block;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
   margin-bottom: 2rem;
-  padding: 1rem; }
+  padding: 1rem calc(1rem + 5.2px); }
 .typeset code {
   font-size: 1.06667rem; }
   @media screen and (min-width: 40em) {
@@ -286,6 +294,8 @@ a {
   @media screen and (min-width: 100em) {
     .typeset code {
       font-size: 0.86667rem; } }
+.typeset pre code {
+  line-height: 1rem; }
 .typeset .upper {
   text-transform: uppercase;
   letter-spacing: 0.1rem; }
@@ -520,20 +530,8 @@ img {
     .js .nav-toggle {
       display: none; } }
 
-.baseline .container {
+#baseline.show-grid {
   background: -webkit-linear-gradient(top, rgba(51, 51, 51, 0.2) 0, rgba(51, 51, 51, 0.2) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 2px);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0px, rgba(51, 51, 51, 0.2)), color-stop(1px, rgba(51, 51, 51, 0.2)), color-stop(1px, rgba(255, 255, 255, 0)), color-stop(2px, rgba(255, 255, 255, 0)));
   background: linear-gradient(to bottom, rgba(51, 51, 51, 0.2) 0, rgba(51, 51, 51, 0.2) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 2px);
-  background-size: 100% 12px; }
-  @media screen and (min-width: 40em) {
-    .baseline .container {
-      background-size: 100% 14px; } }
-  @media screen and (min-width: 50em) {
-    .baseline .container {
-      background-size: 100% 15px; } }
-  @media screen and (min-width: 64em) {
-    .baseline .container {
-      background-size: 100% 17px; } }
-  @media screen and (min-width: 100em) {
-    .baseline .container {
-      background-size: 100% 18px; } }
+  background-size: 100% 1rem; }

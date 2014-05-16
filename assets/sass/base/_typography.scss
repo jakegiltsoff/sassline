@@ -41,7 +41,6 @@ a {
     background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkColour,30%) 50%);
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($linkColour,30%) 50%);
     background-repeat: repeat-x;
-    -webkit-background-size: 2px 2px;
     background-size: 2px 2px;
     background-position: 0 90%;
     text-shadow: 1px 0 #FFF,2px 0 #FFF,-1px 0 #FFF,-2px 0 #FFF;
@@ -59,7 +58,8 @@ a {
     -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    margin-bottom: 2rem;
+    margin-bottom: calc(2rem - #{22 * (1.636363636 - $serifcap) / 2}px);
+    padding-top: #{22 * (1.636363636 - $serifcap) / 2}px;
   }
 
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
@@ -77,58 +77,52 @@ a {
 
   // Heading level 1.
   h1, .alpha {
-    padding-top: 1rem;
-    line-height: 2.5rem;
+    line-height: 3rem;
     @include fontsize(alpha, all);
+    margin-bottom: calc(1rem - #{50 * (1.08 - $sanscap) / 2}px);
+    padding-top: #{50 * (1.08 - $sanscap) / 2}px;
   }
 
   // Heading level 2.
   h2, .beta {
-    padding-top: 1rem;
-    line-height: 2.5rem;
+    line-height: 3rem;
     @include fontsize(beta, all);
+    margin-bottom: calc(1rem - #{44 * (1.227272727 - $sanscap) / 2}px);
+    padding-top: #{44 * (1.227272727 - $sanscap) / 2}px;
   }
 
   // Heading level 3.
   h3, .gamma {
-    padding-top: 1rem;
+    line-height: 3rem;
     @include fontsize(gamma, all);
+    margin-bottom: calc(1rem - #{35 * (1.542857143 - $sanscap) / 2}px);
+    padding-top: #{35 * (1.542857143 - $sanscap) / 2}px;
   }
 
   // Heading level 4.
   h4, .delta {
-    padding-top: 1rem;
     @include fontsize(delta, all);
+    margin-bottom: -#{31 * (1.161290323 - $sanscap) / 2}px;
+    padding-top: #{31 * (1.161290323 - $sanscap) / 2}px;
   }
 
   // Heading level 5.
   h5, .epsilon {
-    padding-top: 1rem;
     @include fontsize(epsilon, all);
+    margin-bottom: -#{25 * (1.44 - $sanscap) / 2}px;
+    padding-top: #{25 * (1.44 - $sanscap) / 2}px;
   }
 
   // Heading level 6.
   h6, .zeta {
-    padding-top: 1rem;
-  }
-
-  // Nice spacing after high level headings and images. Text sits directly below h4, h5 and h6.
-  h1 + p, h1 + ol, h1 + ul, h1 + blockquote p, h1 + pre,
-  .alpha + p, .alpha + ol, .alpha + ul, .alpha + blockquote p, .alpha + pre,
-  h2 + p, h2 + ol, h2 + ul, h2 + blockquote p, h2 + pre,
-  .beta + p, .beta + ol, .beta + ul, .beta + blockquote p, .beta + pre,
-  img + p, img + ol, img + ul, img + blockquote p, img + pre {
-    margin-top: 2rem;
-  }
-
-  // Remove padding-top from first heading
-  section > .container > :first-child {
-    padding-top: 0;
+    margin-bottom: -#{22 * (1.636363636 - $sanscap) / 2}px;
+    padding-top: #{22 * (1.636363636 - $sanscap) / 2}px;
   }
 
   // Lists.
   ul, ol {
-    margin-bottom: 2rem;
+    margin-bottom: calc(2rem - #{22 * (1.636363636 - $serifcap) / 2}px);
+    padding-top: #{22 * (1.636363636 - $serifcap) / 2}px;
     li {
       -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
       -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
@@ -166,11 +160,13 @@ a {
 
   .caption {
     color: $captionColour;
+    padding-top: #{16 * (2.25 - $serifcap) / 2}px;
+    margin-bottom: calc(2rem - #{16 * (2.25 - $serifcap) / 2}px);
   }
 
   // Nice spacing for captions.
-  h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption, .gamma + .caption, img + .caption {
-    margin-top: 0;
+  h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption, .gamma + .caption {
+    margin-top: -1rem;
   }
 
   // Quotes.
@@ -179,20 +175,26 @@ a {
       font-style: italic;
       padding-left: 1rem;
       border-left: 0.1rem solid $linkColour;
-      @include breakpoint(break-1) {
-        padding-left: 2rem;
-      }
+      margin-bottom: calc(3rem - #{22 * (1.636363636 - $serifcap)}px);
+      padding-bottom: #{22 * (1.636363636 - $serifcap) / 2}px;
+    }
+    @include breakpoint(break-1) {
+      margin-left: -1rem;
     }
   }
 
   // Horizontal rule.
   hr {
-    color: darken($backgroundColour,20%);
-    background-color: darken($backgroundColour,20%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to(darken($backgroundColour,20%)));
+    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,darken($backgroundColour,20%) 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,darken($backgroundColour,20%) 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 50%;
     border: 0;
-    border-bottom: 1px solid darken($backgroundColour,20%);
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin: 0;
   }
 
   // Code block.
@@ -203,18 +205,22 @@ a {
   }
 
   pre {
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     display: block;
     white-space: pre;
     white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: 1rem calc(1rem + #{16 * (1.125 - $monocap)}px);
   }
 
   code {
     @include fontsize(theta, all);
+  }
+
+  pre code {
+    line-height: 1rem;
   }
 
   // Letter space those capitals people, Jan Tschichold would be proud.
