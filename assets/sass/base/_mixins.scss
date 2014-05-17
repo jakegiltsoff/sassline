@@ -97,14 +97,14 @@
 
     // If using a number for fontsize.
     @if $font-value == number {
-      font-size: #{$fontsize / nth($sizes, 1)}rem;
+      font-size: #{$fontsize / nth($sizes, ($breakpoint + 1))}rem;
 
     // If using a variable from the scale for fontsize.
     } @else if $in-scale == true {
       $get-scale: map-get($modular-scale, scale-#{$breakpoint});
       $get-size: map-get($get-scale, $fontsize);
 
-      font-size: #{$get-size / nth($sizes, $i)}rem;
+      font-size: #{$get-size / nth($sizes, ($breakpoint + 1))}rem;
 
     } @else {
       @warn "#{$fontsize} is not a valid scale variable";
@@ -149,6 +149,46 @@
 
   } @else {
     @warn "#{$breakpoint} is not valid to use as a breakpoint";
+  }
+}
+
+// Advanced baseline magic.
+// ! Read the README to help understand what is going on here.
+// Parts based on https://gist.github.com/razwan/10662500
+@mixin baselinify-0($fontsize, $font, $lineheight: 2, $below: 2, $breakpoint: 0) {
+  // Type of chosen variables.
+  $font-value: type-of($fontsize);
+  $break-value: type-of($breakpoint);
+  // Number of breakpoints.
+  $length: length($breakpoints);
+  // Lineheight value as decimal.
+  $lineheight-value: #{$fontsize / $lineheight};
+  // Cap height
+  $cap-height: map-get($font, cap-height);
+  // Check if value exists in scale.
+  $in-scale: in-modular-scale(scale-#{$breakpoint}, $fontsize);
+  // List of rootsizes and breakpoints.
+  $sizes: map-values($rootsizes);
+  $points: map-values($breakpoints);
+
+  // If specifying a breakpoint to use (and breakpoint exists).
+  @if $break-value == number and $breakpoint <= ($length - 1) and $breakpoint >= 0 {
+
+    @if $font-value == number {
+      margin-bottom: calc(#{$below}rem - #{$fontsize * ($lineheight-value - $cap-height) / 2}px);
+      padding-top: #{$fontsize * ($lineheight-value - $cap-height) / 2}px;
+
+    } @else if $in-scale == true {
+      $get-scale: map-get($modular-scale, scale-#{$breakpoint});
+      $get-size: map-get($get-scale, $fontsize);
+
+      margin-bottom: calc(#{$below}rem - #{$get-size * ($lineheight-value - $cap-height) / 2}px);
+      padding-top: #{$get-size * ($lineheight-value - $cap-height) / 2}px;
+    }
+
+  // If want to use value for all breakpoints.
+  } @else if $breakpoint == all {
+
   }
 }
 
