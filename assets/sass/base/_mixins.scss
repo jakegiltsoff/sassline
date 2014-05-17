@@ -1,7 +1,6 @@
 // SCSS mixins
 // ---------------------------------------
 
-
 // Breakpoints. Either set one to one of the breakpoint variables, or use a custom value for minor breakpoints.
 // Defaults to min-width, but both min->max and max-width are available too.
 // Parts based on https://gist.github.com/timknight/03e6335b8816aa534cf7
@@ -168,6 +167,7 @@
   // If specifying a breakpoint to use (and breakpoint exists).
   @if $break-value == number and $breakpoint <= ($length - 1) and $breakpoint >= 0 {
 
+    // If using a number for fontsize.
     @if $font-value == number {
       $rootsize: nth($sizes, ($breakpoint + 1));
       $baseline-shift: #{($fontsize / 2 * (($lineheight * $rootsize / $fontsize) - $cap-height)) / $rootsize + 0.00001};
@@ -176,6 +176,7 @@
       margin-bottom: #{$baseline-push}rem;
       padding-top: #{$baseline-shift}rem;
 
+    // If using a variable from the scale for fontsize.
     } @else if $in-scale == true {
       $get-scale: map-get($modular-scale, scale-#{$breakpoint});
       $get-size: map-get($get-scale, $fontsize);
@@ -194,6 +195,7 @@
   // If want to use value for all breakpoints.
   } @else if $breakpoint == all {
 
+    // If using a number for fontsize.
     @if $font-value == number {
       $rootsize: nth($sizes, 1);
       $baseline-shift: #{($fontsize / 2 * (($lineheight * $rootsize / $fontsize) - $cap-height)) / $rootsize + 0.00001};
@@ -250,9 +252,7 @@
   }
 }
 
-// Advanced baseline magic.
-// ! Read the README to help understand what is going on here.
-// Parts based on https://gist.github.com/razwan/10662500
+// Set fontsize and baseline at once.
 @mixin sassline($fontsize, $font, $lineheight: 2, $below: 2, $breakpoint: 0) {
   $font-value: type-of($fontsize);
   $break-value: type-of($breakpoint);
@@ -311,7 +311,6 @@
         }
       }
 
-    // If using a variable from the scale for fontsize.
     } @else if $in-scale == true {
       $get-scale: map-get($modular-scale, scale-0);
       $get-size: map-get($get-scale, $fontsize);
@@ -322,7 +321,6 @@
       margin-bottom: #{$baseline-push}rem;
       padding-top: #{$baseline-shift}rem;
 
-      // Loop through breakpoints.
       @for $i from 2 through $length {
         $get-scale: map-get($modular-scale, scale-#{$i - 1});
         $get-size: map-get($get-scale, $fontsize);

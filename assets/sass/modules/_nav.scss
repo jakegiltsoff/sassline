@@ -75,11 +75,16 @@
   li {
     font-family: $sans-serif;
     @include fontsize(16, all);
-    a {
+    a, span {
       display: block;
       padding: 10px 3%;
       color: #FFF;
       border-bottom: 0.1rem solid $white;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
       &:hover, &:active, &:focus {
         background-color: lighten($linkColour,35%);
         color: $hoverColour;
@@ -89,8 +94,8 @@
       display: inline-block;
       width: auto;
       margin-right: 2rem;
-      padding-top: 7px; // Vertical centring
-      a {
+      padding-top: 7px; // Vertical centering
+      a, span {
         color: $white;
         border: 0;
         display: inline;
