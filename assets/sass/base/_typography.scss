@@ -58,8 +58,7 @@ a {
     -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
     font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    margin-bottom: calc(2rem - #{22 * (1.636363636 - $serifcap) / 2}px);
-    padding-top: #{22 * (1.636363636 - $serifcap) / 2}px;
+    @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
   }
 
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
@@ -77,52 +76,37 @@ a {
 
   // Heading level 1.
   h1, .alpha {
-    line-height: 3rem;
-    @include fontsize(alpha, all);
-    margin-bottom: calc(1rem - #{50 * (1.08 - $sanscap) / 2}px);
-    padding-top: #{50 * (1.08 - $sanscap) / 2}px;
+    @include sassline($fontsize: alpha, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
   }
 
   // Heading level 2.
   h2, .beta {
-    line-height: 3rem;
-    @include fontsize(beta, all);
-    margin-bottom: calc(1rem - #{44 * (1.227272727 - $sanscap) / 2}px);
-    padding-top: #{44 * (1.227272727 - $sanscap) / 2}px;
+    @include sassline(beta, $headingtype, 3, 1, all);
   }
 
   // Heading level 3.
   h3, .gamma {
-    line-height: 3rem;
-    @include fontsize(gamma, all);
-    margin-bottom: calc(1rem - #{35 * (1.542857143 - $sanscap) / 2}px);
-    padding-top: #{35 * (1.542857143 - $sanscap) / 2}px;
+    @include sassline(gamma, $headingtype, 3, 1, all);
   }
 
   // Heading level 4.
   h4, .delta {
-    @include fontsize(delta, all);
-    margin-bottom: -#{31 * (1.161290323 - $sanscap) / 2}px;
-    padding-top: #{31 * (1.161290323 - $sanscap) / 2}px;
+    @include sassline(delta, $headingtype, 2, 0, all);
   }
 
   // Heading level 5.
   h5, .epsilon {
-    @include fontsize(epsilon, all);
-    margin-bottom: -#{25 * (1.44 - $sanscap) / 2}px;
-    padding-top: #{25 * (1.44 - $sanscap) / 2}px;
+    @include sassline(epsilon, $headingtype, 2, 0, all);
   }
 
   // Heading level 6.
   h6, .zeta {
-    margin-bottom: -#{22 * (1.636363636 - $sanscap) / 2}px;
-    padding-top: #{22 * (1.636363636 - $sanscap) / 2}px;
+    @include sassline(zeta, $headingtype, 2, 0, all);
   }
 
   // Lists.
   ul, ol {
-    margin-bottom: calc(2rem - #{22 * (1.636363636 - $serifcap) / 2}px);
-    padding-top: #{22 * (1.636363636 - $serifcap) / 2}px;
+    @include baseline(zeta, $bodytype, 2, 2, all);
     li {
       -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
       -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
@@ -155,13 +139,14 @@ a {
   // Caption and inline small text.
   small, .caption {
     font-family: $sans-serif;
+    font-style: normal;
+    font-weight: 400;
     @include fontsize(theta, all);
   }
 
   .caption {
     color: $captionColour;
-    padding-top: #{16 * (2.25 - $serifcap) / 2}px;
-    margin-bottom: calc(2rem - #{16 * (2.25 - $serifcap) / 2}px);
+    @include baseline(theta, $headingtype, 2, 2, all);
   }
 
   // Nice spacing for captions.

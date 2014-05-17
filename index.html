@@ -56,6 +56,8 @@
 
       <p>Proident dolores corrupti consequatur voluptatibus labore commodi quos. <b>Incidunt mollitia</b> tempora assumenda laborum voluptate accusamus dolore optio incididunt. Maiores at duis consequatur corrupti consectetur, aliquam optio commodo accusamus distinctio, necessitatibus&nbsp;nostrum.</p>
 
+      <p>Optio, nesciunt, quo, fugiat, blanditiis at quas excepturi quae maiores vel corrupti voluptate cupiditate nemo! In, eius quidem harum quibusdam ratione non. Iste, deleniti, fugit, voluptas aperiam qui adipisci provident ab accusantium possimus eveniet voluptate&nbsp;consectetur!</p>
+
       <h2>Repellat optio</h2>
 
       <h3>Ad perferendis omnis</h3>
@@ -130,18 +132,15 @@
   <script>
   var navigation = responsiveNav(".main-nav");
 
+  function changeClass() {
+    if ( document.getElementById("baseline").className.match(/(?:^|\s)show-grid(?!\S)/) ) {
+      document.getElementById("baseline").className = document.getElementById("baseline").className.replace( /(?:^|\s)show-grid(?!\S)/g , '' )
+    } else { document.getElementById("baseline").className += " show-grid"; }
+  }
 
-    function changeClass()
-    {
-        if ( document.getElementById("baseline").className.match(/(?:^|\s)show-grid(?!\S)/) ) {
-          document.getElementById("baseline").className = document.getElementById("baseline").className.replace( /(?:^|\s)show-grid(?!\S)/g , '' )
-        } else { document.getElementById("baseline").className += " show-grid"; }
-    }
-
-    window.onload = function()
-    {
-        document.getElementById("gridtoggle").addEventListener( 'click' , changeClass );
-    }
+  window.onload = function() {
+    document.getElementById("gridtoggle").addEventListener( 'click' , changeClass );
+  }
   </script>
 </body>
 </html>
