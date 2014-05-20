@@ -362,8 +362,24 @@ a {
   font-style: italic;
   padding-left: 1rem;
   border-left: 0.1rem solid #d52836;
-  margin-bottom: calc(3rem - 21.04px);
-  padding-bottom: 10.52px; }
+  margin-bottom: 1.90666rem;
+  padding-bottom: 0.54668rem; }
+  @media screen and (min-width: 40em) {
+    .typeset blockquote p {
+      margin-bottom: 1.8257rem;
+      padding-bottom: 0.58715rem; } }
+  @media screen and (min-width: 50em) {
+    .typeset blockquote p {
+      margin-bottom: 1.81599rem;
+      padding-bottom: 0.59201rem; } }
+  @media screen and (min-width: 64em) {
+    .typeset blockquote p {
+      margin-bottom: 1.79999rem;
+      padding-bottom: 0.60001rem; } }
+  @media screen and (min-width: 100em) {
+    .typeset blockquote p {
+      margin-bottom: 1.8311rem;
+      padding-bottom: 0.58445rem; } }
 @media screen and (min-width: 40em) {
   .typeset blockquote {
     margin-left: -1rem; } }
@@ -390,7 +406,19 @@ a {
   word-break: break-all;
   word-wrap: break-word;
   margin-bottom: 2rem;
-  padding: 1rem calc(1rem + 5.2px); }
+  padding: 1rem 2.14668rem; }
+  @media screen and (min-width: 40em) {
+    .typeset pre {
+      padding: 1rem 2.22287rem; } }
+  @media screen and (min-width: 50em) {
+    .typeset pre {
+      padding: 1rem 2.23201rem; } }
+  @media screen and (min-width: 64em) {
+    .typeset pre {
+      padding: 1rem 2.29413rem; } }
+  @media screen and (min-width: 100em) {
+    .typeset pre {
+      padding: 1rem 2.30668rem; } }
 .typeset code {
   font-size: 1.06667rem; }
   @media screen and (min-width: 40em) {
@@ -508,20 +536,19 @@ img {
   @media screen and (min-width: 40em) {
     .global-header {
       background-color: #29323a; } }
-
-.global-header__logo {
-  background-image: url(../img/logo.png);
-  background-size: cover;
-  color: transparent;
-  display: inline-block;
-  font: 0/0 a;
-  height: 60px;
-  width: 165px;
-  margin-left: 3%;
-  vertical-align: middle; }
-  @media screen and (min-width: 40em) {
-    .global-header__logo {
-      margin-left: 0; } }
+  .global-header__logo {
+    background-image: url(../img/logo.png);
+    background-size: cover;
+    color: transparent;
+    display: inline-block;
+    font: 0/0 a;
+    height: 60px;
+    width: 165px;
+    margin-left: 3%;
+    vertical-align: middle; }
+    @media screen and (min-width: 40em) {
+      .global-header__logo {
+        margin-left: 0; } }
 
 /* Navigation demo styles */
 /* --------------------------------------- */

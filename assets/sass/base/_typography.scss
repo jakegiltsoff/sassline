@@ -11,9 +11,9 @@ html {
 // Site-wide base styles.
 body {
   line-height: 2rem;
-  font-family: $serif;
+  font-family: unquote(map-get($bodytype, font-family));
   font-style: normal;
-  font-weight: 400;
+  font-weight: map-get($bodytype, regular);
   @include fontsize(zeta, all);
 }
 
@@ -26,6 +26,7 @@ a {
   transition: .1s color;
   color: $linkColour;
   text-decoration: none;
+
   &:hover, &:active, &:focus {
     color: $hoverColour;
     text-decoration: none;
@@ -44,6 +45,7 @@ a {
     background-size: 2px 2px;
     background-position: 0 90%;
     text-shadow: 1px 0 #FFF,2px 0 #FFF,-1px 0 #FFF,-2px 0 #FFF;
+
     &:hover, &:active, &:focus {
       background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to(lighten($hoverColour,30%)));
       background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,30%) 50%);
@@ -69,9 +71,9 @@ a {
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     color: $headingColour;
-    font-family: $sans-serif;
+    font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
-    font-weight: 700;
+    font-weight: map-get($bodytype, bold);
   }
 
   // Heading level 1.
@@ -107,6 +109,7 @@ a {
   // Lists.
   ul, ol {
     @include baseline(zeta, $bodytype, 2, 2, all);
+
     li {
       -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
       -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
@@ -114,11 +117,14 @@ a {
       -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
       font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
       margin-left: 2rem;
+
       @include breakpoint(break-1) {
         margin-left: 0;
       }
+
       a {
         color: $hoverColour;
+
         &:hover, &:active, &:focus {
           color: $linkColour;
         }
@@ -128,19 +134,19 @@ a {
 
   // Bold.
   b, strong, .bold {
-    font-weight: 700;
+    font-weight: map-get($bodytype, bold);
   }
 
   // Italic.
   em, i, .italic {
-    font-style: italic;
+    font-style: map-get($bodytype, italic);
   }
 
   // Caption and inline small text.
   small, .caption {
-    font-family: $sans-serif;
+    font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
-    font-weight: 400;
+    font-weight: map-get($headingtype, regular);
     @include fontsize(theta, all);
   }
 
@@ -156,13 +162,36 @@ a {
 
   // Quotes.
   blockquote {
+
     p {
-      font-style: italic;
+      font-style: map-get($bodytype, italic);
       padding-left: 1rem;
       border-left: 0.1rem solid $linkColour;
-      margin-bottom: calc(3rem - #{22 * (1.636363636 - $serifcap)}px);
-      padding-bottom: #{22 * (1.636363636 - $serifcap) / 2}px;
+
+      // Add spacing below blockquote paragraphs to align to baseline grid.
+      $get-scale: map-get($modular-scale, scale-0);
+      $get-size: map-get($get-scale, zeta);
+      $rootsize: nth($sizes, 1);
+      $baseline-shift: #{($get-size / 2 * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001};
+      $baseline-push: #{3 - (($get-size * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001)};
+
+      margin-bottom: #{$baseline-push}rem;
+      padding-bottom: #{$baseline-shift}rem;
+
+      @for $i from 2 through $breakpoints-limit {
+        $get-scale: map-get($modular-scale, scale-#{$i - 1});
+        $get-size: map-get($get-scale, zeta);
+        $rootsize: nth($sizes, $i);
+        $baseline-shift: #{($get-size / 2 * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001};
+        $baseline-push: #{3 - (($get-size * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001)};
+
+        @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
+          margin-bottom: #{$baseline-push}rem;
+          padding-bottom: #{$baseline-shift}rem;
+        }
+      }
     }
+
     @include breakpoint(break-1) {
       margin-left: -1rem;
     }
@@ -186,7 +215,7 @@ a {
   code, pre {
     background-color: $codeBackgroundColour;
     color: $white;
-    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-family: unquote(map-get($monospacetype, font-family));
   }
 
   pre {
@@ -197,7 +226,26 @@ a {
     word-break: break-all;
     word-wrap: break-word;
     margin-bottom: 2rem;
-    padding: 1rem calc(1rem + #{16 * (1.125 - $monocap)}px);
+
+    // Add padding in pre blocks to align to baseline grid.
+    $get-scale: map-get($modular-scale, scale-0);
+    $get-size: map-get($get-scale, theta);
+    $rootsize: nth($sizes, 1);
+    $baseline-push: #{1 + (($get-size * ((2 * $rootsize / $get-size) - map-get($monospacetype, cap-height))) / $rootsize + 0.00001)};
+
+    padding: 1rem #{$baseline-push}rem;
+
+    @for $i from 2 through $breakpoints-limit {
+      $get-scale: map-get($modular-scale, scale-#{$i - 1});
+      $get-size: map-get($get-scale, theta);
+      $rootsize: nth($sizes, $i);
+      $baseline-push: #{1 + (($get-size * ((2 * $rootsize / $get-size) - map-get($monospacetype, cap-height))) / $rootsize + 0.00001)};
+
+      @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
+        padding: 1rem #{$baseline-push}rem;
+      }
+    }
+
   }
 
   code {

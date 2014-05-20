@@ -36,23 +36,22 @@ $maxwidths: (
 // Add typefaces here.
 $bodytype: (
   font-family: '"edita", Georgia, Times, serif',
-  weights: (
-    regular: 400,
-    bold: 700
-  ),
-  styles: (
-    regluar-italic: italic
-  ),
+  regular: 400,
+  bold: 700,
+  italic: italic,
   cap-height: 0.68
 );
 
 $headingtype: (
   font-family: '"ratio", Helvetica, Arial, sans-serif',
-  weights: (
-    regular: 400,
-    bold: 700
-  ),
+  regular: 400,
+  bold: 700,
   cap-height: 0.74
+);
+
+$monospacetype: (
+  font-family: 'Menlo, Monaco, "Courier New", monospace',
+  cap-height: 0.8
 );
 
 $serif: "edita", Georgia, Times, serif;
