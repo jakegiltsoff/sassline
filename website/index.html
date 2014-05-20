@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sassline</title>
+  <link rel="stylesheet" href="/assets/css/style.min.css">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <script src="/assets/js/responsive-nav.min.js"></script>
+  <script>
+  // Example of how to load in a smaller Typekit kit at smaller viewport widths. Every little helps.
+  var kit;
+  if( window.innerWidth < 800 ) {
+    // Smaller kit - default characters (swap in your kit code)
+    kit='frh2lrk';
+  } else {
+    // Larger kit - all characters enabled (swap in your kit code)
+    kit='ouk5bdy';
+  };
+  document.write('\x3Cscript src="//use.typekit.net/'+kit+'.js">\x3C/script>');
+  </script>
+  <script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+  <header class="global-header">
+    <h1 class="global-header__logo">Sassline</h1>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li><span id="gridtoggle">Toggle Grid</span></li
+       ><li><a href="http://sassline.com">Website</a></li
+       ><li><a href="http://github.com/designbyjake/sassline">Github</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <div id="baseline" class="container typeset">
+      <h1>What is Sassline?</h1>
+      <p>There are many different options when it comes to boilerplates, frameworks and pattern libraries these days. Sassline has one aim and one aim only&thinsp;&mdash;&thinsp;to spread better typography across the responsive environment that is the web. It can be used for prototyping, blogs or other web projects. It has recommended base typography styling and mixins to work proportionally from the baseline grid and as little bloat as possible, simples.</p>
+      <h2>Setting the baseline</h2>
+      <p>Sassline is based on the method used for setting text to a baseline when designing for print. By setting the root font-size as half the line-height of the paragraph text, the height of the baseline grid is effectively set at 2rem. This allows us to easily use proportions of the baseline elsewhere for margins and padding. The typographic styling included sets all elements to the baseline and is context aware. The spacing is set between elements with the Gestalt law of proximity (elements closer together are visually grouped).</p>
+      <h3>OpenType features</h3>
+      <p>OpenType features are enabled to give the nicest formatting of text and some flourishes in the headings if available in the web font (and supported in the browser). Getting the most out of OpenType features can end up with large typeface files being served to your site as discussed on the <a href="http://blog.typekit.com/2013/04/17/fallback-fonts-on-mobile-devices/">Typekit blog</a>. Included in Sassline is a method for using a smaller kit (without the full character sets) on mobile devices.</p>
+      <hr>
+      <h4>Demo</h4>
+      <p>Check out the demo of Sassline to see it in action with web fonts and local fonts. You can also read a little more about Sassline on <a href="http://github.com/designbyjake/sassline">github</a>.</p>
+    </div>
+  </section>
+
+  <footer class="global-footer">
+    <p>Hodor</p>
+  </footer>
+
+  <script>
+  var navigation = responsiveNav(".main-nav");
+
+  function changeClass() {
+    if ( document.getElementById("baseline").className.match(/(?:^|\s)show-grid(?!\S)/) ) {
+      document.getElementById("baseline").className = document.getElementById("baseline").className.replace( /(?:^|\s)show-grid(?!\S)/g , '' )
+    } else { document.getElementById("baseline").className += " show-grid"; }
+  }
+
+  window.onload = function() {
+    document.getElementById("gridtoggle").addEventListener( 'click' , changeClass );
+  }
+  </script>
+</body>
+</html>
