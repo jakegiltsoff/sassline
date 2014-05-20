@@ -466,6 +466,8 @@ a {
   .global-footer p {
     color: white;
     font-family: "ratio", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
     text-align: center;
     padding: 1rem 0;
     margin: 0;
@@ -613,6 +615,8 @@ img {
       text-align: right; } }
 .main-nav li {
   font-family: "ratio", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 1.33333rem; }
   @media screen and (min-width: 40em) {
     .main-nav li {
@@ -674,7 +678,7 @@ img {
       display: none; } }
 
 #baseline.show-grid {
-  background: -webkit-linear-gradient(top, rgba(51, 51, 51, 0.2) 0, rgba(51, 51, 51, 0.2) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 2px);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0px, rgba(51, 51, 51, 0.2)), color-stop(1px, rgba(51, 51, 51, 0.2)), color-stop(1px, rgba(255, 255, 255, 0)), color-stop(2px, rgba(255, 255, 255, 0)));
-  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.2) 0, rgba(51, 51, 51, 0.2) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 2px);
+  background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.2) 0, rgba(50, 50, 50, 0.2) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 2px);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0px, rgba(50, 50, 50, 0.2)), color-stop(1px, rgba(50, 50, 50, 0.2)), color-stop(1px, rgba(255, 255, 255, 0)), color-stop(2px, rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, rgba(50, 50, 50, 0.2) 0, rgba(50, 50, 50, 0.2) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 2px);
   background-size: 100% 1rem; }

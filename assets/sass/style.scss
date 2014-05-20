@@ -11,9 +11,10 @@
 // Import all SCSS modules with Sass globbing.
 @import "modules/*";
 
+// Demo baseline grid styles
 #baseline.show-grid {
-  background: -webkit-linear-gradient(top,rgba(51, 51, 51, 0.2)0,rgba(51, 51, 51, 0.2)1px,rgba(255, 255, 255, 0)1px,rgba(255, 255, 255, 0)2px);
-  background: -webkit-gradient(linear,left top,left bottom,color-stop(0px,rgba(51,51,51,.2)),color-stop(1px,rgba(51,51,51,.2)),color-stop(1px,rgba(255,255,255,0)),color-stop(2px,rgba(255,255,255,0)));
-  background: linear-gradient(to bottom,rgba(51, 51, 51, 0.2)0,rgba(51, 51, 51, 0.2)1px,rgba(255, 255, 255, 0)1px,rgba(255, 255, 255, 0)2px);
+  background: -webkit-linear-gradient(top,rgba(50,50,50, 0.2)0,rgba(50,50,50, 0.2)1px,rgba(255, 255, 255, 0)1px,rgba(255, 255, 255, 0)2px);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0px,rgba(50,50,50,.2)),color-stop(1px,rgba(50,50,50,.2)),color-stop(1px,rgba(255,255,255,0)),color-stop(2px,rgba(255,255,255,0)));
+  background: linear-gradient(to bottom,rgba(50,50,50, 0.2)0,rgba(50,50,50, 0.2)1px,rgba(255, 255, 255, 0)1px,rgba(255, 255, 255, 0)2px);
   background-size: 100% 1rem;
 }
