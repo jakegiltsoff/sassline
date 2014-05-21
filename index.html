@@ -12,10 +12,10 @@
   var kit;
   if( window.innerWidth < 800 ) {
     // Smaller kit - default characters (swap in your kit code)
-    kit='frh2lrk';
+    kit='xxx1xxx';
   } else {
     // Larger kit - all characters enabled (swap in your kit code)
-    kit='ouk5bdy';
+    kit='xxx2xxx';
   };
   document.write('\x3Cscript src="//use.typekit.net/'+kit+'.js">\x3C/script>');
   </script>
@@ -132,12 +132,12 @@
   <script>
   var navigation = responsiveNav(".main-nav");
 
+  // Grid toggle
   function changeClass() {
     if ( document.getElementById("baseline").className.match(/(?:^|\s)show-grid(?!\S)/) ) {
       document.getElementById("baseline").className = document.getElementById("baseline").className.replace( /(?:^|\s)show-grid(?!\S)/g , '' )
     } else { document.getElementById("baseline").className += " show-grid"; }
   }
-
   window.onload = function() {
     document.getElementById("gridtoggle").addEventListener( 'click' , changeClass );
   }

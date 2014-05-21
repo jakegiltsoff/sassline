@@ -34,25 +34,32 @@ $maxwidths: (
 );
 
 // Add typefaces here.
+// Add weight and style details too.
+// Set cap height to set to the baseline.
 $bodytype: (
-  font-family: '"edita", Georgia, Times, serif',
+  font-family: 'Georgia, serif',
   regular: 400,
   bold: 700,
   italic: italic,
-  cap-height: 0.65
+  cap-height: 0.66
 );
 
 $headingtype: (
-  font-family: '"ratio", Helvetica, Arial, sans-serif',
+  font-family: 'Helvetica, sans-serif',
   regular: 400,
   bold: 700,
-  cap-height: 0.73
+  cap-height: 0.65
 );
 
 $monospacetype: (
-  font-family: 'Menlo, Monaco, "Courier New", monospace',
-  cap-height: 0.8
+  font-family: 'Menlo, monospace',
+  regular: 400,
+  cap-height: 0.68
 );
+
+// Here are some cap-height sizes to get you started:
+// Georgia: 0.66, Times / Times New Roman: 0.65, Palatino: 0.52
+// Lucida Grande: 0.72, Helvetica: 0.65, Verdana: 0.76, Tahoma: 0.76
 
 // Text colours. British English.
 $headingColour: #2E2E2E;
