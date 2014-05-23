@@ -1,0 +1,5 @@
+{
+  "name": "Sassline",
+  "description": "Set text on the web to a baseline grid easily with rems and Sass.",
+  "tags": ["typography", "baseline", "rem", "responsive", "opentype"]
+}
