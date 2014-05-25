@@ -36,7 +36,7 @@ Using Sass 3.3.7+ and Sass-Globbing:
 
 `sass -r sass-globbing --watch assets/sass:assets/css`
 
-Alternatively a Mixture simple project settings file is included which will compile the Sass + minify for you (as well as much more). Sassline is also available as a mixture boilerplate here.
+Alternatively a Mixture simple project settings file is included which will compile the Sass + minify for you (as well as much more). Sassline is also available as a mixture boilerplate [here](https://github.com/designbyjake/sassline-mixture).
 
 You can also used your preferred methods for compiling sass as long as you have Sass 3.3.7+ and Sass-Globbing enabled.
 
