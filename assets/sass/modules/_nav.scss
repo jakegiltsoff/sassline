@@ -1,0 +1,157 @@
+/* Navigation demo styles */
+/* --------------------------------------- */
+
+/* responsive-nav.js styles */
+.nav-collapse {
+
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+  }
+
+  li {
+    width: 100%;
+    display: block;
+  }
+
+  &.opened {
+    max-height: 9999px;
+  }
+}
+
+.js {
+
+  .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+
+    @include breakpoint(break-1) {
+      position: relative;
+      max-height: none;
+    }
+  }
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  @include breakpoint(break-1) {
+    display: none;
+  }
+}
+
+/* Demo overrides. Delete if not wanted. */
+.main-nav {
+  @include breakpoint(break-1) {
+    display: inline-block;
+    width: calc(100% - 165px);
+    vertical-align: middle;
+  }
+
+  .main-nav__list {
+    width: 165px;
+    margin-left: 3%;
+    background-color: $linkColour;
+    border-top: 0.1rem solid $white;
+    text-align: center;
+
+    @include breakpoint(break-1) {
+      width: 100%;
+      background-color: transparent;
+      border: 0;
+      margin-left: 0;
+      text-align: right;
+    }
+  }
+
+  li {
+    font-family: unquote(map-get($headingtype, font-family));
+    font-style: normal;
+    font-weight: map-get($headingtype, regular);
+    @include fontsize(16, all);
+
+    a, span {
+      display: block;
+      padding: 10px 3%;
+      color: $white;
+      border-bottom: 0.1rem solid $white;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      &:hover, &:active, &:focus {
+        background-color: lighten($linkColour,35%);
+        color: $hoverColour;
+      }
+    }
+
+    @include breakpoint(break-1) {
+      display: inline-block;
+      width: auto;
+      margin-right: 2rem;
+      padding-top: 7px; // Vertical centering
+
+      a, span {
+        color: $white;
+        border: 0;
+        display: inline;
+        padding: 0;
+
+        &:hover, &:active, &:focus {
+          background-color: transparent;
+          color: $linkColour;
+        }
+      }
+    }
+  }
+}
+
+.js {
+
+  .nav-collapse {
+    @include breakpoint(break-1) {
+      display: inline-block;
+      position: relative;
+      max-height: none;
+    }
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 20px;
+
+    &:after {
+      content: '\2630';
+      @include fontsize(30);
+    }
+
+    &.active:after {
+      content: '\2715';
+    }
+
+    @include breakpoint(break-1) {
+      display: none;
+    }
+  }
+}

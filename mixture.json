@@ -1,0 +1,28 @@
+{
+  "convertHtmlOutput": null,
+  "customRubyPath": null,
+  "debug": false,
+  "domain": null,
+  "followLeader": false,
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": "assets",
+  "preprocessorScriptOutput": "assets/js",
+  "preprocessorStyleOutput": "assets/css",
+  "projectName": "Sassline",
+  "projectDescription": "Set text on the web to a baseline grid with Sass & rems.",
+  "publishedId": null,
+  "serverHostname": "localhost",
+  "serverPort": null,
+  "simpleModePartnerServer": null,
+  "sass": {
+    "outputStyle": "nested",
+    "sourceMap": false,
+    "cache": false,
+    "lineNumbers": false,
+    "debugInfo": false,
+    "globbing": true
+  },
+  "type": "simple",
+  "useCompass": false
+}

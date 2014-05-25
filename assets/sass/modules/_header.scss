@@ -1,0 +1,27 @@
+/* Header demo styles */
+/* --------------------------------------- */
+
+.global-header {
+  background-color: $backgroundColour;
+  font-size: 0;
+
+  @include breakpoint(break-1) {
+    background-color: $headBackgroundColour;
+  }
+
+  &__logo {
+    background-image: url(../img/logo.png);
+    background-size: cover;
+    color: transparent;
+    display: inline-block;
+    font: 0/0 a;
+    height: 60px;
+    width: 165px;
+    margin-left: 3%;
+    vertical-align: middle;
+
+    @include breakpoint(break-1) {
+      margin-left: 0;
+    }
+  }
+}

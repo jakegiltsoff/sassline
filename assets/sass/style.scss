@@ -1,118 +1,20 @@
 /* CSS compiled from SCSS */
 /* --------------------------------------- */
 
-@import "variables";
-@import "mixins";
-@import "reset";
-@import "nav";
-@import "typography";
+// Import Sassline base SCSS files in order so variables are read correctly.
+@import "base/reset";
+@import "base/variables";
+@import "base/modular-scale";
+@import "base/mixins";
+@import "base/typography";
 
+// Import all SCSS modules with Sass globbing.
+@import "modules/*";
 
-/* Styles */
-/* --------------------------------------- */
-
-// Base styling, feel free to change.
-
-body {
-  background-color: $headBackgroundColour;
-  color: $bodyColour;
-  overflow-x: hidden;
-}
-
-header {
-  background: $headBackgroundColour;
-  border-bottom: 0.1rem solid darken($headBackgroundColour,10%);
-  position: relative;
-  z-index: 1;
-}
-
-.logo {
-  color: transparent;
-  background: url(../img/logo.png);
-  font: 0/0 a;
-  height: 40px;
-  width: 150px;
-  margin: 1rem 5%;
-  @include breakpoint(break-3) {
-    margin: 1.5rem 0%;
-    position: absolute;
-  }
-  @include breakpoint(break-4) {
-    margin: 2rem 0;
-  }
-}
-
-section {
-  background-color: $backgroundColour;
-  padding: 4rem 0;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: $maxwidth-0;
-  position: relative;
-  width: 90%;
-  @include clearfix;
-  @include breakpoint(break-1) {
-    max-width: $maxwidth-1;
-  }
-  @include breakpoint(break-2) {
-    max-width: $maxwidth-2;
-  }
-  @include breakpoint(break-3) {
-    max-width: $maxwidth-3;
-  }
-  @include breakpoint(break-4) {
-    max-width: $maxwidth-4;
-  }
-}
-
-.container--header {
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
-  @include clearfix;
-  @include breakpoint(break-3) {
-    max-width: $maxwidth-3;
-  }
-  @include breakpoint(break-4) {
-    max-width: $maxwidth-4;
-  }
-}
-
-footer {
-  background: $headBackgroundColour;
-  border-top: 0.1rem solid darken($headBackgroundColour,10%);
-  p {
-    color: $headingColour;
-    font-family: $sans-serif;
-    text-align: center;
-    padding: 1rem 0;
-    margin: 0;
-    @include fontsize-0(14);
-    @include breakpoint(break-1) {
-      @include fontsize-1(14);
-    }
-    @include breakpoint(break-2) {
-      @include fontsize-2(14);
-    }
-    @include breakpoint(break-3) {
-      @include fontsize-3(16);
-    }
-    @include breakpoint(break-4) {
-      @include fontsize-4(18);
-    }
-  }
-}
-
-img {
-  -ms-interpolation-mode: bicubic;
-  height: auto;
-  vertical-align: middle;
-  width: 100%;
-  @include breakpoint(break-1) {
-    margin: 0 auto;
-    max-width: 100%;
-    width: auto;
-  }
+// Demo baseline grid styles
+#baseline.show-grid {
+  background: -webkit-linear-gradient(top,rgba(50,50,50, 0.2)0,rgba(50,50,50, 0.2)1px,rgba(255, 255, 255, 0)1px,rgba(255, 255, 255, 0)2px);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0px,rgba(50,50,50,.2)),color-stop(1px,rgba(50,50,50,.2)),color-stop(1px,rgba(255,255,255,0)),color-stop(2px,rgba(255,255,255,0)));
+  background: linear-gradient(to bottom,rgba(50,50,50, 0.2)0,rgba(50,50,50, 0.2)1px,rgba(255, 255, 255, 0)1px,rgba(255, 255, 255, 0)2px);
+  background-size: 100% 1rem;
 }

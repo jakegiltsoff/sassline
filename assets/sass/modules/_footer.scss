@@ -1,0 +1,18 @@
+/* Footer demo styles */
+/* --------------------------------------- */
+
+.global-footer {
+  background: $headBackgroundColour;
+  border-top: 0.1rem solid darken($headBackgroundColour,10%);
+
+  p {
+    color: $white;
+    font-family: unquote(map-get($headingtype, font-family));
+    font-style: normal;
+    font-weight: map-get($headingtype, regular);
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+    @include fontsize(eta, all);
+  }
+}
