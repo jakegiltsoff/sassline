@@ -121,14 +121,6 @@ a {
       @include breakpoint(break-1) {
         margin-left: 0;
       }
-
-      a {
-        color: $hoverColour;
-
-        &:hover, &:active, &:focus {
-          color: $linkColour;
-        }
-      }
     }
   }
 
@@ -148,6 +140,10 @@ a {
     font-style: normal;
     font-weight: map-get($headingtype, regular);
     @include fontsize(theta, all);
+  }
+
+  small {
+    line-height: 1rem;
   }
 
   .caption {
@@ -231,9 +227,6 @@ a {
 
   code {
     @include fontsize(theta, all);
-  }
-
-  pre code {
     line-height: 1rem;
   }
 

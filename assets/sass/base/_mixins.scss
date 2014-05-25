@@ -67,7 +67,7 @@ $widths: map-values($maxwidths);
 }
 
 // Value in scale in $modular-scale?
-// Used in following font size mixin.
+// Used in following fontsize mixin.
 @function in-modular-scale($scale, $key) {
   $map: map-get($modular-scale, $scale);
   $output: map-has-key($map, $key);

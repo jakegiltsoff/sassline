@@ -65,7 +65,7 @@
     vertical-align: middle;
   }
 
-  .main-nav__list {
+  &__list {
     width: 165px;
     margin-left: 3%;
     background-color: $linkColour;
@@ -90,7 +90,7 @@
     a, span {
       display: block;
       padding: 10px 3%;
-      color: #FFF;
+      color: $white;
       border-bottom: 0.1rem solid $white;
       cursor: pointer;
       -webkit-user-select: none;

@@ -4,7 +4,7 @@ Set text on the web to a baseline grid with Sass & rems. [Sassline](http://sassl
 
 ## v2
 
-Version 2 of Sassline has been vastly improved with the use of Sass 3.3. The mixins are now much more powerful and flexible. They might look pretty complicated so make sure to keep reading to find out how to use them and how they work. Note: as in v1.1 pixel fallbacks are not included.
+Version 2 of Sassline has been vastly improved with the use of Sass 3.3 and Sass maps. The mixins are now much more powerful and flexible. Make sure to keep reading to find out how to use the mixins and how they work. Note: as v1.1 pixel fallbacks are not included for rems.
 
 ## Demo
 
@@ -18,43 +18,35 @@ The idea is to have easy to use and maintain SCSS files utilising the power of S
 
 OpenType features are enabled to give the nicest formatting of text and some flourishes in the headings if available in the web font and supported in the browser.
 
+## Root font-size = ½ line-height
+
+Sassline is based on setting the root font-size as half the line-height of the paragraph text. The height of the baseline grid is then effectively set at 2rem, with increments at each 1rem. This makes it nice and easy to work proportionally from the baseline with integer rem values.
+
 ## Smaller web fonts for mobiles
 
 Getting the most out of OpenType features can end up with large typeface files being served to your site as discussed on the [Typekit blog](http://blog.typekit.com/2013/04/17/fallback-fonts-on-mobile-devices). Included in Sassline is a method for using a smaller kit (without the full character sets) at smaller viewport sizes where OpenType support is low anyway to save downloading the extra characters.
 
-## Root font-size = ½ line-height?
-
-Sassline is based on setting the root font-size as half the line-height of the paragraph text. The height of the baseline grid is then effectively set at 2rem, with increments at each 1rem. This makes it nice and easy to work proportionally from the baseline with integer rem values.
-
-## Why?
-
-Last year I wrote my dissertation on responsive typography at university. Sassline takes some of my thoughts from this and puts them into action. You can also read some more about how it came about [here](http://typenot.es/posts/baseline-rem). Version 2 has come pretty far and I hope to write about this soon.
-
 ## Documentation
 
-Sassline is fully commented with details in the SCSS. Set the font sizes with the font-size mixin and use rems for everything else.
+Sassline is fully commented with details in the SCSS. Set the font sizes with the font-size mixin, set the spacing using the baseline mixin or set both at once with the sassline mixin. Use rems for everything else. Here are some other key points:
 
 ### Compiling Sass
 
-Use Sass 3.3.7+ and Sass-Globbing.
+Using Sass 3.3.7+ and Sass-Globbing:
 
-sass -r sass-globbing --watch assets/sass:assets/css
+`sass -r sass-globbing --watch assets/sass:assets/css`
 
-Alternatively a mixture simple project settings file is included
+Alternatively a Mixture simple project settings file is included which will compile the Sass + minify for you (as well as much more). Sassline is also available as a mixture boilerplate here.
 
+You can also used your preferred methods for compiling sass as long as you have Sass 3.3.7+ and Sass-Globbing enabled.
 
-### Breakpoints
+### Sass file structure
 
-### Rootsizes
+My preferred method is to work along the lines of the SMACSS & BEM method. In the sass folder there there are two folders — base and modules. The base folder has the Sassline base SCSS partials. Use the modules folder contains some demo SCSS partials with styles you can keep or remove. All new partials added to modules will be compiled into your css so work in here with new files. 
 
-### Responsive modular-scale
+### Using Sassline
 
-### Font sizing
-
-### Align to baseline
-
-### 
-
+Please see [this blog post](http://jakegiltsoff.co.uk/posts/sassline-v2-0).
 
 ## Responsive Nav
 
@@ -63,7 +55,6 @@ Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-
 
 ## Roadmap
 
-- Improved documentation
 - More complex demos
 - Lightweight Sass grid system
 
@@ -73,21 +64,10 @@ Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Jake Giltsoff
+Copyright (c) 2013-2014 Jake Giltsoff
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
