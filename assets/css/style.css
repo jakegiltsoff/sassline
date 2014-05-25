@@ -585,14 +585,14 @@ img {
     display: inline-block;
     width: calc(100% - 165px);
     vertical-align: middle; } }
-.main-nav__list {
+.main-nav .main-nav__list {
   width: 165px;
   margin-left: 3%;
   background-color: #d52836;
   border-top: 0.1rem solid white;
   text-align: center; }
   @media screen and (min-width: 40em) {
-    .main-nav__list {
+    .main-nav .main-nav__list {
       width: 100%;
       background-color: transparent;
       border: 0;
