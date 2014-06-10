@@ -138,9 +138,7 @@
       document.getElementById("baseline").className = document.getElementById("baseline").className.replace( /(?:^|\s)show-grid(?!\S)/g , '' )
     } else { document.getElementById("baseline").className += " show-grid"; }
   }
-  window.onload = function() {
-    document.getElementById("gridtoggle").addEventListener( 'click' , changeClass );
-  }
+  document.getElementById("gridtoggle").addEventListener( 'click' , changeClass );
   </script>
 </body>
 </html>
