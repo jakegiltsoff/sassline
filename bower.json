@@ -1,0 +1,26 @@
+{
+  "name": "sassline",
+  "version": "2.0.0",
+  "homepage": "http://sassline.com/",
+  "authors": [
+    "Jake Giltsoff <hi@jke.me>"
+  ],
+  "description": "Set text on the web to a baseline grid easily with Sass & rems.",
+  "main": "assets/css/style.css",
+  "keywords": [
+    "sass",
+    "typography",
+    "baseline",
+    "design",
+    "css",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
