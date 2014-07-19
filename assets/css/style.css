@@ -63,7 +63,8 @@ body {
   font-family: Georgia, serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.33333rem; }
+  font-size: 1.33333rem;
+  text-rendering: geometricPrecision; }
   @media screen and (min-width: 40em) {
     body {
       font-size: 1.21429rem; } }
