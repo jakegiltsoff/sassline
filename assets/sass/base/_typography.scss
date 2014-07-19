@@ -15,6 +15,7 @@ body {
   font-style: normal;
   font-weight: map-get($bodytype, regular);
   @include fontsize(zeta, all);
+  text-rendering: geometricPrecision;
 }
 
 // Links.
