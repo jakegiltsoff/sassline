@@ -1,0 +1,34 @@
+// Global demo styles
+// ---------------------------------------
+
+body {
+  background-color: $backgroundColour;
+  color: $bodyColour;
+  overflow-x: hidden;
+}
+
+.section {
+  padding: 2rem 0;
+
+  @include breakpoint(break-1) {
+    padding: 3rem 0;
+  }
+
+  @include breakpoint(break-2) {
+    padding: 4rem 0;
+  }
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+
+  @include breakpoint(break-1) {
+    margin: 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+}

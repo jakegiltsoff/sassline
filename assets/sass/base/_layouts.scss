@@ -1,0 +1,235 @@
+// Layouts
+// ---------------------------------------
+
+// Container.
+.section {
+  margin: 0 auto;
+  position: relative;
+  width: 94%;
+  @include clearfix;
+
+  @include breakpoint(break-3) {
+    @include maxwidth(3);
+  }
+
+  @include breakpoint(break-4) {
+    @include maxwidth(4);
+  }
+}
+
+// Single column.
+.single {
+  margin: 0 auto;
+  @include measure(all);
+}
+
+// Base column styles.
+.column {
+  margin: 0 auto;
+  width: 100%;
+  @include measure(0);
+
+  @include breakpoint(break-1) {
+    float: left;
+    margin: inherit;
+    max-width: auto;
+    padding-left: map-get($gutterwidths, small);
+    padding-right: map-get($gutterwidths, small);
+  }
+
+  @include breakpoint(break-3) {
+    padding-left: map-get($gutterwidths, medium);
+    padding-right: map-get($gutterwidths, medium);
+  }
+}
+
+// Two columns.
+.column--duo {
+  @include breakpoint(break-1) {
+    width: 50%;
+  }
+}
+
+// Three columns.
+.column--trio {
+  @include breakpoint(break-1) {
+    width: 33.333%;
+  }
+}
+
+// Four columns. Two at smaller breakpoints.
+.column--quad {
+  @include breakpoint(break-1) {
+    width: 50%;
+  }
+
+  @include breakpoint(break-2) {
+    width: 25%;
+  }
+}
+
+// Two column layout with a main text column and a sidebar.
+
+// Main column.
+.column--main {
+  @include breakpoint(break-1) {
+    @include ideal-measure(1, small);
+  }
+
+  @include breakpoint(break-2) {
+    @include ideal-measure(2, small);
+  }
+
+  @include breakpoint(break-3) {
+    @include ideal-measure(3, medium);
+  }
+
+  @include breakpoint(break-4) {
+    @include ideal-measure(4, medium);
+  }
+}
+
+// Sidebar.
+.column--sidebar {
+  @include breakpoint(break-1) {
+    padding-right: map-get($gutterwidths, medium);
+    @include ideal-measure(1, small, false);
+  }
+
+  @include breakpoint(break-2) {
+    @include ideal-measure(2, small, false);
+  }
+
+  @include breakpoint(break-3) {
+    padding-right: map-get($gutterwidths, large);
+    @include ideal-measure(3, medium, false);
+  }
+
+  @include breakpoint(break-4) {
+    @include ideal-measure(4, medium, false);
+  }
+}
+
+// If sidebar on the right side.
+.column--main + .column--sidebar {
+  @include breakpoint(break-1) {
+    padding-left: map-get($gutterwidths, medium);
+    padding-right: map-get($gutterwidths, small);
+  }
+
+  @include breakpoint(break-3) {
+    padding-left: map-get($gutterwidths, large);
+    padding-right: map-get($gutterwidths, medium);
+  }
+}
+
+// Set the main text one level down in the modular scale for narrower columns.
+.column--trio,
+.column--quad,
+.column--sidebar {
+  @include breakpoint(break-3) {
+    p, li {
+      @include sassline($fontsize: eta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: 3);
+    }
+  }
+
+  @include breakpoint(break-4) {
+    p, li {
+      @include sassline($fontsize: eta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: 4);
+    }
+  }
+}
+
+// Main column on the right with inline sidenotes.
+// The sidenotes will move out the column into the sidebar position aligned to the baseline.
+.column--right {
+  @include breakpoint(break-1) {
+    @include ideal-measure(1, small);
+    @include ideal-measure(1, small, false, margin-left);
+  }
+
+  @include breakpoint(break-2) {
+    @include ideal-measure(2, small);
+    @include ideal-measure(2, small, false, margin-left);
+  }
+
+  @include breakpoint(break-3) {
+    @include ideal-measure(3, medium);
+    @include ideal-measure(3, medium, false, margin-left);
+  }
+
+  @include breakpoint(break-4) {
+    @include ideal-measure(4, medium);
+    @include ideal-measure(4, medium, false, margin-left);
+  }
+
+  .sidenote {
+    @include breakpoint(break-1) {
+      left: 0;
+      padding-left: map-get($gutterwidths, small);
+      padding-right: map-get($gutterwidths, medium);
+      position: absolute;
+      @include ideal-measure(1, small, false);
+    }
+
+    @include breakpoint(break-2) {
+      @include ideal-measure(2, small, false);
+    }
+
+    @include breakpoint(break-3) {
+      padding-right: map-get($gutterwidths, large);
+      @include ideal-measure(3, medium, false);
+    }
+
+    @include breakpoint(break-4) {
+      padding-left: map-get($gutterwidths, medium);
+      @include ideal-measure(4, medium, false);
+    }
+  }
+}
+
+// Main column on the left with inline sidenotes.
+.column--left {
+  @include breakpoint(break-1) {
+    @include ideal-measure(1, small);
+  }
+
+  @include breakpoint(break-2) {
+    @include ideal-measure(2, small);
+  }
+
+  @include breakpoint(break-3) {
+    @include ideal-measure(3, medium);
+  }
+
+  @include breakpoint(break-4) {
+    @include ideal-measure(4, medium);
+  }
+
+  .sidenote {
+    @include breakpoint(break-1) {
+      padding-left: map-get($gutterwidths, medium);
+      padding-right: map-get($gutterwidths, small);
+      position: absolute;
+      @include ideal-measure(1, small, false);
+      @include ideal-measure(1, small, true, left);
+    }
+
+    @include breakpoint(break-2) {
+      @include ideal-measure(2, small, false);
+      @include ideal-measure(2, small, true, left);
+    }
+
+    @include breakpoint(break-3) {
+      padding-left: map-get($gutterwidths, large);
+      @include ideal-measure(3, medium, false);
+      @include ideal-measure(3, medium, true, left);
+    }
+
+    @include breakpoint(break-4) {
+      padding-right: map-get($gutterwidths, medium);
+      @include ideal-measure(4, medium, false);
+      @include ideal-measure(4, medium, true, left);
+    }
+  }
+}

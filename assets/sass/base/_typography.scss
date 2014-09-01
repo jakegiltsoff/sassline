@@ -1,0 +1,280 @@
+// Typography
+// ---------------------------------------
+
+// Setting root sizes and base styles.
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+  @include rootsize;
+}
+
+// Site-wide base styles.
+body {
+  font-family: unquote(map-get($bodytype, font-family));
+  font-style: normal;
+  font-weight: map-get($bodytype, regular);
+  line-height: 2rem;
+
+  @include fontsize(zeta, all);
+}
+
+// Links.
+a {
+  -webkit-transition: color .1s, background-color .1s;
+  -moz-transition: color .1s, background-color .1s;
+  -ms-transition: color .1s, background-color .1s;
+  -o-transition: color .1s, background-color .1s;
+  transition: color .1s, background-color .1s;
+
+  color: $linkColour;
+  text-decoration: none;
+
+  &:hover, &:active, &:focus {
+    color: $hoverColour;
+    text-decoration: none;
+  }
+}
+
+// Styles for typeset text.
+.typeset {
+
+  // Nice underlines for text links.
+  p a, li a {
+    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
+    background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
+    background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
+    background-position: 0 93%;
+    background-repeat: repeat-x;
+    background-size: 100% 0.15rem;
+    text-shadow: 0.1rem 0 $backgroundColour,0.15rem 0 $backgroundColour,-0.1rem 0 $backgroundColour,-0.15rem 0 $backgroundColour;
+
+    &:hover, &:active, &:focus {
+      background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
+      background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
+      background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
+      background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
+    }
+  }
+
+  // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
+  p {
+    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+
+    @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
+  }
+
+  // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
+  h1, h2, h3, h4, h5, h6 {
+    -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+
+    color: $headingColour;
+    font-family: unquote(map-get($headingtype, font-family));
+    font-style: normal;
+    font-weight: map-get($headingtype, bold);
+  }
+
+  // Heading level 1.
+  h1, .alpha {
+    @include sassline($fontsize: alpha, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
+  }
+
+  // Heading level 2.
+  h2, .beta {
+    @include sassline(beta, $headingtype, 3, 1, all);
+  }
+
+  // Heading level 3.
+  h3, .gamma {
+    @include sassline(gamma, $headingtype, 3, 1, all);
+  }
+
+  // Heading level 4.
+  h4, .delta {
+    @include sassline(delta, $headingtype, 2, 0, all);
+  }
+
+  // Heading level 5.
+  h5, .epsilon {
+    @include sassline(epsilon, $headingtype, 2, 0, all);
+  }
+
+  // Heading level 6.
+  h6, .zeta {
+    @include sassline(zeta, $headingtype, 2, 0, all);
+  }
+
+  // Lists.
+  ul, ol {
+    @include baseline(zeta, $bodytype, 2, 2, all);
+
+    li {
+      -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+      -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+      -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+      -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+      font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+
+      margin-left: 2rem;
+
+      @include breakpoint(break-1) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  // Bold.
+  b, strong, .bold {
+    font-weight: map-get($bodytype, bold);
+  }
+
+  // Italic.
+  em, i, .italic {
+    font-style: map-get($bodytype, italic);
+  }
+
+  // Caption and inline small text.
+  small, .caption {
+    font-family: unquote(map-get($headingtype, font-family));
+    font-style: normal;
+    font-weight: map-get($headingtype, regular);
+
+    @include fontsize(theta, all);
+  }
+
+  small {
+    line-height: 1rem;
+  }
+
+  .caption {
+    color: $captionColour;
+
+    @include baseline(theta, $headingtype, 2, 2, all);
+  }
+
+  // Nice spacing for captions.
+  h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption, .gamma + .caption {
+    margin-top: -1rem;
+  }
+
+  .delta + .caption, .epsilon + .caption, .zeta + .caption {
+    margin-top: 0rem;
+  }
+
+  // Quotes.
+  blockquote {
+
+    p {
+      border-left: 0.15rem solid $linkColour;
+      font-style: map-get($bodytype, italic);
+      padding-left: 1rem;
+
+      // Add spacing below blockquote paragraphs to align to baseline grid.
+      $get-scale: map-get($modular-scale, scale-0);
+      $get-size: map-get($get-scale, zeta);
+      $rootsize: nth($sizes, 1);
+      $baseline-shift: #{($get-size / 2 * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001};
+      $baseline-push: #{3 - (($get-size * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001)};
+
+      margin-bottom: #{$baseline-push}rem;
+      padding-bottom: #{$baseline-shift}rem;
+
+      @for $i from 2 through $breakpoints-limit {
+        $get-scale: map-get($modular-scale, scale-#{$i - 1});
+        $get-size: map-get($get-scale, zeta);
+        $rootsize: nth($sizes, $i);
+        $baseline-shift: #{($get-size / 2 * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001};
+        $baseline-push: #{3 - (($get-size * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001)};
+
+        @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
+          margin-bottom: #{$baseline-push}rem;
+          padding-bottom: #{$baseline-shift}rem;
+        }
+      }
+    }
+
+    @include breakpoint(break-1) {
+      margin-left: -1rem;
+    }
+  }
+
+  // Horizontal rule.
+  hr {
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to($captionColour));
+    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,$captionColour 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$captionColour 50%);
+    background-position: 0 50%;
+    background-repeat: repeat-x;
+    background-size: 100% 0.15rem;
+    border: 0;
+    margin: 0;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  // Code block.
+  code, pre {
+    background-color: $codeBackgroundColour;
+    font-family: unquote(map-get($monospacetype, font-family));
+  }
+
+  pre {
+    display: block;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+
+  code {
+    line-height: 1rem;
+
+    @include fontsize(theta, all);
+  }
+
+  // Letter space those capitals people, Jan Tschichold would be proud.
+  .upper {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+
+  // Real small caps.
+  .small-caps {
+    -webkit-font-feature-settings: 'smcp' 1, 'kern' 1;
+    -moz-font-feature-settings: 'smcp' 1, 'kern' 1;
+    -ms-font-feature-settings: 'smcp' 1, 'kern' 1;
+    -o-font-feature-settings: 'smcp' 1, 'kern' 1;
+    font-feature-settings: 'smcp' 1, 'kern' 1;
+
+    letter-spacing: 0.1rem;
+  }
+
+  // Consistent height numbers with OpenType.
+  .lining-numerals {
+    -webkit-font-feature-settings: 'lnum' 1, 'kern' 1;
+    -moz-font-feature-settings: 'lnum' 1, 'kern' 1;
+    -ms-font-feature-settings: 'lnum' 1, 'kern' 1;
+    -o-font-feature-settings: 'lnum' 1, 'kern' 1;
+    font-feature-settings: 'lnum' 1, 'kern' 1;
+  }
+
+  // Ascending and descending numbers with OpenType.
+  .oldstyle-numerals {
+    -webkit-font-feature-settings: 'onum' 1, 'kern' 1;
+    -moz-font-feature-settings: 'onum' 1, 'kern' 1;
+    -ms-font-feature-settings: 'onum' 1, 'kern' 1;
+    -o-font-feature-settings: 'onum' 1, 'kern' 1;
+    font-feature-settings: 'onum' 1, 'kern' 1;
+  }
+}

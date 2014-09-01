@@ -1,0 +1,17 @@
+// Footer demo styles
+// ---------------------------------------
+
+.global-footer {
+
+  p {
+    color: $captionColour;
+    font-family: unquote(map-get($headingtype, font-family));
+    font-style: normal;
+    font-weight: map-get($headingtype, regular);
+    padding: 1rem 0;
+    margin: 0;
+    text-align: center;
+
+    @include fontsize(eta, all);
+  }
+}

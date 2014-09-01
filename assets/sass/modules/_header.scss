@@ -1,0 +1,32 @@
+// Header demo styles
+// ---------------------------------------
+
+.global-header {
+  background-color: $backgroundColour;
+  font-size: 0;
+
+  &__logo {
+    background-image: url(../img/sassline-logo.svg);
+    background-size: cover;
+    color: transparent;
+    display: inline-block;
+    font: 0/0 a;
+    height: 19px;
+    margin: 2rem 0 2rem 3%;
+    position: relative;
+    vertical-align: middle;
+    width: 132px;
+
+    @include breakpoint(break-1) {
+      margin-left: 2rem;
+    }
+
+    a {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
