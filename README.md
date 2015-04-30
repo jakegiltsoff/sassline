@@ -34,7 +34,7 @@ Using Sass 3.3.7+ and Sass-Globbing:
 
 Alternatively a Mixture simple project settings file is included which will compile the Sass + minify for you (as well as much more). Sassline is also available as a mixture boilerplate [here](https://github.com/designbyjake/sassline-mixture).
 
-You can also used your preferred methods for compiling sass as long as you have Sass 3.3.7+ and Sass-Globbing enabled.
+You can also use your preferred methods for compiling sass as long as you have Sass 3.3.7+ and Sass-Globbing enabled.
 
 ### Sass file structure
 
@@ -42,11 +42,11 @@ My preferred method is to work along the lines of the SMACSS & BEM method. In th
 
 ### Using Sassline
 
-Please see [this blog post](http://jakegiltsoff.co.uk/posts/sassline-v2-0).
+Please see [this blog post](https://jakegiltsoff.co.uk/posts/sassline-v2-0).
 
 ## Responsive Nav
 
-Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-nav.js) plugin is included to provide a mobile ready navigation to work from.
+Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-nav.js) plugin is included to provide a mobile-ready navigation from which to work.
 
 
 ## Browsers
