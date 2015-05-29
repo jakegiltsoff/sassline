@@ -13,7 +13,7 @@
   ],
   "preprocessorScriptOutput": "assets/js",
   "preprocessorStyleOutput": "assets/css",
-  "projectDescription": "Set text on the web to a baseline grid with Sass & rems.",
+  "projectDescription": "Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale.",
   "projectName": "Sassline",
   "publishedId": null,
   "optimiseSVG": true,

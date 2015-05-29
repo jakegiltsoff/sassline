@@ -1,6 +1,6 @@
 # [Sassline](http://sassline.com)
 
-Set text on the web to a baseline grid with Sass & rems.
+Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale.
 
 ## New in v2.1
 
@@ -45,7 +45,7 @@ Please see [this blog post](https://jakegiltsoff.co.uk/posts/sassline-v2-0).
 Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-nav.js) plugin is included to provide a mobile-ready navigation to work from.
 
 
-## ¯\_( Browsers )_/¯
+## ¯\\\_( Browsers )_/¯
 
 Sassline will set text to the baseline in recent versions of Chrome and Firefox, IE 11+ and Safari 8+.
 
@@ -57,12 +57,4 @@ Sassline will set text to the baseline in recent versions of Chrome and Firefox,
 
 ## License
 
-The MIT License (MIT)
-
-Copyright (c) 2013-2015 Jake Giltsoff
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Sassline is licensed under the MIT license. ([http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT))

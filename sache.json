@@ -1,5 +1,5 @@
 {
   "name": "Sassline",
-  "description": "Set a responsive typographic modular-scale to a baseline grid easily with Sass and rems",
+  "description": "Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale.",
   "tags": ["starting-point", "type", "typography", "vertical-rhythm", "media-queries", "breakpoints", "responsive", "mixins"]
 }

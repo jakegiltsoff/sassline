@@ -1,0 +1,16 @@
+{
+  "name": "sassline",
+  "version": "2.1.0",
+  "description": "Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designbyjake/sassline.git"
+  },
+  "devDependencies": {
+    "sass": "~3.3.7",
+    "sass-globbing": "~1.1.1"
+  },
+  "keywords": [ "sass", "baseline", "boilerplate", "modular-scale" ],
+  "author": "Jake Giltsoff <contact@designbyjake.co.uk> (http://jke.me)",
+  "license" : "MIT"
+}
