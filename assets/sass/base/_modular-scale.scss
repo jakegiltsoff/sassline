@@ -3,7 +3,7 @@
 
 // Setting responsive modular-scales. Use appropriate scales for viewport sizes.
 $modular-scale: (
-  // Major Third http://modularscale.com/scale/?px1=16&px2=28&ra1=1.25&ra2=0
+  // Major Third http://www.modularscale.com/?16,28&px&1.25&web&text
   scale-0: (
     alpha:   28.0,
     beta:    25.0,
@@ -15,7 +15,7 @@ $modular-scale: (
     theta:   12.8,
     iota:    11.5
   ),
-  // Major Third http://modularscale.com/scale/?px1=17&px2=30&ra1=1.25&ra2=0
+  // Major Third http://www.modularscale.com/?17,30&px&1.25&web&text
   scale-1: (
     alpha:   30.0,
     beta:    26.6,
@@ -27,7 +27,7 @@ $modular-scale: (
     theta:   13.6,
     iota:    12.8
   ),
-  // Major Third http://modularscale.com/scale/?px1=18&px2=32&ra1=1.25&ra2=0
+  // Major Third http://www.modularscale.com/?18,32&px&1.25&web&text
   scale-2: (
     alpha:   32.0,
     beta:    28.1,
@@ -39,7 +39,7 @@ $modular-scale: (
     theta:   14.4,
     iota:    13.1
   ),
-  // Perfect Fourth http://modularscale.com/scale/?px1=20&px2=40&ra1=1.333&ra2=0
+  // Perfect Fourth http://www.modularscale.com/?20,40&px&1.333&web&text
   scale-3: (
     alpha:   40.0,
     beta:    35.5,
@@ -51,7 +51,7 @@ $modular-scale: (
     theta:   15.0,
     iota:    12.7
   ),
-  // Aug. Fourth http://modularscale.com/scale/?px1=22&px2=50&ra1=1.414&ra2=0
+  // Aug. Fourth http://www.modularscale.com/?22,50&px&1.414&web&text
   scale-4: (
     alpha:   50.0,
     beta:    43.9,
