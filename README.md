@@ -1,4 +1,4 @@
-# [Sassline](http://sassline.com)
+# [Sassline](https://sassline.com)
 
 Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale.
 
