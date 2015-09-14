@@ -17,8 +17,8 @@
   }
 }
 
-// Single column.
-.single {
+// Single column (based on measure for typeset content).
+.single-measure {
   margin: 0 auto;
   @include measure(all);
 }

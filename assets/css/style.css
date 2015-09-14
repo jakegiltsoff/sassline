@@ -463,20 +463,20 @@ a {
     .section {
       max-width: 68.42105rem; } }
 
-.single {
+.single-measure {
   margin: 0 auto;
   max-width: 41.66667rem; }
   @media screen and (min-width: 40em) {
-    .single {
+    .single-measure {
       max-width: 39.28571rem; } }
   @media screen and (min-width: 50em) {
-    .single {
+    .single-measure {
       max-width: 40rem; } }
   @media screen and (min-width: 64em) {
-    .single {
+    .single-measure {
       max-width: 40rem; } }
   @media screen and (min-width: 100em) {
-    .single {
+    .single-measure {
       max-width: 39.47368rem; } }
 
 .column {
