@@ -128,14 +128,22 @@
 .column--quad,
 .column--sidebar {
   @include breakpoint(break-3) {
-    p, li {
+    p {
       @include sassline($fontsize: eta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: 3);
+    }
+
+    li {
+      @include fontsize(eta, 3);
     }
   }
 
   @include breakpoint(break-4) {
-    p, li {
+    p {
       @include sassline($fontsize: eta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: 4);
+    }
+
+    li {
+      @include fontsize(eta, 4);
     }
   }
 }

@@ -129,6 +129,139 @@ a {
       @include breakpoint(break-1) {
         margin-left: 0;
       }
+
+      ol, ul {
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  // Ordered lists.
+  ol {
+    list-style-type: none;
+
+    li {
+      counter-increment: top-level;
+
+      &:before {
+        -webkit-font-feature-settings: 'lnum' 1, 'tnum' 1;
+        -moz-font-feature-settings: 'lnum' 1, 'tnum' 1;
+        -ms-font-feature-settings: 'lnum' 1, 'tnum' 1;
+        -o-font-feature-settings: 'lnum' 1, 'tnum' 1;
+        font-feature-settings: 'lnum' 1, 'tnum' 1;
+
+        content: counter(top-level) '.';
+        margin-left: -3rem;
+        position: absolute;
+        text-align: right;
+        width: 2em;
+      }
+
+      ul {
+
+        li {
+
+          &:before {
+            content: '';
+          }
+
+          ol {
+
+            li {
+              counter-increment: alt-level;
+
+              &:before {
+                content: counter(alt-level) '.';
+              }
+            }
+          }
+        }
+      }
+
+      ol {
+
+        li {
+          counter-increment: sub-level;
+
+          &:before {
+            content: counter(top-level) '.' counter(sub-level);
+          }
+
+          ul {
+
+            li {
+
+              &:before {
+                content: '';
+              }
+            }
+          }
+
+          ol {
+
+            li {
+              counter-increment: sub-sub-level;
+
+              &:before {
+                content: counter(top-level) '.' counter(sub-level) '.' counter(sub-sub-level);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Definition lists.
+  dl {
+    @include baseline(zeta, $bodytype, 2, 2, all);
+
+    dt, dd {
+      -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+      -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+      -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+      -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+      font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+
+      margin-left: 2rem;
+
+      @include breakpoint(break-1) {
+        margin-left: 0;
+      }
+    }
+
+    dt {
+      font-weight: map-get($bodytype, bold);
+    }
+
+    dd + dt {
+      padding-top: 1rem;
+    }
+  }
+
+  // Tables.
+  table {
+    -webkit-font-feature-settings: 'liga' 1, 'lnum' 1, 'tnum' 1, 'kern' 1;
+    -moz-font-feature-settings: 'liga' 1, 'lnum' 1, 'tnum' 1, 'kern' 1;
+    -ms-font-feature-settings: 'liga' 1, 'lnum' 1, 'tnum' 1, 'kern' 1;
+    -o-font-feature-settings: 'liga' 1, 'lnum' 1, 'tnum' 1, 'kern' 1;
+    font-feature-settings: 'liga' 1, 'lnum' 1, 'tnum' 1, 'kern' 1;
+
+    font-family: unquote(map-get($headingtype, font-family));
+    font-style: normal;
+    font-weight: map-get($headingtype, regular);
+    width: 100%;
+
+    @include sassline(eta, $headingtype, 2, 0, all);
+
+    thead {
+
+      th {
+        @include sassline(zeta, $headingtype, 2, 0, all);
+        padding-bottom: 1px;
+      }
     }
   }
 
