@@ -12,5 +12,11 @@
     "boilerplate",
     "modular-scale"
   ],
+  "main": "assets/sass/style.scss",
+  "ignore": [
+    "**/.*",
+    "*.json",
+    "Gemfile"
+    ]
   "license": "MIT"
 }
