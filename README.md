@@ -32,9 +32,11 @@ Alternatively a Mixture simple project settings file is included which will comp
 
 You can also use your preferred methods for compiling sass as long as you have Sass 3.3.7+ and Sass-Globbing enabled.
 
+To just include the necessary partials from your existing sass project, you only need to import [base.scss](assets/sass/base.scss). No Sass-Globbing required.
+
 ### Sass file structure
 
-My preferred method is to work along the lines of the SMACSS & BEM method. In the sass folder there there are two folders — base and modules. The base folder has the Sassline base SCSS partials. The modules folder contains some demo SCSS partials with styles you can keep or remove. All new partials added to modules will be compiled into your css so work in here with new files.
+My preferred method is to work along the lines of the SMACSS & BEM method. In the sass folder there there are two folders — base and modules. The base folder has the Sassline base SCSS partials. The modules folder contains some demo SCSS partials with styles you can keep or remove. All new partials added to modules will be compiled into your css so work in here with new files. 
 
 ### More on information on using Sassline
 
