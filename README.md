@@ -2,10 +2,6 @@
 
 Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale.
 
-## New in v2.1
-
-Layouts added with new mixins to create a main column with optimal measure and a sidebar that doesn’t get too narrow. Better baseline grid overlay.
-
 ## Do one thing well
 
 Sassline has one aim and one aim only – to spread better typography across the responsive environment of the web.
@@ -14,25 +10,30 @@ The idea is to have easy to use and maintain SCSS partials utilising the power o
 
 OpenType features are enabled with `font-feature-settings` to give the most appropriate formatting of text and some flourishes in the headings if available in the web font and supported in the browser.
 
+Sassline includes some basic layouts, and includes mixins to create a main column with optimal measure and a sidebar that doesn’t get too narrow.
+
 ## Root font-size = ½ line-height
 
-Sassline works by setting the root font-size as half the line-height of the standard paragraph text. The height of the baseline grid is then effectively set at 2rem, with increments at each 1rem. This makes it nice and easy to work proportionally from the baseline with integer rem values. This is based of a technique for setting text in print documents.
+Sassline works by setting the root font-size as half the line-height of the standard paragraph text. The height of the baseline grid is then effectively set at 2rem, with increments at each 1rem. This makes it nice and easy to work proportionally from the baseline with integer rem values to create harmony in your layout and typography. This is based off a technique for setting text in print documents.
 
 ## Documentation
 
 Sassline is fully commented with details in the SCSS. Set the font sizes with the `fontsize` mixin, set the spacing using the `baseline` mixin or set both at once with the `sassline` mixin. Use rems for everything else. Full documentation is in the works.
 
-### Compiling Sass
+### Running / compiling
 
-Using Sass 3.3.7+:
+You can also use your preferred methods for compiling Sass as long as you have Sass 3.3.7+. To just include the necessary partials in your existing sass project, you only need to import [sassline-base.scss](assets/sass/_sassline-base.scss).
 
-`sass --watch assets/sass:assets/css`
+If you want to run Sassline as a standalone project use the gulp setup included (or modify it to your needs).
 
-Alternatively a Mixture simple project settings file is included which will compile the Sass + minify for you (as well as much more).
+1. Clone the repo or grab the zip file
+2. Open a terminal window and `cd` into this directory
+3. Run `npm install -g gulp` (this may need sudo in front)
+4. Run `npm install`
 
-You can also use your preferred methods for compiling sass as long as you have Sass 3.3.7+.
+Once that is done you can start the server with `gulp` and stop it with `ctrl` + `c`.
 
-To just include the necessary partials in your existing sass project, you only need to import [sassline-base.scss](assets/sass/_sassline-base.scss).
+The pages will run at http://localhost:1234/
 
 ### Sass file structure
 
@@ -46,8 +47,7 @@ Please see [this blog post](https://jakegiltsoff.co.uk/posts/sassline-v2-0).
 
 Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-nav.js) plugin is included to provide a mobile-ready navigation to work from.
 
-
-## ¯\\\_( Browsers )_/¯
+## Browsers
 
 Sassline will set text to the baseline in recent versions of Chrome and Firefox, IE 11+ and Safari 8+.
 

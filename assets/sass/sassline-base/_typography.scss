@@ -21,14 +21,9 @@ body {
 
 // Links.
 a {
-  -webkit-transition: color .1s, background-color .1s;
-  -moz-transition: color .1s, background-color .1s;
-  -ms-transition: color .1s, background-color .1s;
-  -o-transition: color .1s, background-color .1s;
-  transition: color .1s, background-color .1s;
-
   color: $linkColour;
   text-decoration: none;
+  transition: color .1s, background-color .1s;
 
   &:hover, &:active, &:focus {
     color: $hoverColour;
@@ -41,44 +36,32 @@ a {
 
   // Nice underlines for text links.
   p a, li a {
-    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
-    background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
-    background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
     background-position: 0 93%;
     background-repeat: repeat-x;
     background-size: 100% 0.15rem;
-    text-shadow: 0.1rem 0 $backgroundColour,0.15rem 0 $backgroundColour,-0.1rem 0 $backgroundColour,-0.15rem 0 $backgroundColour;
+    text-shadow: 0.1rem 0 $backgroundColour,
+                 0.15rem 0 $backgroundColour,
+                -0.1rem 0 $backgroundColour,
+                -0.15rem 0 $backgroundColour;
 
     &:hover, &:active, &:focus {
-      background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
-      background-image: -moz-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
-      background-image: -o-linear-gradient(top,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
       background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
     }
   }
 
   // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
   p {
-    -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    font-feature-settings: 'kern', 'onum', 'liga';
 
     @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
   }
 
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
   h1, h2, h3, h4, h5, h6 {
-    -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-
     color: $headingColour;
     font-family: unquote(map-get($headingtype, font-family));
+    font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
     font-style: normal;
     font-weight: map-get($headingtype, bold);
   }
@@ -118,12 +101,7 @@ a {
     @include baseline(zeta, $bodytype, 2, 2, all);
 
     li {
-      -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-      -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-      -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-      -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-      font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-
+      font-feature-settings: 'kern', 'onum', 'liga';
       margin-left: 2rem;
 
       @include breakpoint(break-1) {
@@ -146,13 +124,8 @@ a {
       counter-increment: top-level;
 
       &:before {
-        -webkit-font-feature-settings: 'lnum' 1, 'tnum' 1;
-        -moz-font-feature-settings: 'lnum' 1, 'tnum' 1;
-        -ms-font-feature-settings: 'lnum' 1, 'tnum' 1;
-        -o-font-feature-settings: 'lnum' 1, 'tnum' 1;
-        font-feature-settings: 'lnum' 1, 'tnum' 1;
-
         content: counter(top-level) '.';
+        font-feature-settings: 'lnum', 'tnum';
         margin-left: -3rem;
         position: absolute;
         text-align: right;
@@ -219,12 +192,7 @@ a {
     @include baseline(zeta, $bodytype, 2, 2, all);
 
     dt, dd {
-      -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-      -moz-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-      -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-      -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-      font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-
+      font-feature-settings: 'kern', 'onum', 'liga';
       margin-left: 2rem;
 
       @include breakpoint(break-1) {
@@ -243,13 +211,8 @@ a {
 
   // Tables.
   table {
-    -webkit-font-feature-settings: 'liga' 1, 'lnum' 1, 'tnum' 1, 'kern' 1;
-    -moz-font-feature-settings: 'liga' 1, 'lnum' 1, 'tnum' 1, 'kern' 1;
-    -ms-font-feature-settings: 'liga' 1, 'lnum' 1, 'tnum' 1, 'kern' 1;
-    -o-font-feature-settings: 'liga' 1, 'lnum' 1, 'tnum' 1, 'kern' 1;
-    font-feature-settings: 'liga' 1, 'lnum' 1, 'tnum' 1, 'kern' 1;
-
     font-family: unquote(map-get($headingtype, font-family));
+    font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
     font-style: normal;
     font-weight: map-get($headingtype, regular);
     width: 100%;
@@ -342,8 +305,6 @@ a {
 
   // Horizontal rule.
   hr {
-    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to($captionColour));
-    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,$captionColour 50%);
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$captionColour 50%);
     background-position: 0 50%;
     background-repeat: repeat-x;
@@ -378,36 +339,25 @@ a {
 
   // Letter space those capitals people, Jan Tschichold would be proud.
   .upper {
+    font-kerning: normal;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
   }
 
   // Real small caps.
   .small-caps {
-    -webkit-font-feature-settings: 'smcp' 1, 'kern' 1;
-    -moz-font-feature-settings: 'smcp' 1, 'kern' 1;
-    -ms-font-feature-settings: 'smcp' 1, 'kern' 1;
-    -o-font-feature-settings: 'smcp' 1, 'kern' 1;
-    font-feature-settings: 'smcp' 1, 'kern' 1;
-
+    font-feature-settings: 'smcp', 'kern';
+    font-kerning: normal;
     letter-spacing: 0.1rem;
   }
 
   // Consistent height numbers with OpenType.
   .lining-numerals {
-    -webkit-font-feature-settings: 'lnum' 1, 'kern' 1;
-    -moz-font-feature-settings: 'lnum' 1, 'kern' 1;
-    -ms-font-feature-settings: 'lnum' 1, 'kern' 1;
-    -o-font-feature-settings: 'lnum' 1, 'kern' 1;
-    font-feature-settings: 'lnum' 1, 'kern' 1;
+    font-feature-settings: 'lnum', 'kern';
   }
 
   // Ascending and descending numbers with OpenType.
   .oldstyle-numerals {
-    -webkit-font-feature-settings: 'onum' 1, 'kern' 1;
-    -moz-font-feature-settings: 'onum' 1, 'kern' 1;
-    -ms-font-feature-settings: 'onum' 1, 'kern' 1;
-    -o-font-feature-settings: 'onum' 1, 'kern' 1;
-    font-feature-settings: 'onum' 1, 'kern' 1;
+    font-feature-settings: 'onum', 'kern';
   }
 }

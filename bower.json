@@ -1,6 +1,6 @@
 {
   "name": "sassline",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "homepage": "https://github.com/designbyjake/sassline",
   "authors": [
     "Jake Giltsoff <hi@jke.me> (http://jke.me)"
@@ -12,11 +12,9 @@
     "boilerplate",
     "modular-scale"
   ],
-  "main": "assets/sass/style.scss",
+  "main": "assets/sass/sassline-base/*.scss",
   "ignore": [
-    "**/.*",
-    "*.json",
-    "Gemfile"
-    ]
+    "**/.*"
+  ]
   "license": "MIT"
 }
