@@ -7,10 +7,9 @@
     "url": "https://github.com/designbyjake/sassline.git"
   },
   "devDependencies": {
-    "sass": "~3.3.7",
-    "sass-globbing": "~1.1.1"
+    "sass": "~3.3.7"
   },
   "keywords": [ "sass", "baseline", "boilerplate", "modular-scale" ],
-  "author": "Jake Giltsoff <contact@designbyjake.co.uk> (http://jke.me)",
+  "author": "Jake Giltsoff <hi@jke.me> (http://jke.me)",
   "license" : "MIT"
 }

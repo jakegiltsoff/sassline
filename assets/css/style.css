@@ -1,4 +1,4 @@
-/* CSS compiled from SCSS */
+/* CSS compiled from SCSS. */
 /* --------------------------------------- */
 * {
   -moz-box-sizing: border-box;
@@ -770,28 +770,6 @@ a {
     max-width: 36.46154%;
     left: 63.53846%; } }
 
-.global-footer p {
-  color: #BDC8CC;
-  font-family: Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  padding: 1rem 0;
-  margin: 0;
-  text-align: center;
-  font-size: 1.19167rem; }
-  @media screen and (min-width: 40em) {
-    .global-footer p {
-      font-size: 1.09286rem; } }
-  @media screen and (min-width: 50em) {
-    .global-footer p {
-      font-size: 1.08667rem; } }
-  @media screen and (min-width: 64em) {
-    .global-footer p {
-      font-size: 0.99412rem; } }
-  @media screen and (min-width: 100em) {
-    .global-footer p {
-      font-size: 0.92632rem; } }
-
 body {
   background-color: #FCFCFC;
   color: #494949;
@@ -838,30 +816,6 @@ img {
       margin-bottom: 1.3821rem;
       padding-top: 0.6179rem; } }
 
-.global-header {
-  background-color: #FCFCFC;
-  font-size: 0; }
-  .global-header .global-header__logo {
-    background-image: url(../img/sassline-logo.svg);
-    background-size: 132px 19px;
-    color: transparent;
-    display: inline-block;
-    font: 0/0 a;
-    height: 19px;
-    margin: 2rem 0 2rem 3%;
-    position: relative;
-    vertical-align: middle;
-    width: 132px; }
-    @media screen and (min-width: 40em) {
-      .global-header .global-header__logo {
-        margin-left: 2rem; } }
-    .global-header .global-header__logo a {
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0; }
-
 .nav-collapse ul {
   display: block;
   list-style: none;
@@ -887,7 +841,7 @@ img {
       position: relative; } }
 
 .disable-pointer-events {
-  pointer-events: none !important; }
+  pointer-events: none; }
 
 .nav-toggle {
   -webkit-tap-highlight-color: transparent;
@@ -984,6 +938,52 @@ img {
   @media screen and (min-width: 40em) {
     .js .nav-toggle {
       display: none; } }
+
+.global-header {
+  background-color: #FCFCFC;
+  font-size: 0; }
+  .global-header .global-header__logo {
+    background-image: url(../img/sassline-logo.svg);
+    background-size: 132px 19px;
+    color: transparent;
+    display: inline-block;
+    font: 0/0 a;
+    height: 19px;
+    margin: 2rem 0 2rem 3%;
+    position: relative;
+    vertical-align: middle;
+    width: 132px; }
+    @media screen and (min-width: 40em) {
+      .global-header .global-header__logo {
+        margin-left: 2rem; } }
+    .global-header .global-header__logo a {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0; }
+
+.global-footer p {
+  color: #BDC8CC;
+  font-family: Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  padding: 1rem 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.19167rem; }
+  @media screen and (min-width: 40em) {
+    .global-footer p {
+      font-size: 1.09286rem; } }
+  @media screen and (min-width: 50em) {
+    .global-footer p {
+      font-size: 1.08667rem; } }
+  @media screen and (min-width: 64em) {
+    .global-footer p {
+      font-size: 0.99412rem; } }
+  @media screen and (min-width: 100em) {
+    .global-footer p {
+      font-size: 0.92632rem; } }
 
 #baseline.show-grid {
   background-image: -webkit-linear-gradient(top, cyan 0, rgba(255, 255, 255, 0) 1px);

@@ -20,7 +20,7 @@
   "sass": {
     "cache": false,
     "debugInfo": false,
-    "globbing": true,
+    "globbing": false,
     "lineNumbers": false,
     "outputStyle": "nested",
     "sourceMap": false

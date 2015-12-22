@@ -1,0 +1,11 @@
+// Baseline grid demo styles.
+// ---------------------------------------
+
+#baseline.show-grid {
+  background-image: -webkit-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+  background-image: -moz-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+  background-image: -o-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+  background-image: linear-gradient(to bottom, cyan 0, rgba(255,255,255,0) 1px);
+  background-repeat: repeat-y;
+  background-size: 100% 1rem;
+}
