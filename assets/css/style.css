@@ -841,9 +841,9 @@ img {
 .global-header {
   background-color: #FCFCFC;
   font-size: 0; }
-  .global-header__logo {
+  .global-header .global-header__logo {
     background-image: url(../img/sassline-logo.svg);
-    background-size: cover;
+    background-size: 132px 19px;
     color: transparent;
     display: inline-block;
     font: 0/0 a;
@@ -853,9 +853,9 @@ img {
     vertical-align: middle;
     width: 132px; }
     @media screen and (min-width: 40em) {
-      .global-header__logo {
+      .global-header .global-header__logo {
         margin-left: 2rem; } }
-    .global-header__logo a {
+    .global-header .global-header__logo a {
       bottom: 0;
       left: 0;
       position: absolute;

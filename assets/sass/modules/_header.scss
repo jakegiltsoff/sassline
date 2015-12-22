@@ -5,9 +5,9 @@
   background-color: $backgroundColour;
   font-size: 0;
 
-  &__logo {
+  .global-header__logo {
     background-image: url(../img/sassline-logo.svg);
-    background-size: cover;
+    background-size: 132px 19px;
     color: transparent;
     display: inline-block;
     font: 0/0 a;
