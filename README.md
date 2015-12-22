@@ -20,13 +20,13 @@ Sassline works by setting the root font-size as half the line-height of the stan
 
 ## Documentation
 
-Sassline is fully commented with details in the SCSS. Set the font sizes with the `font-size` mixin, set the spacing using the `baseline` mixin or set both at once with the `sassline` mixin. Use rems for everything else. Full documentation is in the works.
+Sassline is fully commented with details in the SCSS. Set the font sizes with the `fontsize` mixin, set the spacing using the `baseline` mixin or set both at once with the `sassline` mixin. Use rems for everything else. Full documentation is in the works.
 
 ### Compiling Sass
 
 Using Sass 3.3.7+:
 
-`sass -r sass-globbing --watch assets/sass:assets/css`
+`sass --watch assets/sass:assets/css`
 
 Alternatively a Mixture simple project settings file is included which will compile the Sass + minify for you (as well as much more).
 
