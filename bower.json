@@ -15,6 +15,6 @@
   "main": "assets/sass/sassline-base/*.scss",
   "ignore": [
     "**/.*"
-  ]
+  ],
   "license": "MIT"
 }
