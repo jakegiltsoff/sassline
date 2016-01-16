@@ -30,5 +30,5 @@ gulp.task('serve', function() {
 });
 
 gulp.task('default', ['sass', 'css', 'serve'], function() {
-  gulp.watch(['./assets/sass/*.scss', './assets/sass/**/*.scss'], ['sass']);
+  gulp.watch(['./assets/sass/*.scss', './assets/sass/**/*.scss'], ['sass', 'css']);
 });
