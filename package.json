@@ -20,11 +20,11 @@
   "keywords": [ "sass", "eyeglass-module", "baseline", "boilerplate", "modular-scale" ],
   "author": "Jake Giltsoff <hi@jke.me> (http://jke.me)",
   "license" : "MIT",
-  "files": [
-    "sass"
-  ],
   "main": "eyeglass-exports.js",
   "dependencies": {
     "eyeglass": "*"
+  },
+  "eyeglass": {
+    "needs": "*"
   }
 }
