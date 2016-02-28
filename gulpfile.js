@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var minifyCss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var webserver = require('gulp-webserver');
 
@@ -14,7 +14,7 @@ gulp.task('sass', function() {
 
 gulp.task('css', function() {
   gulp.src('./assets/css/style.css')
-    .pipe(minifyCss())
+    .pipe(cleanCSS())
     .pipe(rename({
       extname: '.min.css'
     }))
