@@ -1,6 +1,6 @@
 {
   "name": "sassline",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale.",
   "repository": {
     "type": "git",
