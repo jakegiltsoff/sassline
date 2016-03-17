@@ -3,10 +3,11 @@
 
 // Container.
 .section {
+  @include clearfix;
+
   margin: 0 auto;
   position: relative;
   width: 94%;
-  @include clearfix;
 
   @include breakpoint(break-3) {
     @include maxwidth(3);
@@ -19,15 +20,17 @@
 
 // Single column (based on measure for typeset content).
 .single-measure {
-  margin: 0 auto;
   @include measure(all);
+
+  margin: 0 auto;
 }
 
 // Base column styles.
 .column {
+  @include measure(0);
+
   margin: 0 auto;
   width: 100%;
-  @include measure(0);
 
   @include breakpoint(break-1) {
     float: left;
@@ -113,9 +116,9 @@
 .column--sidebar {
 
   @include breakpoint(break-1) {
-    padding-right: map-get($gutterwidths, medium);
-
     @include ideal-measure(1, small, false);
+
+    padding-right: map-get($gutterwidths, medium);
   }
 
   @include breakpoint(break-2) {
@@ -123,9 +126,9 @@
   }
 
   @include breakpoint(break-3) {
-    padding-right: map-get($gutterwidths, large);
-
     @include ideal-measure(3, medium, false);
+
+    padding-right: map-get($gutterwidths, large);
   }
 
   @include breakpoint(break-4) {
@@ -201,12 +204,12 @@
   .sidenote {
 
     @include breakpoint(break-1) {
+      @include ideal-measure(1, small, false);
+
       left: 0;
       padding-left: map-get($gutterwidths, small);
       padding-right: map-get($gutterwidths, medium);
       position: absolute;
-
-      @include ideal-measure(1, small, false);
     }
 
     @include breakpoint(break-2) {
@@ -214,15 +217,15 @@
     }
 
     @include breakpoint(break-3) {
-      padding-right: map-get($gutterwidths, large);
-
       @include ideal-measure(3, medium, false);
+
+      padding-right: map-get($gutterwidths, large);
     }
 
     @include breakpoint(break-4) {
-      padding-left: map-get($gutterwidths, medium);
-
       @include ideal-measure(4, medium, false);
+
+      padding-left: map-get($gutterwidths, medium);
     }
   }
 }
@@ -249,12 +252,12 @@
   .sidenote {
 
     @include breakpoint(break-1) {
+      @include ideal-measure(1, small, false);
+      @include ideal-measure(1, small, true, left);
+
       padding-left: map-get($gutterwidths, medium);
       padding-right: map-get($gutterwidths, small);
       position: absolute;
-
-      @include ideal-measure(1, small, false);
-      @include ideal-measure(1, small, true, left);
     }
 
     @include breakpoint(break-2) {
@@ -263,17 +266,17 @@
     }
 
     @include breakpoint(break-3) {
-      padding-left: map-get($gutterwidths, large);
-
       @include ideal-measure(3, medium, false);
       @include ideal-measure(3, medium, true, left);
+
+      padding-left: map-get($gutterwidths, large);
     }
 
     @include breakpoint(break-4) {
-      padding-right: map-get($gutterwidths, medium);
-
       @include ideal-measure(4, medium, false);
       @include ideal-measure(4, medium, true, left);
+
+      padding-right: map-get($gutterwidths, medium);
     }
   }
 }

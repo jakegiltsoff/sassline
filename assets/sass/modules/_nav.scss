@@ -46,10 +46,6 @@
 .nav-toggle {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
 
   @include breakpoint(break-1) {
@@ -59,6 +55,7 @@
 
 // Demo overrides.
 .main-nav {
+
   @include breakpoint(break-1) {
     display: inline-block;
     width: calc(100% - 132px - 2rem);
@@ -78,11 +75,11 @@
   }
 
   li {
+    @include fontsize(16, 0);
+
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
     font-weight: map-get($headingtype, regular);
-
-    @include fontsize(16, 0);
 
     a, span {
       -webkit-user-select: none;
@@ -103,14 +100,14 @@
     }
 
     @include breakpoint(break-1) {
+      @include fontsize(12, 1);
+
       display: inline-block;
       letter-spacing: 0.1rem;
       margin-right: 2rem;
       padding: 1rem 0;
       text-transform: uppercase;
       width: auto;
-
-      @include fontsize(12, 1);
 
       a, span {
         border: 0;

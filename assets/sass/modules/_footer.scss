@@ -4,6 +4,8 @@
 .global-footer {
 
   p {
+    @include fontsize(eta, all);
+
     color: $captionColour;
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
@@ -11,7 +13,5 @@
     padding: 1rem 0;
     margin: 0;
     text-align: center;
-
-    @include fontsize(eta, all);
   }
 }

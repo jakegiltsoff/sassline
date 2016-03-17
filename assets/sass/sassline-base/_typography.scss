@@ -3,20 +3,20 @@
 
 // Setting root sizes and base styles.
 html {
+  @include rootsize;
+
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-
-  @include rootsize;
 }
 
 // Site-wide base styles.
 body {
+  @include fontsize(zeta, all);
+
   font-family: unquote(map-get($bodytype, font-family));
   font-style: normal;
   font-weight: map-get($bodytype, regular);
   line-height: 2rem;
-
-  @include fontsize(zeta, all);
 }
 
 // Links.
@@ -52,9 +52,9 @@ a {
 
   // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
   p {
-    font-feature-settings: 'kern', 'onum', 'liga';
-
     @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
+
+    font-feature-settings: 'kern', 'onum', 'liga';
   }
 
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
@@ -211,13 +211,13 @@ a {
 
   // Tables.
   table {
+    @include sassline(eta, $headingtype, 2, 0, all);
+
     font-family: unquote(map-get($headingtype, font-family));
     font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
     font-style: normal;
     font-weight: map-get($headingtype, regular);
     width: 100%;
-
-    @include sassline(eta, $headingtype, 2, 0, all);
 
     thead {
 
@@ -240,11 +240,11 @@ a {
 
   // Caption and inline small text.
   small, .caption {
+    @include fontsize(theta, all);
+
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
     font-weight: map-get($headingtype, regular);
-
-    @include fontsize(theta, all);
   }
 
   small {
@@ -252,9 +252,9 @@ a {
   }
 
   .caption {
-    color: $captionColour;
-
     @include baseline(theta, $headingtype, 2, 2, all);
+
+    color: $captionColour;
   }
 
   // Nice spacing for captions.
@@ -332,9 +332,9 @@ a {
   }
 
   code {
-    line-height: 1rem;
-
     @include fontsize(theta, all);
+
+    line-height: 1rem;
   }
 
   // Letter space those capitals people, Jan Tschichold would be proud.
