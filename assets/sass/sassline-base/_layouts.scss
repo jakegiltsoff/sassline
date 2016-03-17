@@ -34,8 +34,8 @@
 
   @include breakpoint(break-1) {
     float: left;
-    margin: inherit;
-    max-width: auto;
+    margin: initial;
+    max-width: initial;
     padding-left: map-get($gutterwidths, small);
     padding-right: map-get($gutterwidths, small);
   }
