@@ -49,12 +49,12 @@
   @include breakpoint(break-1) {
     width: 50%;
 
-    &:nth-child(3n) {
+    &:nth-of-type(2n+3) {
       clear: left;
     }
 
-    &:nth-child(n+3) {
-      margin-top: 2rem;
+    &:nth-of-type(n+3) {
+      margin-top: 3rem;
     }
   }
 }
@@ -65,12 +65,12 @@
   @include breakpoint(break-1) {
     width: 33.333%;
 
-    &:nth-child(4n) {
+    &:nth-of-type(3n+4) {
       clear: left;
     }
 
-    &:nth-child(n+4) {
-      margin-top: 2rem;
+    &:nth-of-type(n+4) {
+      margin-top: 3rem;
     }
   }
 }
