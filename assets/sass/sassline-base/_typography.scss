@@ -23,7 +23,7 @@ body {
 a {
   color: $linkColour;
   text-decoration: none;
-  transition: color .1s, background-color .1s;
+  transition: color $anchorTransitionTime, background-color $anchorTransitionTime;
 
   &:hover, &:active, &:focus {
     color: $hoverColour;
@@ -36,7 +36,7 @@ a {
 
   // Nice underlines for text links.
   p a, li a {
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($linkColour,20%) 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($linkColour, $anchorUnderlineLightnessRatio) 50%);
     background-position: 0 93%;
     background-repeat: repeat-x;
     background-size: 100% 0.15rem;
@@ -46,7 +46,7 @@ a {
                 -0.15rem 0 $backgroundColour;
 
     &:hover, &:active, &:focus {
-      background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($hoverColour,20%) 50%);
+      background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($hoverColour, $anchorUnderlineLightnessRatio) 50%);
     }
   }
 
