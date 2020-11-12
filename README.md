@@ -2,6 +2,8 @@
 
 Set text on the web to a baseline grid with Sass & rems using a responsive modular-scale.
 
+`Please note this code is p old now and is no longer actively maintained.`
+
 ## Do one thing well
 
 Sassline has one aim and one aim only – to spread better typography across the responsive environment of the web.
