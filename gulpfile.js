@@ -12,7 +12,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./assets/css/'));
 });
 
-gulp.task('css', function() {
+gulp.task('css', ['sass'], function() {
   gulp.src('./assets/css/style.css')
     .pipe(cleanCSS())
     .pipe(rename({
@@ -29,6 +29,6 @@ gulp.task('serve', function() {
     }));
 });
 
-gulp.task('default', ['sass', 'css', 'serve'], function() {
-  gulp.watch(['./assets/sass/*.scss', './assets/sass/**/*.scss'], ['sass', 'css']);
+gulp.task('default', ['css', 'serve'], function() {
+  gulp.watch(['./assets/sass/*.scss', './assets/sass/**/*.scss'], ['css']);
 });
