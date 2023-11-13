@@ -135,6 +135,7 @@ a {
       ul {
 
         li {
+          counter-increment: none;
 
           &:before {
             content: '';
@@ -165,6 +166,7 @@ a {
           ul {
 
             li {
+              counter-increment: none;
 
               &:before {
                 content: '';
