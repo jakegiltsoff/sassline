@@ -57,11 +57,11 @@ a {
     font-feature-settings: 'kern', 'onum', 'liga';
   }
 
-  // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
+  // Headings. OpenType ligatures and lining figures enabled if available.
   h1, h2, h3, h4, h5, h6 {
     color: $headingColour;
     font-family: unquote(map-get($headingtype, font-family));
-    font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+    font-feature-settings: 'liga', 'lnum', 'kern';
     font-style: normal;
     font-weight: map-get($headingtype, bold);
   }
@@ -135,6 +135,7 @@ a {
       ul {
 
         li {
+          counter-increment: none;
 
           &:before {
             content: '';
@@ -165,6 +166,7 @@ a {
           ul {
 
             li {
+              counter-increment: none;
 
               &:before {
                 content: '';
