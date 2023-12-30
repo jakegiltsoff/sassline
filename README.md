@@ -4,6 +4,8 @@ Set text on the web to a baseline grid with Sass & rems using a responsive modul
 
 `Please note this code is p old now and is no longer actively maintained.`
 
+`Hey, you can do this all in pure CSS now — fun how things evolve in 10 years. I’ll see if I can work up a new version, stay tuned.`
+
 ## Do one thing well
 
 Sassline has one aim and one aim only – to spread better typography across the responsive environment of the web.
