@@ -47,7 +47,7 @@ Please see [this blog post](https://jakegiltsoff.co.uk/posts/sassline-v2-0).
 
 ## Responsive Nav
 
-Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-nav.js) plugin is included to provide a mobile-ready navigation to work from.
+Ariel Salminen’s [responsive-nav.js](https://github.com/arielsalminen/responsive-nav.js) plugin is included to provide a mobile-ready navigation to work from.
 
 ## Browsers
 
